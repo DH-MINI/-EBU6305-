@@ -1,14 +1,28 @@
+/* 全局设置 */
+html,
+body {
+    margin: 0;
+    padding: 0;
+    width: 100%;
+    height: 100%;
+    font-family: Inter, sans-serif;
+}
 
 .container {
     background: linear-gradient(
-    180deg,
-    #ffece3 12.93%,
-    #bb4f4d 150.44%,
-    #a11414 150.46%
+        180deg,
+        #ffece3 12.93%,
+        #bb4f4d 150.44%,
+        #a11414 150.46%
     );
     display: flex;
     flex-direction: column;
+    max-width: 1200px; /* 新增：设置最大宽度 */
+    margin: 0 auto; /* 新增：自动居中对齐 */
+    padding: 0 20px; /* 新增：添加左右边距 */
 }
+
+/* 剩余样式保持不变 */
 
 .header {
     background-color: #feebe2;
@@ -372,13 +386,19 @@
 }
 
 .footer {
-    background: linear-gradient(0deg, #a11414 -78.61%, #d9938e 74.88%);
+    background: linear-gradient(
+    180deg,
+    #ffece3 12.93%,
+    #bb4f4d 150.44%,
+    #a11414 150.46%
+    );
     display: flex;
     margin-top: 120px;
     width: 100%;
     flex-direction: column;
     padding: 40px;
 }
+
 
 @media (max-width: 991px) {
     .footer {
