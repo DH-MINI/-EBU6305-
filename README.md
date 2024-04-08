@@ -2,7 +2,7 @@
 
 ## Group Number: 2024EBU6305G27
 
-## Project Title: XXXXXXXXXXXXXXXX
+## Project Title: ChinaDreamWorkStudio
 
 ## Members:
 
