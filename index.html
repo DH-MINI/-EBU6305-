@@ -5,93 +5,101 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>China Dream Works Studios</title>
-    <link rel="stylesheet" href="./src/css/index.css">
+    <link href="./src/css/index.css" rel="stylesheet">
+    <!-- Bootstrap CSS -->
+    <link href="https://cdn.staticfile.net/twitter-bootstrap/4.3.1/css/bootstrap.min.css" rel="stylesheet">
+    <!-- jQuery -->
+    <script src="https://cdn.staticfile.net/jquery/3.2.1/jquery.min.js"></script>
+    <!-- Popper.js -->
+    <script src="https://cdn.staticfile.net/popper.js/1.15.0/umd/popper.min.js"></script>
+    <!-- Bootstrap JS -->
+    <script src="https://cdn.staticfile.net/twitter-bootstrap/4.3.1/js/bootstrap.min.js"></script>
 </head>
 
 <body>
-    <div class="container">
+    <div class="container gradient-background">
         <header class="header">
-            <div class="header-content">
-                <div class="logo-column">
+            <div class="row align-items-center">
+                <div class="col-md-4">
                     <img src="https://cdn.builder.io/api/v1/image/assets/TEMP/aaf4050a881a710ab33ca2ce3f255e1e74be09e0bdf9689019e54eb0a5477e65?apiKey=9001c79c70de47e78269e89b2de0f98c&"
-                        alt="Company Logo" class="logo-img" />
+                        alt="Company Logo" class="img-fluid logo-img">
                 </div>
-                <div class="nav-column">
-                    <nav class="nav-wrapper">
-                        <ul class="nav-list">
-                            <li>
-                                <a href="#home" class="nav-item">Home</a>
-                            </li>
-                            <li>
-                                <a href="#classicAnimation" class="nav-item">Classic animation</a>
-                            </li>
-                            <li>
-                                <a href="#developmentHistory" class="nav-item">Development history</a>
-                            </li>
-                            <li>
-                                <a href="#shanghaiArtFilmStudio" class="nav-item">Shanghai Art Film Studio</a>
-                            </li>
-                        </ul>
-                        <div class="search-bar">
-                            <img src="https://cdn.builder.io/api/v1/image/assets/TEMP/c8030529a08631d4974a58cc7d730f2c80c4f7ad44aa102fb80bb079b29bcc07?apiKey=9001c79c70de47e78269e89b2de0f98c&"
-                                alt="Search Icon" class="search-icon" />
-                            <input type="text" placeholder="Search" class="search-input"
-                                onkeyup="handleSearch(event)" />
+                <div class="col-md-8">
+                    <nav class="navbar navbar-expand-md">
+                        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav"
+                            aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+                            <span class="navbar-toggler-icon"></span>
+                        </button>
+                        <div class="collapse navbar-collapse" id="navbarNav">
+                            <ul class="navbar-nav">
+                                <li class="nav-item">
+                                    <a class="nav-link" href="#home">Home</a>
+                                </li>
+                                <li class="nav-item">
+                                    <a class="nav-link" href="#classicAnimation">Classic animation</a>
+                                </li>
+                                <li class="nav-item">
+                                    <a class="nav-link" href="#developmentHistory">Development history</a>
+                                </li>
+                                <li class="nav-item">
+                                    <a class="nav-link" href="#shanghaiArtFilmStudio">Shanghai Art Film Studio</a>
+                                </li>
+                            </ul>
                         </div>
                     </nav>
+                    <div class="search-bar mt-2">
+                        <img src="https://cdn.builder.io/api/v1/image/assets/TEMP/c8030529a08631d4974a58cc7d730f2c80c4f7ad44aa102fb80bb079b29bcc07?apiKey=9001c79c70de47e78269e89b2de0f98c&"
+                            alt="Search Icon" class="search-icon">
+                        <input type="text" placeholder="Search" class="search-input" onkeyup="handleSearch(event)">
+                    </div>
                 </div>
             </div>
         </header>
-        <h1 class="title">China Dream Works Studios</h1>
+        <h1 class="title mt-4">China Dream Works Studios</h1>
         <section class="hero-section">
-            <!-- <img src="https://cdn.builder.io/api/v1/image/assets/TEMP/821b516ced20809c31f181f8e42d8833f38e867dab9b05a16a38fea55216b0a0?apiKey=9001c79c70de47e78269e89b2de0f98c&" alt="Hero Background" class="hero-bg" /> -->
             <div class="hero-content">
                 <img src="https://cdn.builder.io/api/v1/image/assets/TEMP/f1ca46df82cdbb01e507405b74ec7efc235711bc0664e724d217b7ce3f010070?apiKey=9001c79c70de47e78269e89b2de0f98c&"
-                    alt="Shanghai Introduction" class="hero-text" />
+                    alt="Shanghai Introduction" class="img-fluid hero-text">
             </div>
         </section>
         <section class="news-section">
-            <h2 class="news-title">News</h2>
-            <p class="news-description">
-                The Latest News Related to the Chinese Animation Industry
-            </p>
-            <article class="news-card">
-                <div class="news-card-content">
-                    <div class="news-image-column">
-                        <img src="https://cdn.builder.io/api/v1/image/assets/TEMP/1ff1994e3f85f8fa599ef0fa217ec1ff3dc3413b0f38506f89ed03c7f2b8907f?apiKey=9001c79c70de47e78269e89b2de0f98c&"
-                            alt="News Image" class="news-image" />
-                    </div>
-                    <div class="news-text-column">
-                        <p class="news-text">
-                            Epic Showdown 2024! <br />
-                            A Big Roundup of 10 Upcoming Chinese Animated Films Set for Release!
-                        </p>
+            <div class="container">
+                <h2 class="news-title">News</h2>
+                <p class="news-description">
+                    The Latest News Related to the Chinese Animation Industry
+                </p>
+                <div class="row">
+                    <div class="col-md-6">
+                        <div class="card mb-3">
+                            <img src="https://cdn.builder.io/api/v1/image/assets/TEMP/1ff1994e3f85f8fa599ef0fa217ec1ff3dc3413b0f38506f89ed03c7f2b8907f?apiKey=9001c79c70de47e78269e89b2de0f98c&"
+                                alt="News Image" class="card-img-top">
+                            <div class="card-body">
+                                <p class="card-text">Epic Showdown 2024!<br>A Big Roundup of 10 Upcoming Chinese Animated
+                                    Films Set for Release!</p>
+                            </div>
+                        </div>
                     </div>
                 </div>
-            </article>
+            </div>
         </section>
-        <footer class="footer">
+        <footer class="footer mt-5">
             <div class="footer-links">
-                <button class="footer-link" onclick="handleFooterLinkClick('about')">
-                    About US
-                </button>
-                <button class="footer-link" onclick="handleFooterLinkClick('email')">
-                    Email US
-                </button>
-                <button class="footer-link" onclick="handleFooterLinkClick('join')">
-                    Join US
-                </button>
+                <button class="btn btn-link footer-link" onclick="handleFooterLinkClick('about')">About US</button>
+                <button class="btn btn-link footer-link" onclick="handleFooterLinkClick('email')">Email US</button>
+                <button class="btn btn-link footer-link" onclick="handleFooterLinkClick('join')">Join US</button>
             </div>
             <div class="social-icons">
                 <img src="https://cdn.builder.io/api/v1/image/assets/TEMP/4161f0460fafb10fd031b1e0b462873a619318b48c348341229845ac63734f3b?apiKey=9001c79c70de47e78269e89b2de0f98c&"
-                    alt="Social Icon 1" class="social-icon" onclick="handleSocialIconClick('social1')" />
+                    alt="Social Icon 1" class="social-icon" onclick="handleSocialIconClick('social1')">
                 <img src="https://cdn.builder.io/api/v1/image/assets/TEMP/5dc5e7228681a08cdf3f2ed57a1f5f4cbc069f32a10d87f8294b61058ca970be?apiKey=9001c79c70de47e78269e89b2de0f98c&"
-                    alt="Social Icon 2" class="social-icon" onclick="handleSocialIconClick('social2')" />
+                    alt="Social Icon 2" class="social-icon" onclick="handleSocialIconClick('social2')">
                 <img src="https://cdn.builder.io/api/v1/image/assets/TEMP/8544809f4818514c5446538a349816fc704edc614038c06a589dd639f837f03d?apiKey=9001c79c70de47e78269e89b2de0f98c&"
-                    alt="Social Icon 3" class="social-icon" onclick="handleSocialIconClick('social3')" />
+                    alt="Social Icon 3" class="social-icon" onclick="handleSocialIconClick('social3')">
                 <img src="https://cdn.builder.io/api/v1/image/assets/TEMP/1adabe08c3080369577ba99109c9ec3d5eddd57ac4907af1650041763a3327bc?apiKey=9001c79c70de47e78269e89b2de0f98c&"
-                    alt="Social Icon 4" class="social-icon" onclick="handleSocialIconClick('social4')" />
+                    alt="Social Icon 4" class="social-icon" onclick="handleSocialIconClick('social4')">
             </div>
         </footer>
     </div>
 </body>
+
+</html>
