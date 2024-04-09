@@ -59,6 +59,14 @@ body {
     flex-grow: 1;
 }
 
+.navbar-nav {
+    padding-left: 0;
+}
+
+.navbar-nav .nav-item {
+    margin-right: 10px; /* Adjust as needed */
+}
+
 .nav-column {
     display: flex;
     flex-direction: column;
