@@ -17,10 +17,12 @@ body {
     );
     display: flex;
     flex-direction: column;
+    width: 100%; /* 设置容器宽度为100% */
     max-width: 1200px;
     margin: 0 auto;
-    padding: 0 20px;
+    padding: 0;
 }
+
 
 .gradient-background {
     background: linear-gradient(
@@ -41,36 +43,45 @@ body {
 .header-content {
     display: flex;
     align-items: center;
-    gap: 20px;
+    gap: 0px;
 }
 
 .logo-column {
     display: flex;
     flex-direction: column;
-    width: 22%;
+    width: 20%;
 }
 
 .logo-img {
     aspect-ratio: 1.25;
     object-fit: contain;
     object-position: center;
-    width: 200px;
+   /* width: 250px;*/
     max-width: 100%;
     flex-grow: 1;
 }
 
 .navbar-nav {
     padding-left: 0;
+    width: 100%;
+
 }
 
 .navbar-nav .nav-item {
     margin-right: 10px; /* Adjust as needed */
+    font-weight: bold;
+    font-size: 18px; /* 改变字体大小 */
+    color: black; /* navigation字体 */
+   
+}
+.navbar-nav .nav-link:hover {
+    color: #10bdfc;
 }
 
 .nav-column {
     display: flex;
     flex-direction: column;
-    width: 78%;
+    width: 100%;
     margin-left: 20px;
 }
 
