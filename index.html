@@ -5,27 +5,54 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>China Dream Works Studios</title>
-    <link href="./src/css/index.css" rel="stylesheet">
-    
+    <!-- Bootstrap CSS -->
     <link href="./bootstrap_src/bootstrap.min.css" rel="stylesheet">
-    <script src="./bootstrap_src/jquery-3.6.0.min.js"></script>
-    <script src="./bootstrap_src/popper.min.js"></script>
+    <!-- Custom CSS -->
+    <link href="./src/css/index.css" rel="stylesheet">
+    <!-- Bootstrap Bundle JS (包含 Popper) -->
+    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
     <script src="./bootstrap_src/bootstrap.bundle.min.js"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
 
     <audio src="./src/music/1.mp3" id="index_background_music" autoplay="autoplay" controls="controls" loop="loop"
         autostart="true"></audio>
+
 </head>
+
 
 <body>
     <div class="container gradient-background">
-       
         <iframe src="navigation.html" width="100%" height="295.5" frameborder="0" scrolling="no"></iframe>
-         
         <h1 class="title mt-4">China Dream Works Studios</h1>
         <section class="hero-section">
-            <div class="hero-content">
-                <img src="src/image/dasheng.png"
-                    alt="Shanghai Introduction" class="img-fluid hero-text">
+            <div id="carouselExampleIndicators" class="carousel slide" data-ride="carousel">
+                <!-- 指示器 -->
+                <ol class="carousel-indicators">
+                    <li data-target="#carouselExampleIndicators" data-slide-to="0" class="active"></li>
+                    <li data-target="#carouselExampleIndicators" data-slide-to="1"></li>
+                    <li data-target="#carouselExampleIndicators" data-slide-to="2"></li>
+                </ol>
+                <!-- 轮播内容 -->
+                <div class="carousel-inner">
+                    <div class="carousel-item active">
+                        <img src="src/image/dasheng.png" class="d-block w-100" alt="Image 1">
+                    </div>
+                    <div class="carousel-item">
+                        <img src="src/image/Huluwa.jpg" class="d-block w-100" alt="Image 2">
+                    </div>
+                    <div class="carousel-item">
+                        <img src="src/image/Tianshuqitan.jpg" class="d-block w-100" alt="Image 3">
+                    </div>
+                </div>
+                <!-- 控制器 -->
+                <a class="carousel-control-prev" href="#carouselExampleIndicators" role="button" data-slide="prev">
+                    <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+                    <span class="sr-only">Previous</span>
+                </a>
+                <a class="carousel-control-next" href="#carouselExampleIndicators" role="button" data-slide="next">
+                    <span class="carousel-control-next-icon" aria-hidden="true"></span>
+                    <span class="sr-only">Next</span>
+                </a>
             </div>
         </section>
         <section class="news-section">
@@ -34,40 +61,69 @@
                 <p class="news-description">
                     The Latest News Related to the Chinese Animation Industry
                 </p>
-                <div class="row">
-                    <div class="col-md-6">
-                        <div class="card mb-3">
-                            <img src="src/image/nezha.png"
-                                alt="News Image" class="card-img-top">
-                            <div class="card-body">
-                                <p class="card-text">Epic Showdown 2024!<br>A Big Roundup of 10 Upcoming Chinese
-                                    Animated
-                                    Films Set for Release!</p>
+                <div id="newsCarousel" class="carousel slide-n" data-ride="carousel">
+                    <div class="carousel-inner-n">
+                        <div class="carousel-item-n active">
+                            <div class="row">
+                                <div class="col-md-6">
+                                    <div class="card mb-3">
+                                        <img src="src/image/nezha.png" alt="News Image" class="card-img-top" style="height: 300px;" >
+                                        <div class="card-body">
+                                            <p class="card-text">Epic Showdown 2024!<br>A Big Roundup of 10 Upcoming
+                                                Chinese Animated Films Set for Release!</p>
+                                        </div>
+                                    </div>
+                                </div>
+                                <!-- Add more news items -->
+                                <div class="col-md-6">
+                                    <div class="card mb-3">
+                                        <img src="src/image/shenhai.jpg" alt="News Image" class="card-img-top">
+                                        <div class="card-body">
+                                            <p class="card-text">ShenHai<br> director Tian 
+                                                Xiaopeng's new work! The first trailer for the animated film The Deep has been revealed</p>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <!-- Add more carousel items -->
+                        <div class="carousel-item-n">
+                            <div class="row">
+                                <div class="col-md-6">
+                                    <div class="card mb-3">
+                                        <img src="src/image/dashenguilai.gif" alt="News Image" class="card-img-top">
+                                        <div class="card-body">
+                                            <p class="card-text">Dashenguilai<br>Monkey King: Hero is Back Film Review/Love is a weakness, but also a strength</p>
+                                        </div>
+                                    </div>
+                                </div>
+                                
                             </div>
                         </div>
                     </div>
+                    <a class="carousel-control-prev" href="#newsCarousel" role="button" data-slide="prev">
+                        <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+                        <span class="sr-only">Previous</span>
+                    </a>
+                    <a class="carousel-control-next" href="#newsCarousel" role="button" data-slide="next">
+                        <span class="carousel-control-next-icon" aria-hidden="true"></span>
+                        <span class="sr-only">Next</span>
+                    </a>
                 </div>
             </div>
         </section>
-        <footer class="footer mt-5">
-            <div class="footer-links">
-                <button class="btn btn-link footer-link" onclick="handleFooterLinkClick('about')">About US</button>
-                <button class="btn btn-link footer-link" onclick="handleFooterLinkClick('email')">Email US</button>
-                <button class="btn btn-link footer-link" onclick="handleFooterLinkClick('join')">Join US</button>
-            </div>
-            <div class="social-icons">
-                <img src="https://cdn.builder.io/api/v1/image/assets/TEMP/4161f0460fafb10fd031b1e0b462873a619318b48c348341229845ac63734f3b?apiKey=9001c79c70de47e78269e89b2de0f98c&"
-                    alt="Social Icon 1" class="social-icon" onclick="handleSocialIconClick('social1')">
-                <img src="https://cdn.builder.io/api/v1/image/assets/TEMP/5dc5e7228681a08cdf3f2ed57a1f5f4cbc069f32a10d87f8294b61058ca970be?apiKey=9001c79c70de47e78269e89b2de0f98c&"
-                    alt="Social Icon 2" class="social-icon" onclick="handleSocialIconClick('social2')">
-                <img src="https://cdn.builder.io/api/v1/image/assets/TEMP/8544809f4818514c5446538a349816fc704edc614038c06a589dd639f837f03d?apiKey=9001c79c70de47e78269e89b2de0f98c&"
-                    alt="Social Icon 3" class="social-icon" onclick="handleSocialIconClick('social3')">
-                <img src="https://cdn.builder.io/api/v1/image/assets/TEMP/1adabe08c3080369577ba99109c9ec3d5eddd57ac4907af1650041763a3327bc?apiKey=9001c79c70de47e78269e89b2de0f98c&"
-                    alt="Social Icon 4" class="social-icon" onclick="handleSocialIconClick('social4')">
-            </div>
-        </footer>
+        
+        <iframe src="footer.html" width="100%" height="157" frameborder="0" scrolling="no"></iframe>
     </div>
-
+    <!-- Bootstrap Bundle JS (包含 Popper) -->
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.bundle.min.js"></script>
+    <script src="./bootstrap_src/jquery.slim.min.js"></script>
+    <script src="./bootstrap_src/bootstrap.bundle.min.js"></script>
+    <script>
+        $('#newsCarousel').carousel({
+            interval: false // Disable auto slide
+        });
+    </script>
 </body>
 
 </html>

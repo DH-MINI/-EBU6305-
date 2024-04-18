@@ -1,12 +1,14 @@
 /* Global settings */
 html,
 body {
-    margin: 0;
-    padding: 0;
+    margin: 0px;
+    padding: 0px;
+    border:0px;
     width: 100%;
     height: 100%;
     font-family: Inter, sans-serif;
 }
+
 
 .container {
     background: linear-gradient(
@@ -17,9 +19,10 @@ body {
     );
     display: flex;
     flex-direction: column;
+    justify-content: center; /* 居中内容 */
+    align-items: center; /* 水平居中 */
     width: 100%; /* 设置容器宽度为100% */
-    max-width: 1200px;
-    margin: 0 auto;
+    margin: 0;
     padding: 0;
 }
 
@@ -162,8 +165,8 @@ body {
 }
 
 .hero-content {
-    display: flex;
-    flex-direction: column;
+    /*display: flex;
+    flex-direction: column;*/
     position: relative;
     overflow: hidden;
     min-height: 500px;
@@ -171,81 +174,140 @@ body {
 }
 
 .hero-text {
-    position: absolute;
-    inset: 0;
+   /* position: absolute;
+    inset: 0;*/
     height: 100%;
     width: 100%;
     object-fit: cover;
     object-position: center;
 }
 
+/* 整个轮播区域的样式 */
+.hero-section {
+    width: 100%;
+    margin: auto; /* 如果需要居中显示 */
+    overflow: hidden; /* 隐藏超出部分 */
+}
+
+/* 轮播图容器样式 */
+#carouselExampleIndicators {
+    position: relative; /* 子元素绝对定位基于此 */
+    width: 100%; /* 容器宽度 */
+    max-width: 1532px; /* 最大宽度限制 */
+    margin: auto; /* 居中显示 */
+}
+
+/* 轮播图内容区域的样式 */
+.carousel-inner {
+    position: relative; /* 控制按钮定位基于此 */
+    width: 100%; /* 容器宽度 */
+    height: 818px; /* 固定高度 */
+}
+
+/* 每个轮播项的样式 */
+.carousel-item {
+    width: 100%; /* 完整覆盖容器宽度 */
+    height: 818px; /* 固定高度 */
+    transition: transform 0.6s ease; /* 平滑过渡效果 */
+}
+
+/* 图片样式 */
+.carousel-item img {
+    width: 100%; /* 宽度填满容器 */
+    height: 100%; /* 高度填满轮播项 */
+    object-fit: cover; /* 覆盖整个可用区域，不变形 */
+}
+
+/* 控制按钮样式 */
+.carousel-control-prev,
+.carousel-control-next {
+    width: 30px; /* 控制按钮宽度 */
+    height: 30px; /* 控制按钮高度 */
+    position: absolute; /* 绝对定位 */
+    top: 50%; /* 垂直居中 */
+    transform: translateY(-50%); /* 精确居中 */
+    background-color: #fff; /* 背景色 */
+    color: black; /* 图标颜色 */
+    border-radius: 50%; /* 圆形按钮 */
+    align-items: center; /* 内部图标居中 */
+    justify-content: center; /* 内部图标居中 */
+    cursor: pointer; /* 鼠标样式 */
+    z-index: 999; /* 控制按钮覆盖轮播图 */
+}
+
+.carousel-control-prev {
+    left: 10px; /* 左边距离 */
+}
+
+.carousel-control-next {
+    right: 10px; /* 右边距离 */
+}
+
+.carousel-control-prev-icon,
+.carousel-control-next-icon {
+    display: inline-block; /* 图标内联显示 */
+    width: 20px; /* 图标宽度 */
+    height: 20px; /* 图标高度 */
+    background-size: 100% 100%; /* 背景图标大小适应 */
+}
+
+/* News section */
+/* News section */
 /* News section */
 .news-section {
-    display: flex;
-    flex-direction: column;
     margin-top: 80px;
-    padding: 0 40px;
+    padding: 0 20px; /* 调整内边距 */
 }
 
-.news-title {
-    color: #9e1515;
-    font: 600 48px/110% Inter, sans-serif;
+.carousel.slide-n {
+    overflow: hidden;
+    width: 100%; /* 新闻部分轮播图宽度与前面轮播图一样 */
 }
 
-.news-description {
-    color: #fff;
-    margin-top: 20px;
-    font: 400 20px/150% Inter, sans-serif;
-}
-
-.news-card {
-    background: linear-gradient(99deg, #fefefe 57.54%, #da9690 89.57%);
-    margin-top: 60px;
-}
-
-.news-card-content {
+.carousel-inner-n {
     display: flex;
-    align-items: center;
-    gap: 40px;
+    flex-wrap: nowrap;
+    width: 100%; /* 新闻部分轮播图宽度与前面轮播图一样 */
 }
 
-.news-image-column {
-    display: flex;
-    flex-direction: column;
-    width: 50%;
+.carousel-item-n {
+    flex: 0 0 auto;
+    width: 100%; /* 新闻卡片宽度与轮播图容器宽度一样 */
+    max-width: 100%; /* 设置新闻卡片最大宽度为100% */
+    margin-right: 20px; /* 调整新闻卡片之间的间距 */
 }
 
-.news-image {
-    aspect-ratio: 16/9;
-    object-fit: cover;
-    width: 100%;
-    box-shadow: -4px 8px 20px 0 rgba(0, 0, 0, 0.1);
-    border: 1px solid rgba(247, 247, 247, 1);
+.carousel-item-n img {
+    border-top-left-radius: 10px;
+    border-top-right-radius: 10px;
+    width: 100%; /* 图片宽度占满新闻卡片 */
+    height: auto; /* 图片高度自适应 */
 }
 
-.news-text-column {
-    display: flex;
-    flex-direction: column;
-    width: 50%;
-    margin-left: 40px;
+
+.carousel-control-prev-icon::before,
+.carousel-control-next-icon::before {
+    content: '';
+    border-width: 5px 5px 0 0;
+    border-color: #fff;
+    border-style: solid;
+    display: inline-block;
+    width: 10px;
+    height: 10px;
+    transform: rotate(-45deg);
 }
 
-.news-text {
-    color: #4a0f0f;
-    text-align: right;
-    font: 500 24px/36px Inter, sans-serif;
-}
+
+
 
 /* Footer */
 .footer {
     background: linear-gradient(
     180deg,
-    #ffece3 12.93%,
-    #bb4f4d 150.44%,
-    #a11414 150.46%
+    #D9938E 12.93%,
+    #BD5452 150.44%
     );
     display: flex;
-    margin-top: 120px;
     flex-direction: column;
     padding: 40px;
 }
@@ -253,9 +315,9 @@ body {
 .footer-links {
     display: flex;
     gap: 20px;
-    font-size: 24px;
+    font-size: 18px;
     color: #fff;
-    font-weight: 700;
+    font-weight: bold;
     line-height: 150%;
     justify-content: center;
 }
@@ -263,14 +325,20 @@ body {
 .footer-link {
     background: none;
     border: none;
-    color: inherit;
+    color: #fff;
     font: inherit;
     cursor: pointer;
     padding: 0;
 }
 
 .social-icons {
-    display: flex;
-    margin-top: 40px;
-    gap: 16px;
+    text-align: center;
+    gap: 70px;
+    height:50px;
+    width:auto;
+}
+.social-icon {
+    text-align: center;
+    height: 50px;
+    width:auto;
 }
