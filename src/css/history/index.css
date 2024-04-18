@@ -1,0 +1,52 @@
+/* 图片展示页面 */
+.img-display-page {
+    position: relative;
+    width: 100%;
+    height: 100%;
+    min-height: 100vh;
+    /* background-image: url('../assets/img-01.jpg'); */
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover;
+    background-attachment: fixed;
+    transition: .5s ease-in-out;
+}
+
+/* 图片展示页面遮罩层 */
+.img-display-page::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: var(--page-mask-c);
+    backdrop-filter: brightness(var(--page-mask-brightness)) blur(var(--page-mask-blur));
+    z-index: 1;
+}
+
+
+/* 图片加载中 */
+.img-display-page__loading {
+    padding: var(--loading-p);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: var(--loading-c);
+    text-align: center;
+    display: none;
+}
+
+.img-display-page__loading p {
+    font-size: var(--loading-text-size);
+}
+
+/* 没有更多内容 */
+.img-display-page__not-more {
+    padding: var(--not-more-p);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: var(--not-more-c);
+    display: none;
+}

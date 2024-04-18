@@ -1,0 +1,177 @@
+/* 图片展示项容器 */
+.img-display-page__img-item-container {
+    box-sizing: border-box;
+    width: 100%;
+    padding: var(--img-item-container-p);
+}
+
+/* 图片展示项 */
+.img-item {
+    width: 100%;
+    opacity: var(--img-item-opacity);
+    display: grid;
+    grid-template-rows: 1fr;
+    grid-template-columns: repeat(2, 1fr);
+    color: var(--img-item-text-c);
+}
+
+/* 图片展示项中内容的容器 */
+.img-item .content-container {
+    box-sizing: border-box;
+    width: 100%;
+    padding: var(--img-item-content-container-p);
+    display: flex;
+    flex-direction: column;
+    justify-content: start;
+}
+
+/* 图片展示项内容 */
+.img-item .content {
+    width: 100%;
+    max-width: var(--img-item-img-max-w);
+}
+
+/* 图片展示项中的图片 */
+.img-item .img {
+    width: 100%;
+    border-radius: .5rem;
+    overflow: hidden;
+    opacity: var(--img-item-img-opacity);
+}
+
+/* 图片展示项中的标题 */
+.img-item .title {
+    margin: var(--img-item-title-text-m);
+    font-size: var(--img-item-title-text-size);
+}
+
+/* 图片展示项中的标题和描述 */
+.img-item .img,
+.img-item .title,
+.img-item .description {
+    transition: .5s ease-in-out;
+}
+
+/* 图片展示项中的时间容器 */
+.img-item .time-container {
+    display: flex;
+    justify-content: start;
+    align-items: center;
+}
+
+/* 图片展示项中的时间 */
+.img-item .time {
+    padding: var(--img-item-time-p);
+}
+
+/*********** 奇数图片展示项样式 ***********/
+.img-item:nth-child(odd) .content-container {
+    border-right: 1px solid var(--line-c);
+    align-items: end;
+}
+
+.img-item:nth-child(odd) .img {
+    box-shadow: -5px 5px 20px var(--img-item-img-shadow-c);
+}
+
+/*********** 偶数图片展示项样式 ***********/
+.img-item:nth-child(even) .content-container {
+    grid-row: 1 / 2;
+    grid-column: 2 / 3;
+    border-left: 1px solid var(--line-c);
+    align-items: start;
+}
+
+.img-item:nth-child(even) .img {
+    box-shadow: 5px 5px 20px var(--img-item-img-shadow-c);
+}
+
+.img-item:nth-child(even) .time-container {
+    grid-row: 1 / 2;
+    grid-column: 1 / 2;
+    justify-content: end;
+}
+
+/*************************** 当前展示图片项样式 ***************************/
+/* 图片展示项的内容容器和时间容器 */
+.img-item.display .content,
+.img-item.display .time-container {
+    position: relative;
+    z-index: 2;
+}
+
+/* 图片展示项的图片 */
+.img-item.display .img {
+    opacity: 1;
+}
+
+/* 图片展示项的标题和描述 */
+.img-item.display .title {
+    transform: translateY(var(--display-img-item-title-translate-y)) translateX(var(--display-img-item-title-translate-x));
+}
+
+.img-item.display .description {
+    transform: translateY(var(--display-img-item-title-translate-y));
+}
+
+/* 图片展示项的时间 */
+/* 通过水平位移实现时间边框与时间线重合显示 */
+.img-item.display .time {
+    --border-w: calc(1px + var(--page-mask-blur));
+    transform: translateX(calc(var(--border-w) * -1));
+    border-left: var(--border-w) solid var(--line-c);
+}
+
+/*********** 偶数图片展示项样式 ***********/
+/* 时间 */
+.img-item.display:nth-child(even) .time {
+    transform: translateX(var(--border-w));
+    border-left: none;
+    border-right: var(--border-w) solid var(--line-c);
+}
+
+/*************************** 屏幕宽度小于等于 768px ***************************/
+@media screen and (max-width: 768px) {
+
+    /* 图片展示项 */
+    .img-item {
+        display: flex;
+        flex-direction: column-reverse;
+        justify-content: start;
+        align-items: start;
+    }
+
+    /* 图片展示项内容 */
+    .img-item .content {
+        max-width: 100%;
+    }
+
+    /* 图片展示项的时间 */
+    .img-item .time {
+        --border-w: calc(1px + var(--page-mask-blur));
+        border-left: var(--border-w) solid var(--line-c);
+    }
+
+    /*********** 奇数图片展示项样式 ***********/
+    /* 图片展示项中内容的容器 */
+    .img-item:nth-child(odd) .content-container {
+        border-left: 1px solid var(--line-c);
+        border-right: none;
+        align-items: start;
+    }
+
+    /*************************** 当前展示图片项样式 ***************************/
+    /* 图片展示项的时间 */
+    .img-item.display .time {
+        transform: translateX(0);
+        border-left: var(--border-w) solid var(--line-c);
+    }
+
+    /*********** 偶数图片展示项样式 ***********/
+    /* 时间 */
+    .img-item.display:nth-child(even) .time {
+        transform: translateX(0);
+        border-left: var(--border-w) solid var(--line-c);
+        border-right: none;
+    }
+}

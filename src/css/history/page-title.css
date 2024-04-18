@@ -1,0 +1,22 @@
+/* 图片展示页面中的标题 */
+.img-display-page__title {
+    position: relative;
+    width: 100%;
+    padding: var(--page-title-p);
+    display: flex;
+    flex-direction: column;
+    justify-content: start;
+    align-items: center;
+    z-index: 2;
+}
+
+.img-display-page__title h1 {
+    color: var(--page-title-text-c);
+    font-size: var(--page-title-text-size);
+}
+
+.img-display-page__title p {
+    margin-top: .5rem;
+    color: var(--page-sub-title-text-c);
+    font-size: var(--page-sub-title-text-size);
+}
