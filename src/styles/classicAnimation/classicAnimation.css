@@ -1,0 +1,66 @@
+html {
+    height: 100%;
+    background: linear-gradient(
+        180deg,
+        #ffece3 12.93%,
+        #bb4f4d 150.44%,
+        #a11414 150.46%
+    );
+    background-attachment: fixed; /* 背景固定，内容滚动时背景不会动 */
+}
+
+body {
+    /* min-height: 100vh; */
+    /* 视口高度 */
+    margin: 0;
+    /* 移除默认的边距 */
+    background: transparent;
+    /* 透明背景确保html的渐变可见 */
+}
+
+/* Title */
+.title {
+    color: #a11414;
+    text-align: center;
+    letter-spacing: -1.92px;
+    margin-top: 40px;
+    font: italic 600 64px Inter, sans-serif;
+}
+
+.hot,
+.recommend {
+    width: 80%;
+    max-width: 1000px;
+    margin: 20px auto;
+    /* 居中并添加顶部和底部的外边距 */
+    border-radius: 20px;
+    background: rgba(198, 103, 100, 0.2);
+    box-shadow: inset 0px 4px 10px 0px rgba(0, 0, 0, 0.3);
+}
+
+.red-block {
+    position: absolute;
+    left: -120px;
+    /* 适当调整这些值 */
+    top: 20px;
+    /* 适当调整这些值 */
+    width: 14px;
+    height: 46px;
+    background: #A11414;
+}
+
+.hottext,
+.recommend-text {
+    position: absolute;
+    left: -100px;
+    /* 适当调整这些值 */
+    top: 20px;
+    /* 适当调整这些值 */
+    width: auto;
+    /* 让宽度自动根据内容调整 */
+    font-size: 40px;
+    font-weight: 900;
+    line-height: 46px;
+    /* 调整与红色块的高度相匹配 */
+    color: #FFFFFF;
+}

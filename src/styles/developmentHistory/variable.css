@@ -1,0 +1,39 @@
+:root {
+    /* 页面遮罩层 */
+    --page-mask-c: #c7cbcf22;
+    --page-mask-brightness: .8;
+    --page-mask-blur: 1px;
+
+    /* 页面标题 */
+    --page-title-p: 3rem 0;
+    --page-title-text-size: 1.75rem;
+    --page-title-text-c: #fff;
+    --page-sub-title-text-size: 0.85rem;
+    --page-sub-title-text-c: #dedede;
+
+    /* 时间线 */
+    --line-c: #efefef;
+
+    /* 图片展示项 */
+    --img-item-container-p: 0 1rem;
+    --img-item-opacity: 1;
+    --img-item-content-container-p: 1.5rem 2rem;
+    --img-item-img-opacity: .4;
+    --img-item-img-max-w: 400px;
+    --img-item-img-shadow-c: #1f2937;
+    --img-item-text-c: #fff;
+    --img-item-title-text-size: 2.5rem;
+    --img-item-title-text-m: .5rem 0;
+    --img-item-time-p: 0 2rem;
+    --display-img-item-title-translate-y: -2.5rem;
+    --display-img-item-title-translate-x: .75rem;
+    
+    /* 图片加载中 */
+    --loading-c: #fff;
+    --loading-p: 1rem 0;
+    --loading-text-size: 2rem;
+
+    /* 没有更多内容 */
+    --not-more-c: #fff;
+    --not-more-p: 1rem 0;
+}
