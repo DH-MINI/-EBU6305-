@@ -1,8 +1,12 @@
 html {
     height: 100%;
-
-    background-attachment: fixed;
-    /* 背景固定，内容滚动时背景不会动 */
+    background: linear-gradient(
+        180deg,
+        #ffece3 12.93%,
+        #bb4f4d 150.44%,
+        #a11414 150.46%
+    );
+    background-attachment: fixed; /* 背景固定，内容滚动时背景不会动 */
 }
 
 body {
@@ -14,7 +18,14 @@ body {
     /* 透明背景确保html的渐变可见 */
 }
 
-
+/* Title */
+.title {
+    color: #a11414;
+    text-align: center;
+    letter-spacing: -1.92px;
+    margin-top: 40px;
+    font: italic 600 64px Inter, sans-serif;
+}
 
 .hot,
 .recommend {
@@ -38,22 +49,7 @@ body {
     background: #A11414;
 }
 
-.hottext {
-    position: absolute;
-    left: -100px;
-    /* 适当调整这些值 */
-    top: 20px;
-    /* 适当调整这些值 */
-    width: auto;
-    /* 让宽度自动根据内容调整 */
-    font-size: 40px;
-    font-weight: 900;
-    line-height: 46px;
-    /* 调整与红色块的高度相匹配 */
-    color: #FFFFFF;
-}
-
-
+.hottext,
 .recommend-text {
     position: absolute;
     left: -100px;

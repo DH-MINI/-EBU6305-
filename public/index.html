@@ -6,23 +6,44 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>China Dream Works Studios</title>
     <!-- Bootstrap CSS -->
-    <link href="./bootstrap_src/bootstrap.min.css" rel="stylesheet">
+    <link href="../src/assets/bootstrap_src/bootstrap.min.css" rel="stylesheet">
     <!-- Custom CSS -->
-    <link href="./src/css/index.css" rel="stylesheet">
+    <link href="../src/styles/index/index.css" rel="stylesheet">
     <!-- Bootstrap Bundle JS (包含 Popper) -->
-    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
-    <script src="./bootstrap_src/bootstrap.bundle.min.js"></script>
-    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+    <script src="../src/assets/bootstrap_src/jquery-3.6.0.min.js"></script>
+    <script src="../src/assets/bootstrap_src/bootstrap.bundle.min.js"></script>
+    <script src="../src/assets/bootstrap_src/popper.min.js"></script>
 
-    <audio src="./src/music/1.mp3" id="index_background_music" autoplay="autoplay" controls="controls" loop="loop"
-        autostart="true"></audio>
+    <!-- <audio src="../src/assets/music/tianGongXunYin.mp3" id="index_background_music" autoplay="autoplay"
+        controls="controls" loop="loop" autostart="true"></audio> -->
 
+    <style>
+        .music-player-button {
+            position: fixed;
+            top: 50%;
+            right: 20px;
+            transform: translateY(-50%);
+            background-color: #fff;
+            border: 1px solid #ccc;
+            padding: 10px;
+            border-radius: 5px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+            z-index: 9999;
+            cursor: pointer;
+        }
+    </style>
 </head>
 
 
 <body>
+
+    <div class="music-player-button" onclick="togglePlay()">
+        <img src="../src/assets/image/icon/play.png" alt="Play" id="playButton" style="width: 20px; height: 20px;">
+    </div>
+
     <div class="container gradient-background">
-        <iframe src="navigation.html" width="100%" height="295.5" frameborder="0" scrolling="no"></iframe>
+        <iframe src="../src/components/navigation.html" width="100%" height="295.5" frameborder="0"
+            scrolling="no"></iframe>
         <h1 class="title mt-4">China Dream Works Studios</h1>
         <section class="hero-section">
             <div id="carouselExampleIndicators" class="carousel slide" data-ride="carousel">
@@ -35,13 +56,13 @@
                 <!-- 轮播内容 -->
                 <div class="carousel-inner">
                     <div class="carousel-item active">
-                        <img src="src/image/dasheng.png" class="d-block w-100" alt="Image 1">
+                        <img src="../src/assets/image/index/daSheng.png" class="d-block w-100" alt="Image 1">
                     </div>
                     <div class="carousel-item">
-                        <img src="src/image/Huluwa.jpg" class="d-block w-100" alt="Image 2">
+                        <img src="../src/assets/image/index/huLuWa.jpg" class=" d-block w-100" alt="Image 2">
                     </div>
                     <div class="carousel-item">
-                        <img src="src/image/Tianshuqitan.jpg" class="d-block w-100" alt="Image 3">
+                        <img src="../src/assets/image/index/tianShuQiTan.jpg" class="d-block w-100" alt="Image 3">
                     </div>
                 </div>
                 <!-- 控制器 -->
@@ -67,7 +88,8 @@
                             <div class="row">
                                 <div class="col-md-6">
                                     <div class="card mb-3">
-                                        <img src="src/image/nezha.png" alt="News Image" class="card-img-top" style="height: 300px;" >
+                                        <img src="../src/assets/image/index/neZha.png" alt="News Image"
+                                            class="card-img-top" style="height: 300px;">
                                         <div class="card-body">
                                             <p class="card-text">Epic Showdown 2024!<br>A Big Roundup of 10 Upcoming
                                                 Chinese Animated Films Set for Release!</p>
@@ -77,10 +99,12 @@
                                 <!-- Add more news items -->
                                 <div class="col-md-6">
                                     <div class="card mb-3">
-                                        <img src="src/image/shenhai.jpg" alt="News Image" class="card-img-top">
+                                        <img src="../src/assets/image/index/shenHai.jpg" alt="News Image"
+                                            class="card-img-top">
                                         <div class="card-body">
-                                            <p class="card-text">ShenHai<br> director Tian 
-                                                Xiaopeng's new work! The first trailer for the animated film The Deep has been revealed</p>
+                                            <p class="card-text">ShenHai<br> director Tian
+                                                Xiaopeng's new work! The first trailer for the animated film The Deep
+                                                has been revealed</p>
                                         </div>
                                     </div>
                                 </div>
@@ -91,13 +115,15 @@
                             <div class="row">
                                 <div class="col-md-6">
                                     <div class="card mb-3">
-                                        <img src="src/image/dashenguilai.gif" alt="News Image" class="card-img-top">
+                                        <img src="../src/assets/image/index/daShenGuiLai.gif" alt="News Image"
+                                            class="card-img-top">
                                         <div class="card-body">
-                                            <p class="card-text">Dashenguilai<br>Monkey King: Hero is Back Film Review/Love is a weakness, but also a strength</p>
+                                            <p class="card-text">Dashenguilai<br>Monkey King: Hero is Back Film
+                                                Review/Love is a weakness, but also a strength</p>
                                         </div>
                                     </div>
                                 </div>
-                                
+
                             </div>
                         </div>
                     </div>
@@ -112,17 +138,32 @@
                 </div>
             </div>
         </section>
-        
-        <iframe src="footer.html" width="100%" height="157" frameborder="0" scrolling="no"></iframe>
+
+        <iframe src="../src/components/footer.html" width="100%" height="157" frameborder="0" scrolling="no"></iframe>
     </div>
     <!-- Bootstrap Bundle JS (包含 Popper) -->
-    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.bundle.min.js"></script>
-    <script src="./bootstrap_src/jquery.slim.min.js"></script>
-    <script src="./bootstrap_src/bootstrap.bundle.min.js"></script>
+    <!-- <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.bundle.min.js"></script> -->
+    <script src="../src/assets/bootstrap_src/v4bootstrap.bundle.min.js"></script>
     <script>
         $('#newsCarousel').carousel({
             interval: false // Disable auto slide
         });
+    </script>
+    <!-- JavaScript 代码 -->
+    <script>
+        var audio = new Audio('../src/assets/music/tianGongXunYin.mp3');
+        var isPlaying = false;
+
+        function togglePlay() {
+            if (isPlaying) {
+                audio.pause();
+                document.getElementById('playButton').src = '../src/assets/image/icon/play.png'; // 切换为播放图标
+            } else {
+                audio.play();
+                document.getElementById('playButton').src = '../src/assets/image/icon/pause.png'; // 切换为暂停图标
+            }
+            isPlaying = !isPlaying;
+        }
     </script>
 </body>
 
