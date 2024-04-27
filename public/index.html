@@ -41,7 +41,7 @@
         <img src="../src/assets/image/icon/play.png" alt="Play" id="playButton" style="width: 20px; height: 20px;">
     </div>
 
-    <div class="container gradient-background">
+    <div class="container-fluid gradient-background">
         <iframe src="../src/components/navigation.html" width="100%" height="295.5" frameborder="0"
             scrolling="no"></iframe>
         <h1 class="title mt-4">China Dream Works Studios</h1>
@@ -77,69 +77,224 @@
             </div>
         </section>
         <section class="news-section">
-            <div class="container">
+            <div class="news-container">
                 <h2 class="news-title">News</h2>
                 <p class="news-description">
                     The Latest News Related to the Chinese Animation Industry
                 </p>
-                <div id="newsCarousel" class="carousel slide-n" data-ride="carousel">
-                    <div class="carousel-inner-n">
-                        <div class="carousel-item-n active">
-                            <div class="row">
-                                <div class="col-md-6">
-                                    <div class="card mb-3">
-                                        <img src="../src/assets/image/index/neZha.png" alt="News Image"
-                                            class="card-img-top" style="height: 300px;">
-                                        <div class="card-body">
-                                            <p class="card-text">Epic Showdown 2024!<br>A Big Roundup of 10 Upcoming
-                                                Chinese Animated Films Set for Release!</p>
-                                        </div>
-                                    </div>
+
+                <!-- Bootstrap row for horizontal card layout -->
+                <div class="row">
+                    <!-- First news item column -->
+                    <div class="col-md-4">
+                        <div class="accordion" id="newsAccordion1">
+                            <div class="card">
+                                <div class="card-header" id="headingOne">
+                                    <h2 class="mb-0">
+                                        <button class="btn btn-link btn-block text-left" type="button"
+                                            data-toggle="collapse" data-target="#collapseOne" aria-expanded="true"
+                                            aria-controls="collapseOne">
+                                            NeZha 2
+                                        </button>
+                                    </h2>
                                 </div>
-                                <!-- Add more news items -->
-                                <div class="col-md-6">
-                                    <div class="card mb-3">
-                                        <img src="../src/assets/image/index/shenHai.jpg" alt="News Image"
-                                            class="card-img-top">
-                                        <div class="card-body">
-                                            <p class="card-text">ShenHai<br> director Tian
-                                                Xiaopeng's new work! The first trailer for the animated film The Deep
-                                                has been revealed</p>
-                                        </div>
+                                <div id="collapseOne" class="collapse show" aria-labelledby="headingOne"
+                                    data-parent="#newsAccordion1">
+                                    <div class="card-body">
+                                        <video controls class="card-img-top" style="height: 300px;">
+                                            <source src="../src/assets/image/index/nezha2.mp4" type="video/mp4">
+                                            Your browser does not support the video tag.
+                                        </video>
+                                        A Big Roundup of 10 Upcoming Chinese Animated Films Set for Release!
                                     </div>
                                 </div>
                             </div>
                         </div>
-                        <!-- Add more carousel items -->
-                        <div class="carousel-item-n">
-                            <div class="row">
-                                <div class="col-md-6">
-                                    <div class="card mb-3">
-                                        <img src="../src/assets/image/index/daShenGuiLai.gif" alt="News Image"
-                                            class="card-img-top">
-                                        <div class="card-body">
-                                            <p class="card-text">Dashenguilai<br>Monkey King: Hero is Back Film
-                                                Review/Love is a weakness, but also a strength</p>
-                                        </div>
+                    </div>
+
+                    <!-- Second news item column -->
+                    <div class="col-md-4">
+                        <div class="accordion" id="newsAccordion2">
+                            <div class="card">
+                                <div class="card-header" id="headingTwo">
+                                    <h2 class="mb-0">
+                                        <button class="btn btn-link btn-block text-left collapsed" type="button"
+                                            data-toggle="collapse" data-target="#collapseTwo" aria-expanded="false"
+                                            aria-controls="collapseTwo">
+                                            Deep Sea
+                                        </button>
+                                    </h2>
+                                </div>
+                                <div id="collapseTwo" class="collapse" aria-labelledby="headingTwo"
+                                    data-parent="#newsAccordion2">
+                                    <div class="card-body">
+                                        <video controls class="card-img-top" style="height: 300px;">
+                                            <source src="../src/assets/image/index/shenhai.mp4" type="video/mp4">
+                                            Your browser does not support the video tag.
+                                        </video>
+                                        Director Tian Xiaopeng's new work! The first trailer for the animated film The
+                                        Deep has been revealed.
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Third news item column -->
+                    <!-- Third news item column -->
+                    <div class="col-md-4">
+                        <div class="accordion" id="newsAccordion3">
+                            <div class="card">
+                                <div class="card-header" id="headingThree">
+                                    <h2 class="mb-0">
+                                        <button class="btn btn-link btn-block text-left collapsed" type="button"
+                                            data-toggle="collapse" data-target="#collapseThree" aria-expanded="false"
+                                            aria-controls="collapseThree">
+                                            White Snake 2
+                                        </button>
+                                    </h2>
+                                </div>
+                                <div id="collapseThree" class="collapse" aria-labelledby="headingThree"
+                                    data-parent="#newsAccordion3">
+                                    <div class="card-body">
+                                        <video controls class="card-img-top" style="height: 300px;">
+                                            <source src="../src/assets/image/index/Baisheyuanqi.mp4" type="video/mp4">
+                                            Your browser does not support the video tag.
+                                        </video>
+                                        "White Snake: Reunion of Fate"! First Trailer Revealed - Nationwide Release in
+                                        2024
                                     </div>
                                 </div>
 
                             </div>
                         </div>
                     </div>
-                    <a class="carousel-control-prev" href="#newsCarousel" role="button" data-slide="prev">
-                        <span class="carousel-control-prev-icon" aria-hidden="true"></span>
-                        <span class="sr-only">Previous</span>
-                    </a>
-                    <a class="carousel-control-next" href="#newsCarousel" role="button" data-slide="next">
-                        <span class="carousel-control-next-icon" aria-hidden="true"></span>
-                        <span class="sr-only">Next</span>
-                    </a>
                 </div>
             </div>
         </section>
 
-        <iframe src="../src/components/footer.html" width="100%" height="157" frameborder="0" scrolling="no"></iframe>
+
+        <section class="Homeanni-animation-section">
+            <div class="Homeanni-container">
+              <h2 class="Homeanni-title">Animation</h2>
+              <p class="Homeanni-description">
+                The Classical Animation of the Shanghai Animation Film Studio
+              </p>
+              <!-- Slider main container -->
+              <div id="Homeanni-carouselExample" class="carousel slide carousel-fade Homeanni-carousel" data-ride="carousel">
+                <!-- Wrapper for carousel items -->
+                <div class="carousel-inner Homeanni-carousel-inner">
+                  <!-- Individual carousel item -->
+                  <div class="carousel-item Homeanni-carousel-item active">
+                    <img src="../src/assets/image/classicAnimation/aFanTi.png" class="d-block w-100 Homeanni-item" alt="Animation 1">
+                    <div class="carousel-caption d-none d-md-block">
+                      <h5>First Animation Title</h5>
+                      <p><a href="your-link-for-animation1" class="btn btn-primary">See more</a></p>
+                    </div>
+                  </div>
+                  <div class="carousel-item Homeanni-carousel-item">
+                    <img src="../src/assets/image/classicAnimation/cat.png" class="d-block w-100 Homeanni-item" alt="Animation 2">
+                    <div class="carousel-caption d-none d-md-block">
+                      <h5>Second Animation Title</h5>
+                      <p><a href="your-link-for-animation2" class="btn btn-primary">See more</a></p>
+                    </div>
+                  </div>
+                  <div class="carousel-item Homeanni-carousel-item">
+                    <img src="../src/assets/image/classicAnimation/deer.jpg" class="d-block w-100 Homeanni-item" alt="Animation 3">
+                    <div class="carousel-caption d-none d-md-block">
+                      <h5>Third Animation Title</h5>
+                      <p><a href="your-link-for-animation3" class="btn btn-primary">See more</a></p>
+                    </div>
+                  </div>
+                  <div class="carousel-item Homeanni-carousel-item">
+                    <img src="../src/assets/image/classicAnimation/keDou.webp" class="d-block w-100 Homeanni-item" alt="Animation 4">
+                    <div class="carousel-caption d-none d-md-block">
+                      <h5>Fourth Animation Title</h5>
+                      <p><a href="your-link-for-animation4" class="btn btn-primary">See more</a></p>
+                    </div>
+                  </div>
+                  <div class="carousel-item Homeanni-carousel-item">
+                    <img src="../src/assets/image/classicAnimation/monk.webp" class="d-block w-100 Homeanni-item" alt="Animation 5">
+                    <div class="carousel-caption d-none d-md-block">
+                      <h5>Fifth Animation Title</h5>
+                      <p><a href="your-link-for-animation5" class="btn btn-primary">See more</a></p>
+                    </div>
+                  </div>
+                </div>
+                <!-- Carousel controls -->
+                <a class="carousel-control-prev Homeanni-carousel-control-prev" href="#Homeanni-carouselExample" role="button" data-slide="prev">
+                  <span class="Homeanni-carousel-control-prev-icon" aria-hidden="true"></span>
+                  <span class="sr-only">Previous</span>
+                </a>
+                <a class="carousel-control-next Homeanni-carousel-control-next" href="#Homeanni-carouselExample" role="button" data-slide="next">
+                  <span class="Homeanni-carousel-control-next-icon" aria-hidden="true"></span>
+                  <span class="sr-only">Next</span>
+                </a>
+              </div>
+            </div>
+          </section>
+
+          <section class="history-section">
+            <div class="history-container">
+              <h2 class="history-title">History</h2>
+              <p class="history-description">
+                A Dive into the Rich History of Shanghai Animation Film Studio
+              </p>
+              
+              <!-- Accordion container -->
+              <div class="accordion" id="history-accordionExample">
+                <!-- First card -->
+                <div class="card">
+                  <div class="card-header" id="history-headingOne">
+                    <h2 class="mb-0">
+                      <button class="btn btn-link" type="button" data-toggle="collapse" data-target="#history-collapseOne" aria-expanded="true" aria-controls="history-collapseOne">
+                        Historic Event #1
+                      </button>
+                    </h2>
+                  </div>
+                  <div id="history-collapseOne" class="collapse show" aria-labelledby="history-headingOne" data-parent="#history-accordionExample">
+                    <div class="card-body">
+                      Some placeholder content for the first accordion panel. This panel is shown by default, thanks to the .show class.
+                    </div>
+                  </div>
+                </div>
+                
+                <!-- Second card -->
+                <div class="card">
+                  <div class="card-header" id="history-headingTwo">
+                    <h2 class="mb-0">
+                      <button class="btn btn-link collapsed" type="button" data-toggle="collapse" data-target="#history-collapseTwo" aria-expanded="false" aria-controls="history-collapseTwo">
+                        Historic Event #2
+                      </button>
+                    </h2>
+                  </div>
+                  <div id="history-collapseTwo" class="collapse" aria-labelledby="history-headingTwo" data-parent="#history-accordionExample">
+                    <div class="card-body">
+                      Some placeholder content for the second accordion panel. This panel is hidden by default.
+                    </div>
+                  </div>
+                </div>
+                
+                <!-- Third card -->
+                <div class="card">
+                  <div class="card-header" id="history-headingThree">
+                    <h2 class="mb-0">
+                      <button class="btn btn-link collapsed" type="button" data-toggle="collapse" data-target="#history-collapseThree" aria-expanded="false" aria-controls="history-collapseThree">
+                        Historic Event #3
+                      </button>
+                    </h2>
+                  </div>
+                  <div id="history-collapseThree" class="collapse" aria-labelledby="history-headingThree" data-parent="#history-accordionExample">
+                    <div class="card-body">
+                      And lastly, the placeholder content for the third accordion panel. This panel is hidden by default.
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </section>
+          
+    <iframe src="../src/components/footer.html" width="100%" height="157" frameborder="0" scrolling="no"></iframe>
     </div>
     <!-- Bootstrap Bundle JS (包含 Popper) -->
     <!-- <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.bundle.min.js"></script> -->
