@@ -1,5 +1,6 @@
 html {
     height: 100%;
+    width: 100%;
     background: linear-gradient(180deg,
             #ffece3 12.93%,
             #bb4f4d 150.44%,
@@ -8,13 +9,17 @@ html {
     /* 背景固定，内容滚动时背景不会动 */
 }
 
+
+
 body {
-    /* min-height: 100vh; */
-    /* 视口高度 */
     margin: 0;
-    /* 移除默认的边距 */
+    padding: 0;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
     background: transparent;
-    /* 透明背景确保html的渐变可见 */
+    width: 100%;
 }
 
 /* Title */
@@ -46,7 +51,6 @@ body {
     /* left: -120px;
     /* 适当调整这些值 */
     top: 20px;
-    */
     /* 适当调整这些值 */
     width: 14px;
     height: 46px;
@@ -169,4 +173,18 @@ body {
     line-height: 24px;
     letter-spacing: 0.08px;
     color: #6f1905
+}
+
+.row {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    /* 控制项目在行中的对齐方式 */
+}
+
+.col-md-3 {
+    flex-basis: calc(25% - 20px);
+    /* 控制每行显示的项目数量 */
+    margin-bottom: 20px;
+    /* 设置项目之间的间距 */
 }
