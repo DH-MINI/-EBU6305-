@@ -1,4 +1,5 @@
 /* 图片展示页面 */
+
 .img-display-page {
     position: relative;
     width: 100%;
@@ -10,6 +11,7 @@
     background-size: cover;
     background-attachment: fixed;
     transition: .5s ease-in-out;
+    display: block;
 }
 
 /* 图片展示页面遮罩层 */

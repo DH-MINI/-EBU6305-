@@ -17,10 +17,35 @@
     <link rel="stylesheet" href="../styles/developmentHistory/image.css">
     <!-- 页面样式 -->
     <link rel="stylesheet" href="../styles/developmentHistory/index.css">
+
+    <link rel="stylesheet" href="../styles/components/navigation.css">
+    <link rel="stylesheet" href="..\styles\iconfont.css">
+    <style>
+        body{
+            display:flex;
+        }
+    </style>
+
+    
 </head>
 
 <body>
-    <iframe src="../components/navigation.html" width="100%" height="295.5" frameborder="0" scrolling="no"></iframe>
+    <div>
+        <div class="tuan">
+
+        </div>
+        <div class="shell">
+            <a href="#" class="box"><i class="iconfont icon-liebiao"></i><span>list</span></a>
+            <a href="#" class="box"><i class="iconfont icon-cangku"></i><span> cbz</span></a>
+            <a href="#" class="box"><i class="iconfont icon-zhuti_tiaosepan"></i><span>cbz</span></a>
+            <a href="#" class="box"><i class="iconfont icon-qianbao"></i><span>cbz</span></a>
+            <a href="#" class="box"><i class="iconfont icon-tupian"></i><span>cbz</span></a>
+            <a href="#" class="box"><i class="iconfont icon-erweima"></i><span>cbz</span></a>
+            <a href="#" class="box"><i class="iconfont icon-dunpaibaoxianrenzheng"></i><span>cbz</span></a>
+            <a href="#" class="box"><i class="iconfont icon-dengchu"></i><span>cbz</span></a>
+        </div>
+    </div>
+
     <!-- 图片展示页面 -->
     <div class="img-display-page">
 
@@ -138,13 +163,17 @@
             <p>No more</p>
         </div>
 
+        <div>
+            <iframe src="../components/footer.html" width="100%" height="157" frameborder="0" scrolling="no"></iframe>
+            <!-- 脚本 -->
+            <!-- 随机生成图片展示项 -->
+            <script src="../scripts/developmentHistory/rand-create-img-item.js"></script>
+            <!-- 控制当前展示图片项 -->
+            <script src="../scripts/developmentHistory/index.js"></script>
+
+        </div>
     </div>
-    <iframe src="../components/footer.html" width="100%" height="157" frameborder="0" scrolling="no"></iframe>
-    <!-- 脚本 -->
-    <!-- 随机生成图片展示项 -->
-    <script src="../scripts/developmentHistory/rand-create-img-item.js"></script>
-    <!-- 控制当前展示图片项 -->
-    <script src="../scripts/developmentHistory/index.js"></script>
+    <script src="../scripts/components.js"></script>
 </body>
 
 </html>

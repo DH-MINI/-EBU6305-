@@ -1,5 +1,6 @@
 /* 图片展示项容器 */
 .img-display-page__img-item-container {
+
     box-sizing: border-box;
     width: 100%;
     padding: var(--img-item-container-p);
