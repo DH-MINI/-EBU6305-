@@ -3,44 +3,47 @@ html,
 body {
     margin: 0px;
     padding: 0px;
-    border:0px;
+    border: 0px;
     width: 100%;
     height: 100%;
     font-family: Inter, sans-serif;
+    background: linear-gradient(180deg,
+            #ffece3 12.93%,
+            #bb4f4d 150.44%,
+            #a11414 150.46%);
 }
 
 
 .container {
-    background: linear-gradient(
-        180deg,
-        #ffece3 12.93%,
-        #bb4f4d 150.44%,
-        #a11414 150.46%
-    );
+    background: linear-gradient(180deg,
+            #ffece3 12.93%,
+            #bb4f4d 150.44%,
+            #a11414 150.46%);
     display: flex;
     flex-direction: column;
-    justify-content: center; /* 居中内容 */
-    align-items: center; /* 水平居中 */
-    width: 100%; /* 设置容器宽度为100% */
+    justify-content: center;
+    /* 居中内容 */
+    align-items: center;
+    /* 水平居中 */
+    width: 100%;
+    /* 设置容器宽度为100% */
     margin: 0;
     padding: 0;
 }
 
 
 .gradient-background {
-    background: linear-gradient(
-        180deg,
-        #ffece3 12.93%,
-        #bb4f4d 150.44%,
-        #a11414 150.46%
-    );
+    background: linear-gradient(180deg,
+            #ffece3 12.93%,
+            #bb4f4d 150.44%,
+            #a11414 150.46%);
 }
 
 /* Header */
 .header {
     background-color: #feebe2;
     width: 100%;
-    padding: 16px 40px;
+    padding: 7px 40px;
 }
 
 .header-content {
@@ -52,14 +55,14 @@ body {
 .logo-column {
     display: flex;
     flex-direction: column;
-    width: 20%;
+    width: 10%;
 }
 
 .logo-img {
     aspect-ratio: 1.25;
     object-fit: contain;
     object-position: center;
-   /* width: 250px;*/
+    /* width: 250px;*/
     max-width: 100%;
     flex-grow: 1;
 }
@@ -71,12 +74,16 @@ body {
 }
 
 .navbar-nav .nav-item {
-    margin-right: 10px; /* Adjust as needed */
+    margin-right: 10px;
+    /* Adjust as needed */
     font-weight: bold;
-    font-size: 18px; /* 改变字体大小 */
-    color: black; /* navigation字体 */
-   
+    font-size: 18px;
+    /* 改变字体大小 */
+    color: black;
+    /* navigation字体 */
+
 }
+
 .navbar-nav .nav-link:hover {
     color: #10bdfc;
 }
@@ -174,7 +181,7 @@ body {
 }
 
 .hero-text {
-   /* position: absolute;
+    /* position: absolute;
     inset: 0;*/
     height: 100%;
     width: 100%;
@@ -185,128 +192,463 @@ body {
 /* 整个轮播区域的样式 */
 .hero-section {
     width: 100%;
-    margin: auto; /* 如果需要居中显示 */
-    overflow: hidden; /* 隐藏超出部分 */
+    margin: auto;
+    /* 如果需要居中显示 */
+    overflow: hidden;
+    /* 隐藏超出部分 */
 }
 
 /* 轮播图容器样式 */
 #carouselExampleIndicators {
-    position: relative; /* 子元素绝对定位基于此 */
-    width: 100%; /* 容器宽度 */
-    max-width: 1532px; /* 最大宽度限制 */
-    margin: auto; /* 居中显示 */
+    position: relative;
+    /* 子元素绝对定位基于此 */
+    width: 100%;
+    /* 容器宽度 */
+    max-width: 1532px;
+    /* 最大宽度限制 */
+    margin: auto;
+    /* 居中显示 */
 }
 
 /* 轮播图内容区域的样式 */
 .carousel-inner {
-    position: relative; /* 控制按钮定位基于此 */
-    width: 100%; /* 容器宽度 */
-    height: 818px; /* 固定高度 */
+    position: relative;
+    /* 控制按钮定位基于此 */
+    width: 100%;
+    /* 容器宽度 */
+    height: 818px;
+    /* 固定高度 */
 }
 
 /* 每个轮播项的样式 */
 .carousel-item {
-    width: 100%; /* 完整覆盖容器宽度 */
-    height: 818px; /* 固定高度 */
-    transition: transform 0.6s ease; /* 平滑过渡效果 */
+    width: 100%;
+    /* 完整覆盖容器宽度 */
+    height: 818px;
+    /* 固定高度 */
+    transition: transform 0.6s ease;
+    /* 平滑过渡效果 */
 }
 
 /* 图片样式 */
 .carousel-item img {
-    width: 100%; /* 宽度填满容器 */
-    height: 100%; /* 高度填满轮播项 */
-    object-fit: cover; /* 覆盖整个可用区域，不变形 */
+    width: 100%;
+    /* 宽度填满容器 */
+    height: 100%;
+    /* 高度填满轮播项 */
+    object-fit: cover;
+    /* 覆盖整个可用区域，不变形 */
 }
 
 /* 控制按钮样式 */
 .carousel-control-prev,
 .carousel-control-next {
-    width: 30px; /* 控制按钮宽度 */
-    height: 30px; /* 控制按钮高度 */
-    position: absolute; /* 绝对定位 */
-    top: 50%; /* 垂直居中 */
-    transform: translateY(-50%); /* 精确居中 */
-    background-color: #fff; /* 背景色 */
-    color: black; /* 图标颜色 */
-    border-radius: 50%; /* 圆形按钮 */
-    align-items: center; /* 内部图标居中 */
-    justify-content: center; /* 内部图标居中 */
-    cursor: pointer; /* 鼠标样式 */
-    z-index: 999; /* 控制按钮覆盖轮播图 */
+    width: 30px;
+    /* 控制按钮宽度 */
+    height: 30px;
+    /* 控制按钮高度 */
+    position: absolute;
+    /* 绝对定位 */
+    top: 50%;
+    /* 垂直居中 */
+    transform: translateY(-50%);
+    /* 精确居中 */
+    background-color: #fff;
+    /* 背景色 */
+    color: black;
+    /* 图标颜色 */
+    border-radius: 50%;
+    /* 圆形按钮 */
+    align-items: center;
+    /* 内部图标居中 */
+    justify-content: center;
+    /* 内部图标居中 */
+    cursor: pointer;
+    /* 鼠标样式 */
+    z-index: 999;
+    /* 控制按钮覆盖轮播图 */
 }
 
 .carousel-control-prev {
-    left: 10px; /* 左边距离 */
+    left: 10px;
+    /* 左边距离 */
 }
 
 .carousel-control-next {
-    right: 10px; /* 右边距离 */
+    right: 10px;
+    /* 右边距离 */
 }
 
 .carousel-control-prev-icon,
 .carousel-control-next-icon {
-    display: inline-block; /* 图标内联显示 */
-    width: 20px; /* 图标宽度 */
-    height: 20px; /* 图标高度 */
-    background-size: 100% 100%; /* 背景图标大小适应 */
+    display: inline-block;
+    /* 图标内联显示 */
+    width: 20px;
+    /* 图标宽度 */
+    height: 20px;
+    /* 图标高度 */
+    background-size: 100% 100%;
+    /* 背景图标大小适应 */
 }
 
-/* News section */
 /* News section */
 /* News section */
 .news-section {
     margin-top: 80px;
-    padding: 0 20px; /* 调整内边距 */
+    padding: 0px;
+    /* Adjust padding */
+    margin-left: auto;
+    /* Auto margin for centering */
+    margin-right: auto;
+    /* Auto margin for centering */
 }
 
-.carousel.slide-n {
+/* News container styles */
+.news-container {
+    background: linear-gradient(180deg,
+            #f4d2ca 0%,
+            #dd9d98 30.55%,
+            #b9e4f1 120.93%,
+            #4eb2ec 150.44%);
+    width: 100%;
+    /* Full width of the parent element */
+    margin: 0;
+    /* No margins */
+    padding: 0;
+    /* No padding */
+    box-shadow: none;
+    /* No shadow for a flat design, if desired */
+    /* Remove border-radius if you don't want rounded corners */
+    border-radius: 0;
+    /* Optional: if you want sharp corners */
+    text-align: center;
+    /* Center text alignment for all children */
+}
+
+
+/* News title adjustments */
+.news-title {
+    font-weight: bold;
+    /* Makes the font bold */
+    color: #a11414;
+    /* Sets the font color to a red shade */
+    text-align: center;
+    /* Centers the title text */
+    font-size: 3rem;
+    /* Sets the size of the title */
+    margin-bottom: 0.5rem;
+    /* Adds some space below the title */
+}
+
+/* News description adjustments */
+.news-description {
+    font-weight: bold;
+    /* Makes the font bold */
+    color: white;
+    /* Sets the font color to a red shade */
+    text-align: center;
+    /* Centers the description text */
+    font-size: 1.25rem;
+    /* Sets the size of the description */
+    margin-top: 0.5rem;
+    /* Adds some space above the description */
+}
+
+
+/* Accordion card body fixed height */
+.accordion .card-body {
+    min-height: 300px;
+    /* Fixed minimum height */
     overflow: hidden;
-    width: 100%; /* 新闻部分轮播图宽度与前面轮播图一样 */
+    /* Hide overflow */
 }
 
-.carousel-inner-n {
-    display: flex;
-    flex-wrap: nowrap;
-    width: 100%; /* 新闻部分轮播图宽度与前面轮播图一样 */
+/* Accordion header and link adjustments */
+.accordion .card-header h2 {
+    margin-bottom: 0;
+    /* Remove bottom margin for cleaner header */
 }
 
-.carousel-item-n {
-    flex: 0 0 auto;
-    width: 100%; /* 新闻卡片宽度与轮播图容器宽度一样 */
-    max-width: 100%; /* 设置新闻卡片最大宽度为100% */
-    margin-right: 20px; /* 调整新闻卡片之间的间距 */
+/* Button style modifications */
+/* Button style modifications */
+.accordion .btn-link {
+    display: block;
+    /* Allows width and height to be set */
+    width: 400px;
+    /* Fixed width, change as needed */
+    height: 50px;
+    /* Fixed height, change as needed */
+    line-height: 50px;
+    /* Centers text vertically, should match height */
+    text-align: center;
+    /* Center text horizontally */
+    padding: 0;
+    /* Reset padding as height and line-height are used for centering */
+    font-weight: bold;
+    /* Make font bold */
+    color: rgba(25, 185, 238, 0.829);
+    /* Change font color to blue */
+    font-size: 2rem;
+    background-color: #f8d15097;
+    /* Yellow background */
+    border: none;
+    /* Remove border */
+    box-shadow: none;
+    /* Remove box shadow if any */
+    margin: 0 auto;
+    /* Center button horizontally if block level */
+    outline: none;
+    /* Remove focus outline */
 }
 
-.carousel-item-n img {
+
+/* Remove default border from .card-header if needed */
+.accordion .card-header {
+    border: none;
+    /* Remove border */
+    background-color: transparent;
+    /* Remove any background color */
+}
+
+/* Ensure images fit and maintain aspect ratio */
+.card-img-top {
+    width: 100%;
+    /* Full width of card */
+    height: auto;
+    /* Maintain aspect ratio */
     border-top-left-radius: 10px;
     border-top-right-radius: 10px;
-    width: 100%; /* 图片宽度占满新闻卡片 */
-    height: auto; /* 图片高度自适应 */
 }
 
-
-.carousel-control-prev-icon::before,
-.carousel-control-next-icon::before {
-    content: '';
-    border-width: 5px 5px 0 0;
-    border-color: #fff;
-    border-style: solid;
-    display: inline-block;
-    width: 10px;
-    height: 10px;
-    transform: rotate(-45deg);
+/* Animation section styles */
+.Homeanni-animation-section {
+    margin-top: 2rem;
+    background: linear-gradient(180deg,
+            #c1d3dc 0%,
+            #b9e4f1 20.93%,
+            #4eb2ec 40.44%,
+            #1475ae 120.44%);
+    text-align: center;
+    margin: 0px;
 }
 
+.Homeanni-title {
+    font-weight: bold;
+    color: #a11414;
+    font-size: 3rem;
+    margin-bottom: 0.5rem;
+}
 
+.Homeanni-description {
+    font-weight: bold;
+    /* Makes the font bold */
+    color: white;
+    /* Sets the font color to a red shade */
+    text-align: center;
+    /* Centers the description text */
+    font-size: 1.25rem;
+    /* Sets the size of the description */
+    margin-top: 0.5rem;
+    /* Adds some space above the description */
+}
 
+/* Container for the carousel */
+.Homeanni-container {
+    max-width: 1140px;
+    margin: auto;
+    padding: 0 15px;
+}
+
+/* Carousel base styles */
+.Homeanni-carousel {
+    position: relative;
+}
+
+/* Inner wrapper for carousel items */
+.Homeanni-carousel-inner {
+    position: relative;
+    display: block;
+}
+
+/* Individual carousel items */
+.Homeanni-carousel-item {
+    transition: opacity 0.6s ease;
+}
+
+/* Images in carousel items */
+.Homeanni-item {
+    width: 100%;
+    height: auto;
+    object-fit: cover;
+}
+
+/* Carousel controls */
+.Homeanni-carousel-control-prev,
+.Homeanni-carousel-control-next {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    width: 45px;
+    height: 45px;
+    background-color: rgba(0, 0, 0, 0.5);
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    cursor: pointer;
+}
+
+.Homeanni-carousel-control-prev {
+    left: 10px;
+}
+
+.Homeanni-carousel-control-next {
+    right: 10px;
+}
+
+.Homeanni-carousel-control-prev-icon,
+.Homeanni-carousel-control-next-icon {
+    background-size: 100%;
+    background-image: url('path-to-your-prev-icon.svg');
+    /* Update with your path */
+}
+
+.Homeanni-carousel-control-prev-icon {
+    background: url('../src/assets/icons/left-arrow.svg') center center no-repeat;
+    /* Adjust the path as needed */
+}
+
+.Homeanni-carousel-control-next-icon {
+    background: url('../src/assets/icons/right-arrow.svg') center center no-repeat;
+    /* Adjust the path as needed */
+}
+
+/* Carousel fade effect */
+.carousel-fade .carousel-item {
+    opacity: 0;
+    transition-property: opacity;
+}
+
+.carousel-fade .carousel-item.active,
+.carousel-fade .carousel-item-next.carousel-item-left,
+.carousel-fade .carousel-item-prev.carousel-item-right {
+    opacity: 1;
+}
+
+.carousel-fade .active.carousel-item-left,
+.carousel-fade .active.carousel-item-right {
+    opacity: 0;
+}
+
+.carousel-fade .carousel-item-next,
+.carousel-fade .carousel-item-prev,
+.carousel-fade .carousel-item.active,
+.carousel-fade .active.carousel-item-left,
+.carousel-fade .active.carousel-item-prev {
+    transform: translateX(0);
+    transition: none;
+}
+
+/*Home-History*/
+/* History section styles */
+.history-section {
+    margin-top: 2rem;
+    /* Adjust the top margin as needed */
+    background: linear-gradient(180deg,
+            #2385be 0%,
+            #d9938e 100.44%);
+    padding: 2rem;
+    /* Padding for the section */
+    margin: 0px;
+}
+
+.history-container {
+    max-width: 1140px;
+    /* Or set to 100% for full width */
+    margin: auto;
+    /* Centers the container */
+    padding: 0 15px;
+    /* Padding on the sides */
+}
+
+.history-title {
+    text-align: center;
+    font-weight: bold;
+    color: #a11414;
+    font-size: 3rem;
+    margin-bottom: 0.5rem;
+}
+
+.history-description {
+    font-weight: bold;
+    /* Makes the font bold */
+    color: white;
+    /* Sets the font color to a red shade */
+    text-align: center;
+    /* Centers the description text */
+    font-size: 1.25rem;
+    /* Sets the size of the description */
+    margin-top: 0.5rem;
+    /* Adds some space above the description */
+}
+
+/* Accordion styles */
+.accordion .card {
+    border: none;
+    /* Remove borders between accordion items */
+    border-radius: 0;
+    /* Optional: remove if you want rounded borders */
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+    /* Subtle shadow for each card */
+}
+
+.accordion .card-header {
+    background-color: #e9ecef;
+    /* Header background color */
+    border-bottom: none;
+    /* Remove the border */
+}
+
+.accordion .btn-link {
+    color: #333;
+    /* Button text color */
+    text-decoration: none;
+    /* No underline */
+    background-color: #e9ecef;
+    /* Button background color */
+    width: 100%;
+    text-align: left;
+}
+
+.accordion .collapse.show {
+    background-color: #fff;
+    /* Content background color when expanded */
+}
+
+.accordion .collapse {
+    border: none;
+    /* Remove border */
+}
+
+/* Card body styles */
+.accordion .card-body {
+    padding: 1rem;
+    /* Padding inside the card body */
+}
+
+/* Adjustments for buttons in card header */
+.accordion button:focus {
+    outline: none;
+    /* Remove outline on focus */
+    box-shadow: none;
+    /* Remove Bootstrap's default focus glow */
+}
 
 /* Footer */
 .footer {
-    background: linear-gradient(
-    180deg,
-    #D9938E 12.93%,
-    #BD5452 150.44%
-    );
+    background: linear-gradient(180deg,
+            #D9938E 12.93%,
+            #BD5452 150.44%);
     display: flex;
     flex-direction: column;
     padding: 40px;
@@ -334,11 +676,12 @@ body {
 .social-icons {
     text-align: center;
     gap: 70px;
-    height:50px;
-    width:auto;
+    height: 50px;
+    width: auto;
 }
+
 .social-icon {
     text-align: center;
     height: 50px;
-    width:auto;
+    width: auto;
 }
