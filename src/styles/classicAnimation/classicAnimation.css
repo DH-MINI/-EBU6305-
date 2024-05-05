@@ -1,15 +1,11 @@
+/* 页面整体样式 */
 html {
     height: 100%;
     width: 100%;
-    background: linear-gradient(180deg,
-            #ffece3 12.93%,
-            #bb4f4d 150.44%,
-            #a11414 150.46%);
+    background: linear-gradient(180deg, #ffece3 12.93%, #bb4f4d 150.44%, #a11414 150.46%);
     background-attachment: fixed;
     /* 背景固定，内容滚动时背景不会动 */
 }
-
-
 
 body {
     margin: 0;
@@ -19,10 +15,11 @@ body {
     align-items: center;
     justify-content: center;
     background: transparent;
+    /* 透明背景 */
     width: 100%;
 }
 
-/* Title */
+/* 标题样式 */
 .title {
     color: #a11414;
     text-align: center;
@@ -31,6 +28,7 @@ body {
     font: italic 600 64px Inter, sans-serif;
 }
 
+/* 热门区域样式 */
 .hot {
     width: 80%;
     max-width: 1200px;
@@ -47,9 +45,6 @@ body {
 }
 
 .red-block {
-    /* position: absolute; */
-    /* left: -120px;
-    /* 适当调整这些值 */
     top: 20px;
     /* 适当调整这些值 */
     width: 14px;
@@ -58,14 +53,10 @@ body {
 }
 
 .hottext {
-    /* position: relative;
-    left: 150px;
-    top: -20px; */
     width: auto;
     font-size: 40px;
     font-weight: 900;
     line-height: 46px;
-
     color: #FFFFFF;
 }
 
@@ -87,45 +78,32 @@ body {
 }
 
 .modal {
-    /* To prevent display before positioning */
     display: block;
+    /* To prevent display before positioning */
     visibility: hidden;
 }
 
 .hover-text {
     position: relative;
     display: inline-block;
-    /* 使得 .hover-text 的尺寸与内部的 img 一致 */
 }
 
 .hover-text img {
     display: block;
-    /* 移除图片下方的空白间隙 */
-
-    /* 假设图片宽度应填满其容器 */
-
     width: 150px;
-    /* 设置图片宽度 */
     height: 200px;
-    /* 设置图片高度 */
     object-fit: cover;
     /* 保持图片比例正确 */
-
 }
 
 .hover-text::after {
     content: attr(data-hovertext);
     position: absolute;
     top: 0;
-    /* 覆盖整个图片 */
     left: 0;
-    /* 覆盖整个图片 */
     right: 0;
-    /* 覆盖整个图片 */
     bottom: 0;
-    /* 覆盖整个图片 */
     background-image: linear-gradient(0deg, #5e1313 3%, rgba(161, 20, 20, 0.2) 100%);
-    /* 半透明背景 */
     color: #fffdfd;
     display: flex;
     justify-content: center;
@@ -172,13 +150,14 @@ body {
     font-weight: normal;
     line-height: 24px;
     letter-spacing: 0.08px;
-    color: #6f1905
+    color: #6f1905;
 }
 
+/* 图片项目排版样式 */
 .row {
     display: flex;
     flex-wrap: wrap;
-    justify-content: space-between;
+    justify-content: space-around;
     /* 控制项目在行中的对齐方式 */
 }
 
@@ -187,4 +166,61 @@ body {
     /* 控制每行显示的项目数量 */
     margin-bottom: 20px;
     /* 设置项目之间的间距 */
+}
+
+/* 当屏幕宽度小于768px时，使每个子项目的宽度变为50% */
+@media (max-width: 767px) {
+    .col-md-3 {
+        flex: 0 0 calc(50% - 20px);
+    }
+}
+
+/* 新增的样式，用于每个子项目的外观调整 */
+.row {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-around;
+}
+
+.col-md-3 {
+    flex: 0 0 calc(25% - 20px);
+    margin-bottom: 20px;
+    text-align: center;
+    /* 居中文本 */
+    border: 1px solid #ccc;
+    /* 添加边框 */
+    border-radius: 8px;
+    /* 圆角边框 */
+    padding: 15px;
+    /* 添加内边距 */
+}
+
+.intro {
+    margin-top: 10px;
+    /* 调整文字和图片之间的间距 */
+}
+
+img {
+    max-width: 100%;
+    /* 图片宽度最大为父容器的100% */
+    height: auto;
+    /* 保持图片比例 */
+    display: block;
+    /* 使图片居中显示 */
+    margin: 0 auto;
+    /* 居中图片 */
+}
+
+/* 当屏幕宽度小于768px时，使每个子项目的宽度变为50% */
+@media (max-width: 767px) {
+    .col-md-3 {
+        flex: 0 0 calc(50% - 20px);
+    }
+}
+
+/* 在小屏幕上，设置footer宽度为100% */
+@media (max-width: 767px) {
+    iframe {
+        width: 100%;
+    }
 }

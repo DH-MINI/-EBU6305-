@@ -64,6 +64,11 @@
         function loadPage(page) {
             document.getElementById("content-iframe").src = "../pages/" + page;
         }
+
+        // Toggle navbar collapse on small screens
+        $('.navbar-toggler').click(function () {
+            $('.collapse').toggleClass('show');
+        });
     </script>
 </body>
 
