@@ -8,6 +8,7 @@
     <link href="./componentsStyle/navigation.css" rel="stylesheet">
     <link href="../assets/bootstrap_src/bootstrap.min.css" rel="stylesheet">
     <script src="../assets/bootstrap_src/jquery-3.6.0.min.js"></script>
+    
 
 </head>
 <style>
@@ -34,7 +35,8 @@
 </style>
 
 <body>
-    <header class="header" style="height: auto;transform: translateY(-10px);margin-bottom: -10px;">
+    <div class="tuan"></div>
+    <header class="header" style="height: auto;position: relative; z-index: 10;">
         <div class="row align-items-center" style="width: 100%;margin:auto;max-width: 1360px;">
             <div class="col-md-1 col-xs-6 col-sm-6 header-item logo">
                 <img onclick="loadPage('index.html')" src="../../public/logo.png" alt="Company Logo"
@@ -73,7 +75,9 @@
                 </div>
             </div>
         </div>
+        
     </header>
+    
     <div class="content">
 
         <iframe class="main" id="content-iframe" src="../pages/index.html"
@@ -219,6 +223,22 @@
             $('.navbar-toggler').click(function () {
                 $('.collapse').toggleClass('show');
             });
+            
+
+            // 获取header和tuan元素
+            var header = document.querySelector('.header');
+            var tuan = document.querySelector('.tuan');
+
+            // 当鼠标移入header时，给tuan添加hover类
+            header.addEventListener('mouseover', function() {
+                tuan.classList.add('hover');
+            });
+
+            // 当鼠标移出header时，给tuan移除hover类
+            header.addEventListener('mouseout', function() {
+                tuan.classList.remove('hover');
+            });
+
         </script>
 
 </body>
