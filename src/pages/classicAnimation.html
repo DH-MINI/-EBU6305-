@@ -77,6 +77,7 @@
         }
     }
 </script>
+
 <body class="container gradient-background">
     <div class="music-player-button" onclick="togglePlay()">
         <img src="../assets/image/icon/play.png" alt="Play" id="playButton" style="width: 20px; height: 20px;">
@@ -204,12 +205,13 @@
 <script>
     var audio2 = new Audio('../assets/music/yin2.mp3');
     let links = document.querySelectorAll("button")
-    for(let i = 0;i<links.length;i++){
+    for (let i = 0; i < links.length; i++) {
         console.log(555);
-        links[i].onclick = function(){
+        links[i].onclick = function () {
             console.log(444);
             audio2.play()
         }
     }
 </script>
+
 </html>
