@@ -1,16 +1,19 @@
 /* Global settings */
 html,
 body {
+    font-family: Microsoft YaHei;
     margin: 0px;
     padding: 0px;
     border: 0px;
     width: 100%;
     height: 100%;
     font-family: Inter, sans-serif;
-    background: linear-gradient(180deg,
+    /* background: linear-gradient(180deg,
             #ffece3 12.93%,
             #bb4f4d 150.44%,
-            #a11414 150.46%);
+            #a11414 150.46%); */
+    /* overflow-x: hidden; */
+    background-color: #feebe2;
 }
 
 
@@ -33,10 +36,10 @@ body {
 
 
 .gradient-background {
-    background: linear-gradient(180deg,
+    /* background: linear-gradient(180deg,
             #ffece3 12.93%,
             #bb4f4d 150.44%,
-            #a11414 150.46%);
+            #a11414 150.46%); */
 }
 
 /* Header */
@@ -168,7 +171,7 @@ body {
     position: relative;
     min-height: 500px;
     margin-top: 80px;
-    padding: 0 40px;
+    padding: 0 ;
 }
 
 .hero-content {
@@ -270,12 +273,12 @@ body {
 }
 
 .carousel-control-prev {
-    left: 10px;
+    left: 18px;
     /* 左边距离 */
 }
 
 .carousel-control-next {
-    right: 10px;
+    right: 18px;
     /* 右边距离 */
 }
 
@@ -305,11 +308,11 @@ body {
 
 /* News container styles */
 .news-container {
-    background: linear-gradient(180deg,
+    /* background: linear-gradient(180deg,
             #f4d2ca 0%,
             #dd9d98 30.55%,
             #b9e4f1 120.93%,
-            #4eb2ec 150.44%);
+            #4eb2ec 150.44%); */
     width: 100%;
     /* Full width of the parent element */
     margin: 0;
@@ -388,7 +391,7 @@ body {
     /* Make font bold */
     color: rgba(25, 185, 238, 0.829);
     /* Change font color to blue */
-    font-size: 2rem;
+    font-size: 1.6rem;
     background-color: #f8d15097;
     /* Yellow background */
     border: none;
@@ -423,11 +426,11 @@ body {
 /* Animation section styles */
 .Homeanni-animation-section {
     margin-top: 2rem;
-    background: linear-gradient(180deg,
+    /* background: linear-gradient(180deg,
             #c1d3dc 0%,
             #b9e4f1 20.93%,
             #4eb2ec 40.44%,
-            #1475ae 120.44%);
+            #1475ae 120.44%); */
     text-align: center;
     margin: 0px;
 }
@@ -454,9 +457,9 @@ body {
 
 /* Container for the carousel */
 .Homeanni-container {
-    max-width: 1140px;
+    /* max-width: 1140px; */
     margin: auto;
-    padding: 0 15px;
+    /* padding: 0 15px; */
 }
 
 /* Carousel base styles */
@@ -554,20 +557,20 @@ body {
 .history-section {
     margin-top: 2rem;
     /* Adjust the top margin as needed */
-    background: linear-gradient(180deg,
+    /* background: linear-gradient(180deg,
             #2385be 0%,
-            #d9938e 100.44%);
-    padding: 2rem;
+            #d9938e 100.44%); */
+    padding: 2rem 0;
     /* Padding for the section */
     margin: 0px;
 }
 
 .history-container {
-    max-width: 1140px;
+    /* max-width: 1140px; */
     /* Or set to 100% for full width */
     margin: auto;
     /* Centers the container */
-    padding: 0 15px;
+    /* padding: 0 15px; */
     /* Padding on the sides */
 }
 
@@ -603,7 +606,7 @@ body {
 }
 
 .accordion .card-header {
-    background-color: #e9ecef;
+    background-color: #feebe2;
     /* Header background color */
     border-bottom: none;
     /* Remove the border */
@@ -646,12 +649,38 @@ body {
 
 /* Footer */
 .footer {
-    background: linear-gradient(180deg,
+    /* background: linear-gradient(180deg,
             #D9938E 12.93%,
-            #BD5452 150.44%);
+            #BD5452 150.44%); */
+    background-color: transparent;
     display: flex;
     flex-direction: column;
+    /* justify-content: center; */
+    /* align-items: center; */
     padding: 40px;
+}
+
+@media screen and (max-width: 536px) {
+
+    /* 在屏幕宽度小于或等于1536px 时应用的样式 */
+    .footer {
+        /* background: linear-gradient(180deg,
+                #D9938E 12.93%,
+                #BD5452 150.44%); */
+        background-color: transparent;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        padding: 0px;
+    }
+
+    .header-item {
+        max-width: 50% !important;
+    }
+    .title{
+        font-size: 1.4rem;
+    }
 }
 
 .footer-links {

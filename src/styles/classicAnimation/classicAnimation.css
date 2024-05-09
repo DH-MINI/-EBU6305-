@@ -27,7 +27,28 @@ body {
     margin-top: 40px;
     font: italic 600 64px Inter, sans-serif;
 }
+@media screen and (max-width: 536px) {
 
+    /* 在屏幕宽度小于或等于1536px 时应用的样式 */
+    .footer {
+        /* background: linear-gradient(180deg,
+                #D9938E 12.93%,
+                #BD5452 150.44%); */
+        background-color: transparent;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        padding: 0px;
+    }
+
+    .header-item {
+        max-width: 50% !important;
+    }
+    .title{
+        font-size: 1.4rem;
+    }
+}
 /* 热门区域样式 */
 .hot {
     width: 80%;

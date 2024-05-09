@@ -10,14 +10,37 @@
     <script src="../assets/bootstrap_src/jquery-3.6.0.min.js"></script>
 
 </head>
+<style>
+    @media screen and (max-width: 536px) {
+
+        /* 在屏幕宽度小于或等于1536px 时应用的样式 */
+
+        /* .header-item{
+    max-width: 50%!important;
+} */
+        .logo,
+        .search {
+            display: none;
+        }
+
+        .main {
+            height: calc(100vh - 100px) !important;
+        }
+    }
+
+    .header-right {
+        display: flex;
+    }
+</style>
 
 <body>
-    <header class="header" style="height: auto;">
-        <div class="row align-items-center">
-            <div class="col-md-4">
-                <img src="../../public/logo.png" alt="Company Logo" class="img-fluid logo-img">
+    <header class="header" style="height: auto;transform: translateY(-10px);margin-bottom: -10px;">
+        <div class="row align-items-center" style="width: 100%;">
+            <div class="col-md-1 col-xs-6 col-sm-6 header-item logo">
+                <img onclick="loadPage('index.html')" src="../../public/logo.png" alt="Company Logo"
+                    style="cursor: pointer;" class="img-fluid logo-img">
             </div>
-            <div class="col-md-8">
+            <div class="col-md-10 col-xs-6 header-item header-right">
                 <nav class="navbar navbar-expand-md">
                     <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav"
                         aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
@@ -44,32 +67,165 @@
                         </ul>
                     </div>
                 </nav>
-                <div class="search-bar mt-2">
+                <div class="search-bar mt-2 search" style="max-width: 500px;margin:auto">
                     <img src="./componentsImg/search.png" alt="Search Icon" class="search-icon">
                     <input type="text" placeholder="Search" class="search-input" onkeyup="handleSearch(event)">
                 </div>
             </div>
         </div>
     </header>
+    <div class="content">
 
-    <iframe id="content-iframe" src="../pages/index.html" style="height: calc(100vh - 214px);"></iframe>
+        <iframe class="main" id="content-iframe" src="../pages/index.html"
+            style="height: calc(100vh - 124px);padding-bottom: 20px;"></iframe>
+    </div>
+    <!-- <canvas id="img" src="../assets/image/cloud.png"
+        style="width: 100%;height: calc(100vh - 124px);transform: translateY(-100%);display: none;opacity: .9;" alt=""> -->
+        <img id="img" src="../assets/image/cloud.png"
+        style="width: 100%;height: calc(100vh - 124px);transform: translateY(-100%);display: none;opacity: .9;" alt="">
+        <script>
+            class CloudOpen {
+                constructor() {
+                    this.canv = null;
+                    this.ctx = null;
+                    this.i = 0;
+                    this.speed = 0;
+                    //遮罩云
+                    this.imgMask = new Image();
+                    this.imgMask.crossOrigin = "";
+                    //主图
+                    this.img = new Image();
+                    this.img.crossOrigin = "";
+                }
 
-    <script>
-        // JavaScript code for handling search
-        function handleSearch(event) {
-            // Add your search logic here
-        }
+                init(back, canvas, img, mask, speed = 10) {
+                    this.speed = speed;
+                    this.canv = canvas;
+                    this.ctx = this.canv.getContext("2d");
+                    this.i = 0;
+                    // this.img.onload = () => {
+                    //     // 主图加载完成
+                    //     this.canv.width = this.img.naturalWidth;
+                    //     this.canv.height = this.img.naturalHeight;
+                    // };
+                    this.imgMask.onload = () => {
+                        // 遮罩加载完成
+                        if (back) {
+                            back();
+                        }
+                    };
+                    //主图
+                    // this.img.src = img;
+                    //遮罩云
+                    this.imgMask.src = mask;
+                }
+                step() {
+                    let maskX = (this.canv.width - this.i) / 2;
+                    let maskY = (this.canv.height - this.i) / 2;
+                    this.ctx.clearRect(0, 0, this.canv.width, this.canv.height);
+                    this.ctx.globalCompositeOperation = "source-over";
+                    this.ctx.drawImage(this.imgMask, maskX, maskY, this.i, this.i);
+                    this.ctx.globalCompositeOperation = "source-in";
+                    // this.ctx.drawImage(
+                    //     this.img,
+                    //     0,
+                    //     0,
+                    //     this.img.naturalWidth,
+                    //     this.img.naturalHeight
+                    // );
+                }
+                //复原
+                reset() {
+                    this.i = 0;
+                    this.step();
+                }
+                draw(backFun = null) {
+                    this.i += this.speed;
+                    this.step();
+                    let maxSize = Math.max(this.canv.width, this.canv.height);
+                    console.log(this.i, maxSize, 999);
+                    if (this.i >= maxSize * 5) {
+                        //结束
+                        if (backFun) {
+                            backFun();
+                        }
+                    } else {
+                        window.requestAnimationFrame(() => {
+                            this.draw(backFun);
+                        });
+                    }
+                }
+            }
 
-        // Function to load content in iframe
-        function loadPage(page) {
-            document.getElementById("content-iframe").src = "../pages/" + page;
-        }
+            function render() {
 
-        // Toggle navbar collapse on small screens
-        $('.navbar-toggler').click(function () {
-            $('.collapse').toggleClass('show');
-        });
-    </script>
+                let cloudOpen = new CloudOpen();
+                let canvasCloud = document.getElementById("img");
+                cloudOpen.init(
+                    () => {
+                        //图片资源加载完成
+                        function loop() {
+                            //散开
+                            cloudOpen.draw(() => {
+                                //复原
+                                cloudOpen.reset();
+                            });
+                        }
+                        loop();
+                    },
+                    canvasCloud,
+                    "https://file.idongjia.cn/T3F4CgB7_T1RCvBVdK.png",
+                    "../assets/image/cloud.png",
+                    8
+                );
+            }
+            // JavaScript code for handling search
+            function handleSearch(event) {
+                // Add your search logic here
+            }
+
+            function showImg() {
+                img.style.display = "block"
+                // render()
+                setTimeout(() => {
+                    img.style.display = "none"
+                }, 2500)
+            }
+            showImg()
+            // setTimeout(()=>{
+
+            //     let frame = document.querySelector(".content")
+            //     frame.onclick = function(){
+            //         console.log(333);
+            //     }
+            // },1000)
+            // 音效
+            let links = document.querySelector(".navbar")
+            var audio = new Audio('../assets/music/yin1.mp3');
+            links.onclick = function(){
+                audio.play()
+            }
+            // Function to load content in iframe
+            function loadPage(page) {
+                if (page.indexOf("index") > -1) {
+                    // showImg()
+                } else {
+
+                }
+                document.getElementById("content-iframe").src = "../pages/" + page;
+            }
+
+            // Toggle navbar collapse on small screens
+            $('.navbar-toggler').click(function () {
+                $('.collapse').toggleClass('show');
+            });
+        </script>
+
 </body>
+<style>
+    body {
+        font-family: 'Arial', sans-serif;
+    }
+</style>
 
 </html>
