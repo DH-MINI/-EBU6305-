@@ -1,0 +1,365 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Classic Animation - China Dream Works Studios</title>
+    <link href="../../assets/bootstrap_src/bootstrap.min.css" rel="stylesheet">
+    <script src="../../assets/bootstrap_src/jquery-3.6.0.min.js"></script>
+    <script src="../../assets/bootstrap_src/bootstrap.bundle.min.js"></script>
+    <script src="../../assets/bootstrap_src/popper.min.js"></script>
+    <script src="../../assets/bootstrap_src/v4bootstrap.bundle.min.js"></script>
+
+    <!-- <script src="../scripts/classicAnimation/classicAnimation.js"></script> -->
+    <style>
+        html {
+            height: 100%;
+            width: 100%;
+            background: linear-gradient(180deg, #ffece3 12.93%, #bb4f4d 150.44%, #a11414 150.46%);
+            background-attachment: fixed;
+            /* 背景固定，内容滚动时背景不会动 */
+        }
+
+        body {
+            margin: 0;
+            padding: 0;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            background: transparent;
+            /* 透明背景 */
+            width: 100%;
+        }
+
+        .box:hover {
+            box-shadow: 0 8px 8px 0 grey;
+            transform: translate(0, -10px);
+            transform: scale(1.1);
+            transition: all 0.4s;
+            z-index: 1;
+
+        }
+
+        .box-bd {
+            margin: 20px 0 0 300px;
+            width: 700px;
+        }
+    </style>
+</head>
+
+<body class="container ">
+    <section>
+        <div id="carouselExampleIndicators" class="carousel slide carousel-fade" data-ride="carousel">
+            <div class="carousel-inner">
+                <div class="carousel-item active">
+                    <img src="../../assets/image/animationDetail/74.jpeg" class="d-block w-100" alt="picture 4">
+                </div>
+                <div class="carousel-item">
+                    <img src="../../assets/image/animationDetail/72.jpeg" class="d-block w-100" alt="picture 2">
+                </div>
+                <div class="carousel-item">
+                    <img src="../../assets/image/animationDetail/73.jpeg" class="d-block w-100" alt="picture 3">
+                </div>
+            </div>
+            <button class="carousel-control-prev" type="button" data-target="#carouselExampleIndicators"
+                data-slide="prev">
+                <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+            </button>
+            <button class="carousel-control-next" type="button" data-target="#carouselExampleIndicators"
+                data-slide="next">
+                <span class="carousel-control-next-icon" aria-hidden="true"></span>
+            </button>
+        </div>
+        <section class="card p-5 text-white bg-danger">
+            <div class="card-header">
+                <h1>
+                    <span class="text-warning">《Snipe and Mussel》</span>
+                </h1>
+            </div>
+            <div class="container">
+                <div class="d-flex align-items-cente"> <!--display flex-->
+                    <div>
+                        <p class="my-4">
+                        <div class="card-body">
+                            <p class="card-text">Director: Hu Jinqing</p>
+                            <h5 class="card-title text-warning">Introduction of the movie</h5>
+                            <p class="card-text">
+                                &nbsp; &nbsp; Lamau paper-cut animation 'Snipe and Mussel' tells the story of 'Snipe and
+                                mussel fight for loach and get hurt by the mussel; Snipe retaliate but get caught by the
+                                mussel and hard to break free, finally caught by the fisherman'.
+                            </p>
+                            <p class="card-text">
+                                &nbsp; &nbsp; The film, with its rich ethnic style, delicate and interesting actions,
+                                and implicit philosophy, gives the audience a fresh, elegant, meaningful and chic
+                                artistic enjoyment.
+                            </p>
+                            <p class="card-text"><small class="text-muted">Welcome to the movie.</small></p>
+                        </div>
+                        </p>
+                        <button class="btn btn-warning btn-lg">watch now</button>
+                    </div>
+                    <img type="button" src="../../assets/image/animationDetail/75.jpeg" alt="showcase"
+                        class=" box w-50 h-100  d-none d-md-block " data-toggle="modal" data-target="#exampleModal">
+                    <!-- Modal -->
+                    <div class="modal fade" id="exampleModal" tabindex="-1" aria-labelledby="exampleModalLabel"
+                        aria-hidden="true">
+                        <div class="modal-dialog modal-dialog-centered modal-dialog-scrollable">
+                            <div class="modal-content">
+                                <div class="modal-header">
+                                    <h5 class="modal-title" id="exampleModalLabel">Modal title</h5>
+                                    <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                                        <span aria-hidden="true">&times;</span>
+                                    </button>
+                                </div>
+                                <div class="modal-body">
+                                    <div class="accordion" id="accordionExample">
+                                        <div class="card">
+                                            <div class="card-header" id="headingOne">
+                                                <h2 class="mb-0">
+                                                    <button class="btn btn-link btn-block text-left" type="button"
+                                                        data-toggle="collapse" data-target="#collapseOne"
+                                                        aria-expanded="true" aria-controls="collapseOne">
+                                                        <h5 class="card-title text-warning">Author</h5>
+                                                    </button>
+                                                </h2>
+                                            </div>
+
+                                            <div id="collapseOne" class="collapse show" aria-labelledby="headingOne"
+                                                data-parent="#accordionExample">
+                                                <div class="card-body">
+                                                    <p class="card-text">Directed by: Collective Choreography</p>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class="card">
+                                            <div class="card-header" id="headingTwo">
+                                                <h2 class="mb-0">
+                                                    <button class="btn btn-link btn-block text-left collapsed"
+                                                        type="button" data-toggle="collapse" data-target="#collapseTwo"
+                                                        aria-expanded="false" aria-controls="collapseTwo">
+                                                        <h5 class="card-title text-warning">Introduction of the movie
+                                                        </h5>
+                                                    </button>
+                                                </h2>
+                                            </div>
+                                            <div id="collapseTwo" class="collapse" aria-labelledby="headingTwo"
+                                                data-parent="#accordionExample">
+                                                <div class="card-body">
+                                                    <p class="card-text">
+                                                        &nbsp; &nbsp; Lamau paper-cut animation 'Snipe and Mussel' tells the story of 'Snipe and
+                                                        mussel fight for loach and get hurt by the mussel; Snipe retaliate but get caught by the
+                                                        mussel and hard to break free, finally caught by the fisherman'.
+                                                    </p>
+                                                    <p class="card-text">
+                                                        &nbsp; &nbsp; The film, with its rich ethnic style, delicate and interesting actions,
+                                                        and implicit philosophy, gives the audience a fresh, elegant, meaningful and chic
+                                                        artistic enjoyment.
+                                                    </p>
+                                                </div>
+                                            </div>
+                                            <div class="card">
+                                                <div class="card-header" id="headingThree">
+                                                    <h2 class="mb-0">
+                                                        <button class="btn btn-link btn-block text-left collapsed"
+                                                            type="button" data-toggle="collapse" data-target="#collapseThree"
+                                                            aria-expanded="false" aria-controls="collapseTwo">
+                                                            <h5 class="card-title text-warning"> Awards
+                                                            </h5>
+                                                        </button>
+                                                    </h2>
+                                                </div>
+                                                <div id="collapseThree" class="collapse" aria-labelledby="headingThree"
+                                                    data-parent="#accordionExample">
+                                                    <div class="card-body">
+                                                        <ul>
+                                                            <li><strong>1983</strong>: Cultural Ministry of China Excellent Film Award</li>
+                                                            <li><strong>1984</strong>: 4th China Film Golden Rooster Award for Best Animated Film</li>
+                                                            <li><strong>1984</strong>: 34th Berlin International Film Festival - Silver Bear Award for Short Film</li>
+                                                            <li><strong>1983</strong>: 6th Zagreb International Animation Film Festival - Special Award</li>
+                                                            <li><strong>1983</strong>: Toronto International Animation Film Festival - Special Award</li>
+                                                          </ul>
+                                                        
+                                                    </div>
+                                                </div>
+
+                                        </div>
+                                    </div>
+
+                                </div>
+                                <div class="modal-footer">
+                                    <button type="button" class="btn btn-warning" data-dismiss="modal">Close</button>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+        </section>
+        <section>
+            <div class="card-group">
+                <div class="card">
+                    <img type="button" src="../../assets/image/animationDetail/71.jpeg" alt="picture 1"
+                        class=" box card-img-top " data-toggle="modal" data-target="#Modal1">
+                    <!-- Modal -->
+                    <div class="modal fade" id="Modal1" tabindex="-1" aria-labelledby="exampleModalLabel"
+                        aria-hidden="true">
+                        <div class="modal-dialog">
+                            <div class="modal-content">
+                                <div class="modal-header">
+                                    <h5 class="modal-title text-warning" id="exampleModalLabel">"Little Tadpole Looks
+                                        for Mama": A Story of Discovery and Belonging</h5>
+                                    <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                                        <span aria-hidden="true">&times;</span>
+                                    </button>
+                                </div>
+                                <div class="modal-body">
+
+                                    <h5>The Journey Begins</h5>
+                                    <ul>
+                                        <li>A Lost Tadpole: The little tadpole sets out on a quest to find his mother.
+                                        </li>
+                                        <li>Encounters with Different Animals: He learns about the world from various
+                                            animals.</li>
+                                        <li>The Importance of Patience and Perseverance: He faces challenges but never
+                                            gives up.</li>
+                                    </ul>
+                                    <h5>The Joy of Reunion</h5>
+                                    <ul>
+                                        <li>Finding His Mother: The little tadpole finally finds his mother and is
+                                            reunited.</li>
+                                        <li>A Sense of Belonging: He finds his place in the world and feels a sense of
+                                            belonging.</li>
+                                        <li>A Celebration of Life: The film ends with a joyous celebration of life.</li>
+                                    </ul>
+                                    <h5>Themes and Significance</h5>
+                                    <ul>
+                                        <li>Power of Curiosity and Exploration: The little tadpole's journey is driven
+                                            by curiosity and exploration.</li>
+                                        <li>Importance of Family and Belonging: The film emphasizes the importance of
+                                            family and belonging.</li>
+                                        <li>Celebration of Diversity: The film celebrates the diversity of life in the
+                                            pond.</li>
+                                    </ul>
+                                </div>
+                                <div class="modal-footer">
+                                    <button type="button" class="btn btn-warning" data-dismiss="modal">Close</button>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="card-body">
+                        <p class="card-text"><small class="text-muted">"Little Tadpole Looks for Mama": A Story of
+                                Discovery and Belonging</small>
+                        </p>
+                    </div>
+                </div>
+                <div class="card">
+                    <img type="button" src="../../assets/image/animationDetail/72.jpeg" alt="picture 2"
+                        class=" box card-img-top " data-toggle="modal" data-target="#Modal2">
+                    <!-- Modal -->
+                    <div class="modal fade" id="Modal2" tabindex="-1" aria-labelledby="exampleModalLabel"
+                        aria-hidden="true">
+                        <div class="modal-dialog">
+                            <div class="modal-content">
+                                <div class="modal-header">
+                                    <h5 class="modal-title text-warning" id="exampleModalLabel">"Little Tadpole Looks
+                                        for Mama": A Timeless Story with Enduring Educational Significance</h5>
+                                    <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                                        <span aria-hidden="true">&times;</span>
+                                    </button>
+                                </div>
+                                <div class="modal-body">
+                                    <h5>Educational Significance</h5>
+                                    <ul>
+                                        <li>Curiosity and Exploration: Encourages children to be curious and explore the
+                                            world.</li>
+                                        <li>Importance of Family and Belonging: Teaches the value of family, friends,
+                                            and community.</li>
+                                        <li>Respect for Diversity: Promotes tolerance and understanding among children.
+                                        </li>
+                                        <li>Perseverance and Determination: Teaches the importance of not giving up on
+                                            dreams and goals.</li>
+                                        <li>Importance of Patience: Teaches the value of patience and not giving up when
+                                            things don't happen immediately.</li>
+                                    </ul>
+                                    <h5>Cultural Influence</h5>
+                                    <ul>
+                                        <li>Beloved Classic: A beloved classic in Chinese animation, enjoyed by
+                                            generations.</li>
+                                        <li>International Recognition: Received international recognition for artistic
+                                            merit and educational value.</li>
+                                        <li>Cultural Symbol: The little tadpole has become a cultural symbol in China.
+                                        </li>
+                                    </ul>
+                                </div>
+                                <div class="modal-footer">
+                                    <button type="button" class="btn btn-warning" data-dismiss="modal">Close</button>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="card-body">
+                        <p class="card-text"><small class="text-muted">Little Tadpole Looks for Mama": A Timeless Story
+                                with Enduring Educational Significance</small></p>
+                    </div>
+                </div>
+                <div class="card">
+                    <img type="button" src="../../assets/image/animationDetail/73.jpeg" alt="picture 3"
+                        class=" box card-img-top " data-toggle="modal" data-target="#Modal3">
+                    <!-- Modal -->
+                    <div class="modal fade" id="Modal3" tabindex="-1" aria-labelledby="exampleModalLabel"
+                        aria-hidden="true">
+                        <div class="modal-dialog">
+                            <div class="modal-content">
+                                <div class="modal-header">
+                                    <h5 class="modal-title text-warning" id="exampleModalLabel">Little Tadpole Looks for
+                                        Mama": A Groundbreaking Film in Chinese Animation History
+                                    </h5>
+                                    <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                                        <span aria-hidden="true">&times;</span>
+                                    </button>
+                                </div>
+                                <div class="modal-body">
+                                    <h5>Historical Significance</h5>
+                                    <ul>
+                                        <li>Early Masterpiece: One of the first Chinese animated films after 1949.</li>
+                                        <li>Innovative Techniques: Employed innovative ink-and-wash animation
+                                            techniques.</li>
+                                        <li>Educational Focus: One of the first Chinese animated films created for
+                                            educational purposes.</li>
+                                    </ul>
+                                    <h5>Artistic Merit and Recognition</h5>
+                                    <ul>
+                                        <li>Critical Acclaim: Received critical acclaim for its artistic merit and won
+                                            numerous awards.</li>
+                                        <li>International Recognition: Screened at film festivals worldwide and earned
+                                            international recognition.</li>
+                                        <li>Cultural Impact: Became a beloved classic in China and part of Chinese
+                                            popular culture.</li>
+                                    </ul>
+                                    <h5>Awards and Honors</h5>
+                                    <ul>
+                                        <li>Golden Rooster Award for Best Animated Film (1962)</li>
+                                        <li>Hundred Flowers Award for Best Animated Film (1963)</li>
+                                        <li>Selected for the Cannes Film Festival (1961)</li>
+                                        <li>Selected for the Berlin International Film Festival (1962)</li>
+                                    </ul>
+                                </div>
+                                <div class="modal-footer">
+                                    <button type="button" class="btn btn-warning" data-dismiss="modal">Close</button>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="card-body">
+                        <p class="card-text"><small class="text-muted">Little Tadpole Looks for Mama": A Groundbreaking
+                                Film in Chinese Animation History</small></p>
+                    </div>
+                </div>
+            </div>
+        </section>
+        <iframe src="../../components/footer.html" width="100%" height="157" frameborder="0" scrolling="no"></iframe>
+
+</body>
+
+</html>
