@@ -136,22 +136,22 @@
     <script>
         // Sample data - replace this with your actual data
         const contentData = [
-            { title: "The Legend Of Sealed Book", image: "../assets/image/classicAnimation/nvYaoGuai.jpg", hoverText: "An imaginative and creative animated film." },
-            { title: "Ginseng Fruit", image: "../assets/image/classicAnimation/11.jpg", hoverText: "Adapted from the classic Chinese literary work 'Journey to the West'." },
-            { title: "Three Monks", image: "../assets/image/classicAnimation/monk.webp", hoverText: "It integrates modern comic techniques into its own national style." },
-            { title: "Prince Nezha's Triumph Against Dragon King", image: "../assets/image/classicAnimation/neZhaNaoHai.jpg", hoverText: "Childhood memories of Chinese people." },
-            { title: "Yao-Chinese Folktales", image: "../assets/image/classicAnimation/zhongGuoQiTan.webp", hoverText: "The clean and pure Chinese art films have returned." },
-            { title: "Small Tadpole Looks for Mother", image: "../assets/image/classicAnimation/keDou.webp", hoverText: "China's first ink wash animation film." },
-            { title: "Snipe-Clam Grapple", image: "../assets/image/classicAnimation/1.jpg", hoverText: "Adapted from a traditional Chinese fable." },
-            { title: "Calabash Brothers", image: "../assets/image/classicAnimation/10.webp", hoverText: "One of the most influential representative works of Chinese animation." },
-            { title: "The Snow Child", image: "../assets/image/classicAnimation/3.jpg", hoverText: "Simple and pure design and story." },
-            { title: "No-brain and Unhappiness", image: "../assets/image/classicAnimation/4.jpg", hoverText: "A representative work of the Chinese School of Animation." },
-            { title: "Shuke and Beita", image: "../assets/image/classicAnimation/5.jpg", hoverText: "A partial critique of the educational system at the time." },
-            { title: "The Story of Avanti", image: "../assets/image/classicAnimation/12.jpg", hoverText: "A person with a sense of justice who can uphold their principles." },
-            { title: "Mad for Music", image: "../assets/image/classicAnimation/7.jpg", hoverText: "An alternative in Chinese animation." },
-            { title: "A Big Cabbage", image: "../assets/image/classicAnimation/8.jpg", hoverText: "Innovative origami animation." },
-            { title: "Pigsy Eats Watermelon", image: "../assets/image/classicAnimation/11.webp", hoverText: "Paper-cut animation born for the exploration of animation art." },
-            { title: "Sanmao Wandering Record", image: "../assets/image/classicAnimation/13.jpg", hoverText: "It mainly portrays the confrontation and struggle between justice and evil, light and darkness." }
+            { title: "The Legend Of Sealed Book", image: "../assets/image/classicAnimation/nvYaoGuai.jpg", hoverText: "An imaginative and creative animated film.", link: "./animationDetails/animationDetail.html" },
+            { title: "Ginseng Fruit", image: "../assets/image/classicAnimation/11.jpg", hoverText: "Adapted from the classic Chinese literary work 'Journey to the West'.", link: "./animationDetails/animationDetail.html" },
+            { title: "Three Monks", image: "../assets/image/classicAnimation/monk.webp", hoverText: "It integrates modern comic techniques into its own national style.", link: "./animationDetails/animationDetail.html" },
+            { title: "Prince Nezha's Triumph Against Dragon King", image: "../assets/image/classicAnimation/neZhaNaoHai.jpg", hoverText: "Childhood memories of Chinese people.", link: "./animationDetails/animationDetail.html" },
+            { title: "Yao-Chinese Folktales", image: "../assets/image/classicAnimation/zhongGuoQiTan.webp", hoverText: "The clean and pure Chinese art films have returned.", link: "./animationDetails/animationDetail.html" },
+            { title: "Small Tadpole Looks for Mother", image: "../assets/image/classicAnimation/keDou.webp", hoverText: "China's first ink wash animation film.", link: "./animationDetails/animationDetail.html" },
+            { title: "Snipe-Clam Grapple", image: "../assets/image/classicAnimation/1.jpg", hoverText: "Adapted from a traditional Chinese fable.", link: "./animationDetails/animationDetail.html" },
+            { title: "Calabash Brothers", image: "../assets/image/classicAnimation/10.webp", hoverText: "One of the most influential representative works of Chinese animation.", link: "./animationDetails/animationDetail.html" },
+            { title: "The Snow Child", image: "../assets/image/classicAnimation/3.jpg", hoverText: "Simple and pure design and story.", link: "./animationDetails/animationDetail.html" },
+            { title: "No-brain and Unhappiness", image: "../assets/image/classicAnimation/4.jpg", hoverText: "A representative work of the Chinese School of Animation.", link: "./animationDetails/animationDetail.html" },
+            { title: "Shuke and Beita", image: "../assets/image/classicAnimation/5.jpg", hoverText: "A partial critique of the educational system at the time.", link: "./animationDetails/animationDetail.html" },
+            { title: "The Story of Avanti", image: "../assets/image/classicAnimation/12.jpg", hoverText: "A person with a sense of justice who can uphold their principles.", link: "./animationDetails/animationDetail.html" },
+            { title: "Mad for Music", image: "../assets/image/classicAnimation/7.jpg", hoverText: "An alternative in Chinese animation.", link: "./animationDetails/animationDetail.html" },
+            { title: "A Big Cabbage", image: "../assets/image/classicAnimation/8.jpg", hoverText: "Innovative origami animation.", link: "./animationDetails/animationDetail.html" },
+            { title: "Pigsy Eats Watermelon", image: "../assets/image/classicAnimation/11.webp", hoverText: "Paper-cut animation born for the exploration of animation art.", link: "./animationDetails/animationDetail.html" },
+            { title: "Sanmao Wandering Record", image: "../assets/image/classicAnimation/13.jpg", hoverText: "It mainly portrays the confrontation and struggle between justice and evil, light and darkness.", link: "./animationDetails/animationDetail.html" }
             // Add more items as needed
         ];
 
@@ -164,7 +164,7 @@
                         <div class="col-md-3">
                             <div class="hover-text" data-hovertext="${item.hoverText}">
                                 <img src="${item.image}" class="img-fluid">
-                                <a href="#" title="这是鼠标悬浮文案">details</a>
+                                <a href="${item.link}" title="details">details</a>
                             </div>
                             <p class="intro">${item.title}</p>
                         </div>
