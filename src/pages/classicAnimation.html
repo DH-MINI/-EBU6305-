@@ -1,6 +1,6 @@
 <!DOCTYPE html>
 <html lang="en">
-    
+
 
 <head>
     <meta charset="UTF-8">
@@ -14,7 +14,6 @@
     <script src="../assets/bootstrap_src/popper.min.js"></script>
     <script src="../assets/bootstrap_src/v4bootstrap.bundle.min.js"></script>
 
-    <!-- <script src="../scripts/classicAnimation/classicAnimation.js"></script> -->
 
 
 </head>
@@ -68,8 +67,10 @@
         <div class="modal-dialog modal-lg" role="document">
             <div class="modal-content">
                 <div class="modal-header">
-                    <h5 class="modal-title" id="exampleModalLabel">动画详情</h5>
-                    <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+
+                    <h5 class="modal-title" id="exampleModalLabel">Animation Details</h5>
+                    <button type="button" class="close" aria-label="Close">
+
                         <span aria-hidden="true">&times;</span>
                     </button>
                 </div>
@@ -77,9 +78,7 @@
                     <!-- 这里是要加载的外部 HTML 内容 -->
                     <iframe id="externalContent" style="width: 100%; height: 100%; border: none;"></iframe>
                 </div>
-                <div class="modal-footer">
-                    <button type="button" class="btn btn-secondary" data-dismiss="modal">关闭</button>
-                </div>
+
             </div>
         </div>
     </div>
@@ -88,6 +87,7 @@
     <div class="music-player-button" onclick="togglePlay()">
         <img src="../assets/image/icon/play.png" alt="Play" id="playButton" style="width: 20px; height: 20px;">
     </div>
+
     <h1 class="title mt-4">Classic Animation</h1>
     <div id="classicAnimationCarousel" class="carousel slide" data-ride="carousel">
         <div class="carousel-inner">
@@ -237,8 +237,16 @@
                 $('#exampleModal').modal('show'); // 显示模态窗口
                 event.preventDefault(); // 阻止按钮的默认行为
             });
+
+
+            // 手动关闭模态窗口的按钮点击事件
+            $('.modal .close').click(function () {
+                $('#exampleModal').modal('hide');
+            });
         });
     </script>
+
+
 
     <script>
         var audio2 = new Audio('../assets/music/yin2.mp3');

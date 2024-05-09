@@ -35,6 +35,7 @@
 </style>
 
 <body>
+
     <div class="tuan"></div>
     <header class="header" style="height: auto;position: relative; z-index: 10;">
         <div class="row align-items-center" style="width: 100%;margin:auto;max-width: 1360px;">
@@ -85,139 +86,140 @@
     </div>
     <!-- <canvas id="img" src="../assets/image/cloud.png"
         style="width: 100%;height: calc(100vh - 124px);transform: translateY(-100%);display: none;opacity: .9;" alt=""> -->
-        <img id="img" src="../assets/image/cloud.png"
+    <img id="img" src="../assets/image/cloud.png"
         style="width: 100%;height: calc(100vh - 124px);transform: translateY(-100%);display: none;opacity: .9;" alt="">
-        <script>
-            class CloudOpen {
-                constructor() {
-                    this.canv = null;
-                    this.ctx = null;
-                    this.i = 0;
-                    this.speed = 0;
-                    //遮罩云
-                    this.imgMask = new Image();
-                    this.imgMask.crossOrigin = "";
-                    //主图
-                    this.img = new Image();
-                    this.img.crossOrigin = "";
-                }
+    <script>
+        class CloudOpen {
+            constructor() {
+                this.canv = null;
+                this.ctx = null;
+                this.i = 0;
+                this.speed = 0;
+                //遮罩云
+                this.imgMask = new Image();
+                this.imgMask.crossOrigin = "";
+                //主图
+                this.img = new Image();
+                this.img.crossOrigin = "";
+            }
 
-                init(back, canvas, img, mask, speed = 10) {
-                    this.speed = speed;
-                    this.canv = canvas;
-                    this.ctx = this.canv.getContext("2d");
-                    this.i = 0;
-                    // this.img.onload = () => {
-                    //     // 主图加载完成
-                    //     this.canv.width = this.img.naturalWidth;
-                    //     this.canv.height = this.img.naturalHeight;
-                    // };
-                    this.imgMask.onload = () => {
-                        // 遮罩加载完成
-                        if (back) {
-                            back();
-                        }
-                    };
-                    //主图
-                    // this.img.src = img;
-                    //遮罩云
-                    this.imgMask.src = mask;
+            init(back, canvas, img, mask, speed = 10) {
+                this.speed = speed;
+                this.canv = canvas;
+                this.ctx = this.canv.getContext("2d");
+                this.i = 0;
+                // this.img.onload = () => {
+                //     // 主图加载完成
+                //     this.canv.width = this.img.naturalWidth;
+                //     this.canv.height = this.img.naturalHeight;
+                // };
+                this.imgMask.onload = () => {
+                    // 遮罩加载完成
+                    if (back) {
+                        back();
+                    }
+                };
+                //主图
+                // this.img.src = img;
+                //遮罩云
+                this.imgMask.src = mask;
+            }
+            step() {
+                let maskX = (this.canv.width - this.i) / 2;
+                let maskY = (this.canv.height - this.i) / 2;
+                this.ctx.clearRect(0, 0, this.canv.width, this.canv.height);
+                this.ctx.globalCompositeOperation = "source-over";
+                this.ctx.drawImage(this.imgMask, maskX, maskY, this.i, this.i);
+                this.ctx.globalCompositeOperation = "source-in";
+                // this.ctx.drawImage(
+                //     this.img,
+                //     0,
+                //     0,
+                //     this.img.naturalWidth,
+                //     this.img.naturalHeight
+                // );
+            }
+            //复原
+            reset() {
+                this.i = 0;
+                this.step();
+            }
+            draw(backFun = null) {
+                this.i += this.speed;
+                this.step();
+                let maxSize = Math.max(this.canv.width, this.canv.height);
+                console.log(this.i, maxSize, 999);
+                if (this.i >= maxSize * 5) {
+                    //结束
+                    if (backFun) {
+                        backFun();
+                    }
+                } else {
+                    window.requestAnimationFrame(() => {
+                        this.draw(backFun);
+                    });
                 }
-                step() {
-                    let maskX = (this.canv.width - this.i) / 2;
-                    let maskY = (this.canv.height - this.i) / 2;
-                    this.ctx.clearRect(0, 0, this.canv.width, this.canv.height);
-                    this.ctx.globalCompositeOperation = "source-over";
-                    this.ctx.drawImage(this.imgMask, maskX, maskY, this.i, this.i);
-                    this.ctx.globalCompositeOperation = "source-in";
-                    // this.ctx.drawImage(
-                    //     this.img,
-                    //     0,
-                    //     0,
-                    //     this.img.naturalWidth,
-                    //     this.img.naturalHeight
-                    // );
-                }
-                //复原
-                reset() {
-                    this.i = 0;
-                    this.step();
-                }
-                draw(backFun = null) {
-                    this.i += this.speed;
-                    this.step();
-                    let maxSize = Math.max(this.canv.width, this.canv.height);
-                    console.log(this.i, maxSize, 999);
-                    if (this.i >= maxSize * 5) {
-                        //结束
-                        if (backFun) {
-                            backFun();
-                        }
-                    } else {
-                        window.requestAnimationFrame(() => {
-                            this.draw(backFun);
+            }
+        }
+
+        function render() {
+
+            let cloudOpen = new CloudOpen();
+            let canvasCloud = document.getElementById("img");
+            cloudOpen.init(
+                () => {
+                    //图片资源加载完成
+                    function loop() {
+                        //散开
+                        cloudOpen.draw(() => {
+                            //复原
+                            cloudOpen.reset();
                         });
                     }
-                }
-            }
+                    loop();
+                },
+                canvasCloud,
+                "https://file.idongjia.cn/T3F4CgB7_T1RCvBVdK.png",
+                "../assets/image/cloud.png",
+                8
+            );
+        }
+        // JavaScript code for handling search
+        function handleSearch(event) {
+            // Add your search logic here
+        }
 
-            function render() {
+        function showImg() {
+            img.style.display = "block"
+            // render()
+            setTimeout(() => {
+                img.style.display = "none"
+            }, 2500)
+        }
+        showImg()
+        // setTimeout(()=>{
 
-                let cloudOpen = new CloudOpen();
-                let canvasCloud = document.getElementById("img");
-                cloudOpen.init(
-                    () => {
-                        //图片资源加载完成
-                        function loop() {
-                            //散开
-                            cloudOpen.draw(() => {
-                                //复原
-                                cloudOpen.reset();
-                            });
-                        }
-                        loop();
-                    },
-                    canvasCloud,
-                    "https://file.idongjia.cn/T3F4CgB7_T1RCvBVdK.png",
-                    "../assets/image/cloud.png",
-                    8
-                );
-            }
-            // JavaScript code for handling search
-            function handleSearch(event) {
-                // Add your search logic here
-            }
+        //     let frame = document.querySelector(".content")
+        //     frame.onclick = function(){
+        //         console.log(333);
+        //     }
+        // },1000)
+        // 音效
+        let links = document.querySelector(".navbar")
+        var audio = new Audio('../assets/music/yin1.mp3');
+        links.onclick = function () {
+            audio.play()
+        }
+        // Function to load content in iframe
+        function loadPage(page) {
+            if (page.indexOf("index") > -1) {
+                // showImg()
+            } else {
 
-            function showImg() {
-                img.style.display = "block"
-                // render()
-                setTimeout(() => {
-                    img.style.display = "none"
-                }, 2500)
             }
-            showImg()
-            // setTimeout(()=>{
+            document.getElementById("content-iframe").src = "../pages/" + page;
+        }
 
-            //     let frame = document.querySelector(".content")
-            //     frame.onclick = function(){
-            //         console.log(333);
-            //     }
-            // },1000)
-            // 音效
-            let links = document.querySelector(".navbar")
-            var audio = new Audio('../assets/music/yin1.mp3');
-            links.onclick = function(){
-                audio.play()
-            }
-            // Function to load content in iframe
-            function loadPage(page) {
-                if (page.indexOf("index") > -1) {
-                    // showImg()
-                } else {
-
-                }
-                document.getElementById("content-iframe").src = "../pages/" + page;
-            }
 
             // Toggle navbar collapse on small screens
             $('.navbar-toggler').click(function () {
@@ -240,6 +242,13 @@
             });
 
         </script>
+ <script>
+        // Toggle navbar collapse on small screens
+        $('.navbar-toggler').click(function () {
+            $('.collapse').toggleClass('show');
+        });
+    </script>
+
 
 </body>
 <style>
