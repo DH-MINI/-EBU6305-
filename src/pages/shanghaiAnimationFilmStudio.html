@@ -5,82 +5,222 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Shanghai Animation Film Studio</title>
-    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+    <link rel="stylesheet" href="../assets/bootstrap_src/v4.5.2bootstrap.min.css">
+    <style>
+        html {
+            height: 100%;
+            width: 100%;
+            background: linear-gradient(180deg, #ffece3 12.93%, #bb4f4d 150.44%, #a11414 150.46%);
+            background-attachment: fixed;
+        }
+
+        body {
+            margin: 0;
+            padding: 0;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            background: transparent;
+            width: 100%;
+        }
+
+        .title {
+            color: #a11414;
+            text-align: center;
+            letter-spacing: -1.92px;
+            margin-top: 40px;
+            font: italic 600 64px 'Inter', sans-serif;
+        }
+
+        .container {
+            margin-top: 40px;
+            padding: 20px;
+            background-color: #fff;
+            border-radius: 10px;
+            box-shadow: 0 0 20px rgba(0, 0, 0, 0.1);
+            font-family: 'Inter', sans-serif;
+        }
+
+        .section {
+            margin-bottom: 40px;
+        }
+
+        @media screen and (max-width: 536px) {
+            .footer {
+                background-color: transparent;
+                display: flex;
+                flex-direction: column;
+                justify-content: center;
+                align-items: center;
+                padding: 0px;
+            }
+
+            .header-item {
+                max-width: 50% !important;
+            }
+
+            .title {
+                font-size: 1.4rem;
+            }
+        }
+    </style>
+
 </head>
 
 <body>
-
-    <div class="jumbotron">
-        <img src="path_to_image.jpg" alt="Shanghai Animation Film Studio" class="img-fluid">
-        <h1 class="display-4">Shanghai Animation Film Studio</h1>
-        <p class="lead">Briefly introduce the establishment time, address, and official website of Shanghai Animation
-            Film Studio.</p>
+    <div class="progress" id="progressBar" style="width: 100%; position: fixed; top: 0; z-index: 999;">
+        <div class="progress-bar progress-bar-striped progress-bar-animated bg-danger" role="progressbar"
+            style="width: 0%;" id="myProgressBar"></div>
     </div>
 
-    <div class="container">
-        <div class="row">
-            <div class="col">
-                <h2>History</h2>
-                <p>Briefly introduce the development history of Shanghai Animation Film Studio, including past
-                    directors.</p>
+    <h1 class="title mt-4">Shanghai Animation Film Studio</h1>
+
+    <div class="container" style="opacity: 1;">
+        <div class="section">
+            <h2>History</h2>
+            <p>Shanghai Animation Film Studio (abbreviated as Shanghai Animation) is one of the oldest animation
+                studios in China, founded in April 1957 and located at 618 Wanhong Road, Changning District, Shanghai.
+            </p>
+            <p>Shanghai Animation has created numerous classic animated works with its unique artistic style and
+                superb production techniques, such as "Havoc in Heaven", "The Little Tadpole Looking for Mom", "The
+                Black Cat Sheriff", "The Calabash Brothers", and many others, which are deeply loved by audiences.
+            </p>
+        </div>
+        <div class="section">
+            <h2>Map</h2>
+            <div class="embed-responsive embed-responsive-16by9">
+                <iframe class="embed-responsive-item"
+                    src="https://maps.google.com/maps?q=上海市静安区万航渡路618号&t=&z=13&ie=UTF8&iwloc=&output=embed"
+                    allowfullscreen></iframe>
             </div>
         </div>
-        <div class="row">
-            <div class="col">
-                <h2>Map</h2>
-                <div class="embed-responsive embed-responsive-16by9">
-                    <iframe class="embed-responsive-item"
-                        src="https://maps.google.com/maps?q=上海市静安区万航渡路618号&t=&z=13&ie=UTF8&iwloc=&output=embed"
-                        allowfullscreen></iframe>
-                </div>
-            </div>
-        </div>
-        <div class="row">
-            <div class="col">
-                <h2>Honors</h2>
-                <p>List the major awards received by Shanghai Animation Film Studio.</p>
-            </div>
-        </div>
-        <div class="row">
-            <div class="col">
-                <h2>Classic Works</h2>
-                <div class="card-deck">
+        <div class="section">
+            <h2>Honors</h2>
+            <div class="row">
+                <div class="col-md-4">
                     <div class="card">
-                        <img src="path_to_image.jpg" class="card-img-top" alt="Classic Work 1">
+                        <img src="path_to_image.jpg" class="card-img-top" alt="Golden Rooster Award">
                         <div class="card-body">
-                            <h5 class="card-title">Classic Work 1</h5>
-                            <p class="card-text">Briefly describe the classic work.</p>
-                        </div>
-                    </div>
-                    <div class="card">
-                        <img src="path_to_image.jpg" class="card-img-top" alt="Classic Work 2">
-                        <div class="card-body">
-                            <h5 class="card-title">Classic Work 2</h5>
-                            <p class="card-text">Briefly describe the classic work.</p>
-                        </div>
-                    </div>
-                    <div class="card">
-                        <img src="path_to_image.jpg" class="card-img-top" alt="Classic Work 3">
-                        <div class="card-body">
-                            <h5 class="card-title">Classic Work 3</h5>
-                            <p class="card-text">Briefly describe the classic work.</p>
+                            <h5 class="card-title">Golden Rooster Award</h5>
+                            <p class="card-text">Won for outstanding animation.</p>
                         </div>
                     </div>
                 </div>
+                <div class="col-md-4">
+                    <div class="card">
+                        <img src="path_to_image.jpg" class="card-img-top" alt="Hundred Flowers Award">
+                        <div class="card-body">
+                            <h5 class="card-title">Hundred Flowers Award</h5>
+                            <p class="card-text">Recognized for excellence in animation.</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-4">
+                    <div class="card">
+                        <img src="path_to_image.jpg" class="card-img-top" alt="Golden Monkey Award">
+                        <div class="card-body">
+                            <h5 class="card-title">Golden Monkey Award</h5>
+                            <p class="card-text">Received at the Animation Film Festival.</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="row mt-4">
+                <div class="col-md-4">
+                    <div class="card">
+                        <img src="path_to_image.jpg" class="card-img-top" alt="Golden Palm Award">
+                        <div class="card-body">
+                            <h5 class="card-title">Golden Palm Award</h5>
+                            <p class="card-text">Achieved at the Cannes Film Festival.</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-4">
+                    <div class="card">
+                        <img src="path_to_image.jpg" class="card-img-top" alt="Golden Bear Award">
+                        <div class="card-body">
+                            <h5 class="card-title">Golden Bear Award</h5>
+                            <p class="card-text">Received at the Berlin Film Festival.</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-4">
+                    <div class="card">
+                        <img src="path_to_image.jpg" class="card-img-top" alt="Golden Lion Award">
+                        <div class="card-body">
+                            <h5 class="card-title">Golden Lion Award</h5>
+                            <p class="card-text">Achieved at the Venice Film Festival.</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="row mt-4">
+                <div class="col-md-4">
+                    <div class="card">
+                        <img src="path_to_image.jpg" class="card-img-top" alt="Academy Award">
+                        <div class="card-body">
+                            <h5 class="card-title">Academy Award</h5>
+                            <p class="card-text">Received at the prestigious Academy Awards.</p>
+                        </div>
+                    </div>
+                </div>
             </div>
         </div>
-        <div class="row">
-            <div class="col">
-                <h2>Contact</h2>
-                <p>Provide contact information for Shanghai Animation Film Studio, including address, phone number, and
-                    official website link.</p>
+        <style>
+            .card:hover {
+                transform: scale(1.1);
+            }
+        </style>
+        <div class="section">
+            <h2>Classic Works</h2>
+            <div class="card-deck">
+                <div class="card">
+                    <img src="path_to_image.jpg" class="card-img-top" alt="Classic Work 1">
+                    <div class="card-body">
+                        <h5 class="card-title">Havoc in Heaven</h5>
+                        <p class="card-text">Released in 1961.</p>
+                    </div>
+                </div>
+                <div class="card">
+                    <img src="path_to_image.jpg" class="card-img-top" alt="Classic Work 2">
+                    <div class="card-body">
+                        <h5 class="card-title">The Little Tadpole Looking for Mom</h5>
+                        <p class="card-text">Released in 1960.</p>
+                    </div>
+                </div>
+                <div class="card">
+                    <img src="path_to_image.jpg" class="card-img-top" alt="Classic Work 3">
+                    <div class="card-body">
+                        <h5 class="card-title">The Black Cat Sheriff</h5>
+                        <p class="card-text">Released from 1984 to 1987.</p>
+                    </div>
+                </div>
             </div>
+        </div>
+        <div class="section">
+            <h2>Contact</h2>
+            <p>Address: 618 Wanhong Road, Changning District, Shanghai</p>
+            <p>Phone: 021-62524349, 021-62512776</p>
+            <p>Official Website: <a href="https://www.ani-sh.com/">https://www.ani-sh.com/</a></p>
         </div>
     </div>
 
-    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
-    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.5.4/dist/umd/popper.min.js"></script>
-    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+
+    <iframe src="../components/footer.html" width="100%" height="157" frameborder="0" scrolling="no"></iframe>
+
+
+    <script src="../assets/bootstrap_src/jquery-3.5.1.slim.min.js"></script>
+    <script src="../assets/bootstrap_src/v2.5.4popper.min.js"></script>
+    <script src="../assets/bootstrap_src/v4.5.2bootstrap.min.js"></script>
+    <script>
+        window.onscroll = function () {
+            var winScroll = document.body.scrollTop || document.documentElement.scrollTop;
+            var height = document.documentElement.scrollHeight - document.documentElement.clientHeight;
+            var scrolled = (winScroll / height) * 100;
+            document.getElementById("myProgressBar").style.width = scrolled + "%";
+        };
+    </script>
 </body>
 
 </html>
