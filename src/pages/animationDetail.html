@@ -1,0 +1,498 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Classic Animation - China Dream Works Studios</title>
+    <link href="../assets/bootstrap_src/bootstrap.min.css" rel="stylesheet">
+    <script src="../assets/bootstrap_src/jquery-3.6.0.min.js"></script>
+    <script src="../assets/bootstrap_src/bootstrap.bundle.min.js"></script>
+    <script src="../assets/bootstrap_src/popper.min.js"></script>
+    <script src="../assets/bootstrap_src/v4bootstrap.bundle.min.js"></script>
+
+    <!-- <script src="../scripts/classicAnimation/classicAnimation.js"></script> -->
+    <style>
+        html {
+            height: 100%;
+            width: 100%;
+            background: linear-gradient(180deg, #ffece3 12.93%, #bb4f4d 150.44%, #a11414 150.46%);
+            background-attachment: fixed;
+            /* 背景固定，内容滚动时背景不会动 */
+        }
+
+        body {
+            margin: 0;
+            padding: 0;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            background: transparent;
+            /* 透明背景 */
+            width: 100%;
+        }
+
+        .box:hover {
+            box-shadow: 0 8px 8px 0 grey;
+            transform: translate(0, -10px);
+            transform: scale(1.1);
+            transition: all 0.4s;
+            z-index: 1;
+
+        }
+
+        .box-bd {
+            margin: 20px 0 0 300px;
+            width: 700px;
+        }
+    </style>
+</head>
+
+<body class="container ">
+    <section>
+        <div id="carouselExampleIndicators" class="carousel slide carousel-fade" data-ride="carousel">
+            <div class="carousel-inner">
+                <div class="carousel-item active">
+                    <img src="../assets/image/animationDetail/4.jpeg" class="d-block w-100" alt="picture 4">
+                </div>
+                <div class="carousel-item">
+                    <img src="../assets/image/animationDetail/2.jpeg" class="d-block w-100" alt="picture 2">
+                </div>
+                <div class="carousel-item">
+                    <img src="../assets/image/animationDetail/3.jpeg" class="d-block w-100" alt="picture 3">
+                </div>
+            </div>
+            <button class="carousel-control-prev" type="button" data-target="#carouselExampleIndicators"
+                data-slide="prev">
+                <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+            </button>
+            <button class="carousel-control-next" type="button" data-target="#carouselExampleIndicators"
+                data-slide="next">
+                <span class="carousel-control-next-icon" aria-hidden="true"></span>
+            </button>
+        </div>
+        <section class="card p-5 text-white bg-danger">
+            <div class="card-header">
+                <h1>
+                    <span class="text-warning">《Smash the Heavenly Palace》</span>
+                </h1>
+            </div>
+            <div class="container">
+                <div class="d-flex align-items-cente"> <!--display flex-->
+                    <div>
+                        <p class="my-4">
+                        <div class="card-body">
+                            <p class="card-text">Director: Wan Lai Ming</p>
+                            <p class="card-text">Assistant Director: Tang Cheng</p>
+                            <h5 class="card-title text-warning">Introduction of the movie</h5>
+                            <p class="card-text">
+                                &nbsp; &nbsp; The Great Pandemonium is China's first color animated
+                                feature film, one
+                                of the pinnacle works of Chinese animation, and one of the classic masterpieces of the
+                                Chinese school of animation. Based on the first seven stories of the Chinese classic
+                                “Journey to the West”, the film uses animation to portray the classic Chinese
+                                mythological hero, the Monkey King.</p>
+                            <p class="card-text">
+                                &nbsp; &nbsp; The artistic style of the film is rich in Chinese national characteristics
+                                and
+                                traditional cultural connotations. On the basis of the decorative style, the film also
+                                integrates the animation's unique animation and imaginative creative techniques,
+                                touching people's hearts with art and impressing the world with cultural connotations,
+                                which is an important milestone in the history of China's animation development.</p>
+                            <p class="card-text"><small class="text-muted">Welcome to the movie.</small></p>
+                        </div>
+                        </p>
+                        <button class="btn btn-warning btn-lg">watch now</button>
+                    </div>
+                    <img type="button" src="../assets/image/animationDetail/5.jpeg" alt="showcase"
+                        class=" box w-50 h-100  d-none d-md-block " data-toggle="modal" data-target="#exampleModal">
+                    <!-- Modal -->
+                    <div class="modal fade" id="exampleModal" tabindex="-1" aria-labelledby="exampleModalLabel"
+                        aria-hidden="true">
+                        <div class="modal-dialog modal-dialog-centered modal-dialog-scrollable">
+                            <div class="modal-content">
+                                <div class="modal-header">
+                                    <h5 class="modal-title" id="exampleModalLabel">Modal title</h5>
+                                    <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                                        <span aria-hidden="true">&times;</span>
+                                    </button>
+                                </div>
+                                <div class="modal-body">
+                                    <div class="accordion" id="accordionExample">
+                                        <div class="card">
+                                            <div class="card-header" id="headingOne">
+                                                <h2 class="mb-0">
+                                                    <button class="btn btn-link btn-block text-left" type="button"
+                                                        data-toggle="collapse" data-target="#collapseOne"
+                                                        aria-expanded="true" aria-controls="collapseOne">
+                                                        <h5 class="card-title text-warning">Author</h5>
+                                                    </button>
+                                                </h2>
+                                            </div>
+
+                                            <div id="collapseOne" class="collapse show" aria-labelledby="headingOne"
+                                                data-parent="#accordionExample">
+                                                <div class="card-body">
+                                                    <p class="card-text">Director: Wan Lai Ming</p>
+                                                    <p class="card-text">Assistant Director: Tang Cheng</p>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class="card">
+                                            <div class="card-header" id="headingTwo">
+                                                <h2 class="mb-0">
+                                                    <button class="btn btn-link btn-block text-left collapsed"
+                                                        type="button" data-toggle="collapse" data-target="#collapseTwo"
+                                                        aria-expanded="false" aria-controls="collapseTwo">
+                                                        <h5 class="card-title text-warning">Introduction of the movie
+                                                        </h5>
+                                                    </button>
+                                                </h2>
+                                            </div>
+                                            <div id="collapseTwo" class="collapse" aria-labelledby="headingTwo"
+                                                data-parent="#accordionExample">
+                                                <div class="card-body">
+                                                    <p class="card-text">
+                                                        &nbsp; &nbsp; The Great Pandemonium is China's first color
+                                                        animated
+                                                        feature film, one
+                                                        of the pinnacle works of Chinese animation, and one of the
+                                                        classic masterpieces
+                                                        of the
+                                                        Chinese school of animation. Based on the first seven stories of
+                                                        the Chinese
+                                                        classic
+                                                        “Journey to the West”, the film uses animation to portray the
+                                                        classic Chinese
+                                                        mythological hero, the Monkey King.</p>
+                                                    <p class="card-text">
+                                                        &nbsp; &nbsp; The artistic style of the film is rich in Chinese
+                                                        national
+                                                        characteristics
+                                                        and
+                                                        traditional cultural connotations. On the basis of the
+                                                        decorative style, the
+                                                        film also
+                                                        integrates the animation's unique animation and imaginative
+                                                        creative techniques,
+                                                        touching people's hearts with art and impressing the world with
+                                                        cultural
+                                                        connotations,
+                                                        which is an important milestone in the history of China's
+                                                        animation development.
+                                                    </p>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class="card">
+                                            <div class="card-header" id="headingThree">
+                                                <h2 class="mb-0">
+                                                    <button class="btn btn-link btn-block text-left collapsed"
+                                                        type="button" data-toggle="collapse"
+                                                        data-target="#collapseThree" aria-expanded="false"
+                                                        aria-controls="collapseThree">
+                                                        <h5 class="card-title text-warning">Awards</h5>
+                                                    </button>
+                                                </h2>
+                                            </div>
+                                            <div id="collapseThree" class="collapse" aria-labelledby="headingThree"
+                                                data-parent="#accordionExample">
+                                                <div class="card-body">
+                                                    <p class="card-text">
+                                                    <ul>
+                                                        <li>
+                                                            <!--<span></span>-->
+                                                            <p>1962</p>
+                                                        </li>
+
+                                                        <li>
+                                                            <!--<span></span>-->
+                                                            <p>Special Prize for Short Films, 13th Karlovy Vary
+                                                                International Film
+                                                                Festival,
+                                                                Czechoslovakia</p>
+                                                        </li>
+
+                                                        <li>
+                                                            <!--<span></span>-->
+                                                            <p>1963</p>
+                                                        </li>
+
+                                                        <li>
+                                                            <!--<span></span>-->
+                                                            <p>Best Animated Film of the 2nd China Popular Film Hundred
+                                                                Flowers Awards
+                                                            </p>
+                                                        </li>
+
+                                                        <li>
+                                                            <!--<span></span>-->
+                                                            <p>1978</p>
+                                                        </li>
+
+                                                        <li>
+                                                            <!--<span></span>-->
+                                                            <p>Best Film Award at the 22nd London International Film
+                                                                Festival</p>
+                                                        </li>
+
+                                                        <li>
+                                                            <!--<span></span>-->
+                                                            <p>1980</p>
+                                                        </li>
+
+                                                        <li>
+                                                            <!--<span></span>-->
+                                                            <p>First Prize of the Second National Children's and Young
+                                                                People's Literary
+                                                                and
+                                                                Artistic Creation Award Committee</p>
+                                                        </li>
+
+                                                        <li>
+                                                            <!--<span></span>-->
+                                                            <p>1982</p>
+                                                        </li>
+
+                                                        <li>
+                                                            <!--<span></span>-->
+                                                            <p>Third Prize, Fourth Quito International Children's Film
+                                                                Festival, Ecuador
+                                                            </p>
+                                                        </li>
+
+                                                        <li>
+                                                            <!--<span></span>-->
+                                                            <p>1983</p>
+                                                        </li>
+
+                                                        <li>
+                                                            <!--<span></span>-->
+                                                            <p>Jury Prize at the 12th Figueireda Foz International Film
+                                                                Festival,
+                                                                Portugal</p>
+                                                        </li>
+                                                    </ul>
+                                                    </p>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+
+                                </div>
+                                <div class="modal-footer">
+                                    <button type="button" class="btn btn-warning" data-dismiss="modal">Close</button>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+        </section>
+        <section>
+            <div class="card-group">
+                <div class="card">
+                    <img type="button" src="../assets/image/animationDetail/1.jpg" alt="picture 1"
+                        class=" box card-img-top " data-toggle="modal" data-target="#Modal1">
+                    <!-- Modal -->
+                    <div class="modal fade" id="Modal1" tabindex="-1" aria-labelledby="exampleModalLabel"
+                        aria-hidden="true">
+                        <div class="modal-dialog">
+                            <div class="modal-content">
+                                <div class="modal-header">
+                                    <h5 class="modal-title text-warning" id="exampleModalLabel">The Monkey King's
+                                        doppelganger fights
+                                        Ne Zha</h5>
+                                    <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                                        <span aria-hidden="true">&times;</span>
+                                    </button>
+                                </div>
+                                <div class="modal-body">
+                                    <p>In the story of Journey to the West, there is no direct description of a fight
+                                        between the Monkey King's doppelganger and Ne Zha. However, we can speculate
+                                        what their battle might be like based on their abilities and personalities.</p>
+                                    <p>The Monkey King's doppelganger is a transformation of the Six-Eared Macaque,
+                                        possessing almost the same magical powers, divine abilities, and weapons as the
+                                        Monkey King. </p>
+                                    <p>Ne Zha is the third son of the Pagoda-Bearing Heavenly King, possessing
+                                        supernatural strength, three heads, six arms, and magical treasures such as the
+                                        Wind Fire Wheels and the Universe Ring. Ne Zha has a fiery personality, hates
+                                        evil, and dares to challenge authority.</p>
+                                    <p>When the Monkey King's doppelganger and Ne Zha meet, both will believe the other
+                                        to be the real Monkey King. Due to their similar abilities, the battle will be
+                                        fierce and evenly matched. The Monkey King's doppelganger will use his cunning
+                                        and imitation abilities to try to confuse Ne Zha. Ne Zha will rely on his divine
+                                        power and magical treasures to confront the Monkey King's doppelganger head-on.
+                                    </p>
+                                    <p>The battle may ultimately end with the appearance of the Monkey King, who will
+                                        expose the Six-Eared Macaque's true identity and defeat him. The Monkey King's
+                                        doppelganger will eventually be defeated by the Monkey King, and Ne Zha will
+                                        also stop fighting due to the Monkey King's appearance. This battle will be a
+                                        showdown between equally matched opponents, showcasing the strengths and
+                                        characteristics of both sides.</p>
+                                    <p>The battle between the Monkey King's doppelganger and Ne Zha will be a thrilling
+                                        spectacle, showcasing the abilities and personalities of both characters.
+                                        Ultimately, the Monkey King will expose the Six-Eared Macaque's true identity
+                                        and defeat him.</p>
+                                </div>
+                                <div class="modal-footer">
+                                    <button type="button" class="btn btn-warning" data-dismiss="modal">Close</button>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="card-body">
+                        <p class="card-text"><small class="text-muted">The Monkey King's doppelganger fights
+                                Ne
+                                Zha</small>
+                        </p>
+                    </div>
+                </div>
+                <div class="card">
+                    <img type="button" src="../assets/image/animationDetail/2.jpeg" alt="picture 2"
+                        class=" box card-img-top " data-toggle="modal" data-target="#Modal2">
+                    <!-- Modal -->
+                    <div class="modal fade" id="Modal2" tabindex="-1" aria-labelledby="exampleModalLabel"
+                        aria-hidden="true">
+                        <div class="modal-dialog">
+                            <div class="modal-content">
+                                <div class="modal-header">
+                                    <h5 class="modal-title text-warning" id="exampleModalLabel">The Story of Princess
+                                        Iron Fan</h5>
+                                    <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                                        <span aria-hidden="true">&times;</span>
+                                    </button>
+                                </div>
+                                <div class="modal-body">
+                                    <p>Princess Iron Fan, also known as Princess Rakshasa, is a character in the Chinese
+                                        novel Journey to the West. She is the wife of the Bull Demon King and the mother
+                                        of Red Boy. She possesses a magic banana fan that can create powerful winds and
+                                        flames.</p>
+                                    <p>The story of Princess Iron Fan can be summarized as follows:</p>
+                                    <ul>
+                                        <li>Sun Wukong Borrows the Banana Fan: Sun Wukong needs to borrow Princess Iron
+                                            Fan's banana fan to extinguish the flames of Fire Mountain. He visits
+                                            Princess Iron Fan three times, but she refuses to lend him the fan each
+                                            time.</li>
+                                        <li>Sun Wukong Tricks Princess Iron Fan: Sun Wukong learns that Princess Iron
+                                            Fan's son, Red Boy, enjoys eating humans. He disguises himself as a child
+                                            and tricks Red Boy into trusting him. Using his cunning, Sun Wukong subdues
+                                            Red Boy and uses their relationship to finally borrow the banana fan from
+                                            Princess Iron Fan.</li>
+                                        <li>Sun Wukong Borrows the Banana Fan Again: After borrowing the banana fan, Sun
+                                            Wukong discovers that Princess Iron Fan has given him a fake fan. He returns
+                                            to her dwelling and engages in a fierce battle with the Bull Demon King.
+                                            Ultimately, Sun Wukong defeats the Bull Demon King and successfully borrows
+                                            the real banana fan.</li>
+                                    </ul>
+                                    <p>The story of Princess Iron Fan showcases Sun Wukong's intelligence, bravery, and
+                                        unwavering determination in the face of adversity. It also reflects the richness
+                                        and diversity of characters and stories found in ancient Chinese mythology.</p>
+                                    <p>Here are some additional details about the story of Princess Iron Fan:</p>
+                                    <ul>
+                                        <li>Princess Iron Fan is believed to be based on the Chinese wind deity from
+                                            ancient mythology.</li>
+                                        <li>Princess Iron Fan's banana fan is also mentioned in some Taoist scriptures.
+                                        </li>
+                                        <li>The story of Princess Iron Fan may vary slightly depending on the version of
+                                            the novel you read.</li>
+                                    </ul>
+                                    <p>If you are interested in learning more about the story of Princess Iron Fan, you
+                                        can refer to the following resources:</p>
+                                    <ul>
+                                        <li>The original Journey to the West novel</li>
+                                        <li>Related film and television adaptations</li>
+                                        <li>Books on Chinese mythology and legends</li>
+                                    </ul>
+                                </div>
+                                <div class="modal-footer">
+                                    <button type="button" class="btn btn-warning" data-dismiss="modal">Close</button>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="card-body">
+                        <p class="card-text"><small class="text-muted">The Story of Princess Iron Fan</small></p>
+                    </div>
+                </div>
+                <div class="card">
+                    <img type="button" src="../assets/image/animationDetail/3.jpeg" alt="picture 3"
+                        class=" box card-img-top " data-toggle="modal" data-target="#Modal3">
+                    <!-- Modal -->
+                    <div class="modal fade" id="Modal3" tabindex="-1" aria-labelledby="exampleModalLabel"
+                        aria-hidden="true">
+                        <div class="modal-dialog">
+                            <div class="modal-content">
+                                <div class="modal-header">
+                                    <h5 class="modal-title text-warning" id="exampleModalLabel">The Monkey King ascends
+                                        to the throne
+                                        at Mount
+                                        Huaguo</h5>
+                                    <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                                        <span aria-hidden="true">&times;</span>
+                                    </button>
+                                </div>
+                                <div class="modal-body">
+                                    <p>In the story of "Journey to the West," Sun Wukong, also known as the Monkey King,
+                                        has a significant connection to the Flower Fruit Mountain. </p>
+                                    <ol>
+                                        <li>
+                                            <strong>Birth of Sun Wukong:</strong> Sun Wukong was initially born as a
+                                            stone monkey nurtured by a rock. He was born and grew up on the Flower Fruit
+                                            Mountain, hence being referred to as the Monkey of Flower Fruit Mountain's
+                                            Water Curtain Cave.
+                                        </li>
+                                        <li>
+                                            <strong>Monkey King:</strong> Due to his intelligence, agility, and
+                                            cleverness, Sun Wukong quickly became the leader of the monkey tribe on
+                                            Flower Fruit Mountain, earning the title of Monkey King.
+                                        </li>
+                                        <li>
+                                            <strong>Seeking Immortality:</strong> Sun Wukong yearned for eternal life
+                                            and sought to obtain the power of immortality. He left Flower Fruit Mountain
+                                            and embarked on a journey to find enlightenment and immortality. Along his
+                                            journey, he encountered various gods and practitioners, learning numerous
+                                            spells and martial arts.
+                                        </li>
+                                        <li>
+                                            <strong>The Four Great Heavenly Kings:</strong> During Sun Wukong's
+                                            training, he encountered the Four Great Heavenly Kings, who were celestial
+                                            guards from the Heavenly Court. They were known as the Blue, Red, Yellow,
+                                            and Green Four Great Heavenly Kings. After engaging in battles with them,
+                                            Sun Wukong eventually became friends with them, gaining their appreciation
+                                            and support.
+                                        </li>
+                                        <li>
+                                            <strong>Conflict with Demon Kings:</strong> Sun Wukong's growing reputation
+                                            on Flower Fruit Mountain attracted the attention of the Heavenly Court. The
+                                            Jade Emperor dispatched celestial soldiers and generals to capture Sun
+                                            Wukong. However, Sun Wukong, with his martial arts skills and magic, fought
+                                            fiercely against them and successfully defended Flower Fruit Mountain.
+                                        </li>
+                                        <li>
+                                            <strong>Sun Wukong as Protector of Tang Sanzang:</strong> Later, at the
+                                            behest of the Jade Emperor, Sun Wukong was sent to the mortal realm to
+                                            protect the Buddhist monk Tang Sanzang on his journey to retrieve sacred
+                                            scriptures. Sun Wukong, along with Tang Sanzang, Zhu Bajie, and Sha Wujing,
+                                            embarked on a perilous journey, facing various adventures and trials.
+                                        </li>
+                                    </ol>
+                                </div>
+                                <div class="modal-footer">
+                                    <button type="button" class="btn btn-warning" data-dismiss="modal">Close</button>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="card-body">
+                        <p class="card-text"><small class="text-muted">The Monkey King ascends to the throne
+                                at Mount
+                                Huaguo</small></p>
+                    </div>
+                </div>
+            </div>
+        </section>
+        <iframe src="../components/footer.html" width="100%" height="157" frameborder="0" scrolling="no"></iframe>
+
+</body>
+
+</html>
