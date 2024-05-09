@@ -8,17 +8,11 @@
     <link href="./componentsStyle/navigation.css" rel="stylesheet">
     <link href="../assets/bootstrap_src/bootstrap.min.css" rel="stylesheet">
     <script src="../assets/bootstrap_src/jquery-3.6.0.min.js"></script>
-    
-
 </head>
+
 <style>
     @media screen and (max-width: 536px) {
 
-        /* 在屏幕宽度小于或等于1536px 时应用的样式 */
-
-        /* .header-item{
-    max-width: 50%!important;
-} */
         .logo,
         .search {
             display: none;
@@ -76,31 +70,27 @@
                 </div>
             </div>
         </div>
-        
-    </header>
-    
-    <div class="content">
 
+    </header>
+
+    <div class="content">
         <iframe class="main" id="content-iframe" src="../pages/index.html"
             style="height: calc(100vh - 124px);padding-bottom: 20px;"></iframe>
     </div>
-    <!-- <canvas id="img" src="../assets/image/cloud.png"
-        style="width: 100%;height: calc(100vh - 124px);transform: translateY(-100%);display: none;opacity: .9;" alt=""> -->
+
     <img id="img" src="../assets/image/cloud.png"
         style="width: 100%;height: calc(100vh - 124px);transform: translateY(-100%);display: none;opacity: .9;" alt="">
+
     <script>
+        // CloudOpen class definition
         class CloudOpen {
             constructor() {
                 this.canv = null;
                 this.ctx = null;
                 this.i = 0;
                 this.speed = 0;
-                //遮罩云
                 this.imgMask = new Image();
                 this.imgMask.crossOrigin = "";
-                //主图
-                this.img = new Image();
-                this.img.crossOrigin = "";
             }
 
             init(back, canvas, img, mask, speed = 10) {
@@ -108,22 +98,14 @@
                 this.canv = canvas;
                 this.ctx = this.canv.getContext("2d");
                 this.i = 0;
-                // this.img.onload = () => {
-                //     // 主图加载完成
-                //     this.canv.width = this.img.naturalWidth;
-                //     this.canv.height = this.img.naturalHeight;
-                // };
                 this.imgMask.onload = () => {
-                    // 遮罩加载完成
                     if (back) {
                         back();
                     }
                 };
-                //主图
-                // this.img.src = img;
-                //遮罩云
                 this.imgMask.src = mask;
             }
+
             step() {
                 let maskX = (this.canv.width - this.i) / 2;
                 let maskY = (this.canv.height - this.i) / 2;
@@ -131,26 +113,18 @@
                 this.ctx.globalCompositeOperation = "source-over";
                 this.ctx.drawImage(this.imgMask, maskX, maskY, this.i, this.i);
                 this.ctx.globalCompositeOperation = "source-in";
-                // this.ctx.drawImage(
-                //     this.img,
-                //     0,
-                //     0,
-                //     this.img.naturalWidth,
-                //     this.img.naturalHeight
-                // );
             }
-            //复原
+
             reset() {
                 this.i = 0;
                 this.step();
             }
+
             draw(backFun = null) {
                 this.i += this.speed;
                 this.step();
                 let maxSize = Math.max(this.canv.width, this.canv.height);
-                console.log(this.i, maxSize, 999);
                 if (this.i >= maxSize * 5) {
-                    //结束
                     if (backFun) {
                         backFun();
                     }
@@ -163,16 +137,12 @@
         }
 
         function render() {
-
             let cloudOpen = new CloudOpen();
             let canvasCloud = document.getElementById("img");
             cloudOpen.init(
                 () => {
-                    //图片资源加载完成
                     function loop() {
-                        //散开
                         cloudOpen.draw(() => {
-                            //复原
                             cloudOpen.reset();
                         });
                     }
@@ -184,33 +154,25 @@
                 8
             );
         }
-        // JavaScript code for handling search
+
         function handleSearch(event) {
             // Add your search logic here
         }
 
         function showImg() {
-            img.style.display = "block"
-            // render()
+            img.style.display = "block";
             setTimeout(() => {
-                img.style.display = "none"
-            }, 2500)
+                img.style.display = "none";
+            }, 2500);
         }
-        showImg()
-        // setTimeout(()=>{
 
-        //     let frame = document.querySelector(".content")
-        //     frame.onclick = function(){
-        //         console.log(333);
-        //     }
-        // },1000)
-        // 音效
-        let links = document.querySelector(".navbar")
+        // Audio effect
+        let links = document.querySelector(".navbar");
         var audio = new Audio('../assets/music/yin1.mp3');
         links.onclick = function () {
-            audio.play()
+            audio.play();
         }
-        // Function to load content in iframe
+
         function loadPage(page) {
             if (page.indexOf("index") > -1) {
                 // showImg()
@@ -220,41 +182,35 @@
             document.getElementById("content-iframe").src = "../pages/" + page;
         }
 
-
-            // Toggle navbar collapse on small screens
-            $('.navbar-toggler').click(function () {
-                $('.collapse').toggleClass('show');
-            });
-            
-
-            // 获取header和tuan元素
-            var header = document.querySelector('.header');
-            var tuan = document.querySelector('.tuan');
-
-            // 当鼠标移入header时，给tuan添加hover类
-            header.addEventListener('mouseover', function() {
-                tuan.classList.add('hover');
-            });
-
-            // 当鼠标移出header时，给tuan移除hover类
-            header.addEventListener('mouseout', function() {
-                tuan.classList.remove('hover');
-            });
-
-        </script>
- <script>
         // Toggle navbar collapse on small screens
         $('.navbar-toggler').click(function () {
             $('.collapse').toggleClass('show');
         });
+
+        // Header and tuan elements
+        var header = document.querySelector('.header');
+        var tuan = document.querySelector('.tuan');
+
+        // Mouse hover effects
+        header.addEventListener('mouseover', function () {
+            tuan.classList.add('hover');
+        });
+
+        header.addEventListener('mouseout', function () {
+            tuan.classList.remove('hover');
+        });
+
+        // Initial function calls
+        showImg();
+        render();
     </script>
 
+    <style>
+        body {
+            font-family: 'Arial', sans-serif;
+        }
+    </style>
 
 </body>
-<style>
-    body {
-        font-family: 'Arial', sans-serif;
-    }
-</style>
 
 </html>
