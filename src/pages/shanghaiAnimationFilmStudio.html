@@ -6,6 +6,8 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Shanghai Animation Film Studio</title>
     <link rel="stylesheet" href="../assets/bootstrap_src/v4.5.2bootstrap.min.css">
+    <link rel="stylesheet" href="../assets/bootstrap_src/all.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css">
     <style>
         html {
             height: 100%;
@@ -33,13 +35,43 @@
             font: italic 600 64px 'Inter', sans-serif;
         }
 
+        h2 {
+            color: #a11414;
+            font-size: 2rem;
+            font-weight: 600;
+            margin-bottom: 20px;
+        }
+
+        h3 {
+            color: #a11414;
+            font-size: 1.5rem;
+            font-weight: 600;
+            margin-bottom: 20px;
+        }
+
         .container {
             margin-top: 40px;
             padding: 20px;
-            background-color: #fff;
+            background-color: rgba(255, 255, 255, 0.7);
+            /* 添加透明度 */
             border-radius: 10px;
             box-shadow: 0 0 20px rgba(0, 0, 0, 0.1);
             font-family: 'Inter', sans-serif;
+            backdrop-filter: blur(20px);
+            /* 添加毛玻璃效果 */
+        }
+
+        .seccontainer {
+            margin-top: 40px;
+            padding: 20px;
+            background-color: rgba(255, 196, 141, 0.1);
+            /* background-color: #f766ff 25%; */
+            /* 添加透明度 */
+            border-radius: 10px;
+            box-shadow: 0 0 20px rgba(0, 0, 0, 0.1);
+            font-family: 'Inter', sans-serif;
+            backdrop-filter: blur(20px);
+            /* 添加毛玻璃效果 */
         }
 
         .section {
@@ -64,30 +96,181 @@
                 font-size: 1.4rem;
             }
         }
+
+
+        /* CSS */
+        @keyframes fadeIn {
+            from {
+                opacity: 0;
+            }
+
+            to {
+                opacity: 1;
+            }
+        }
+
+        .fade-in {
+            animation: fadeIn 0.5s ease-in-out;
+        }
+
+        /* CSS */
+        @keyframes slideUpFast {
+            from {
+                transform: translateY(100px);
+                opacity: 0;
+            }
+
+            to {
+                transform: translateY(0);
+                opacity: 1;
+            }
+        }
+
+        .slide-up-fast {
+            animation: slideUpFast 0.8s cubic-bezier(0.55, 0.085, 0.68, 0.53);
+            /* 这是一个快速的动画效果 */
+        }
+
+        /* CSS */
+        @keyframes slideUpMedium {
+            from {
+                transform: translateY(100px);
+                opacity: 0;
+            }
+
+            to {
+                transform: translateY(0);
+                opacity: 1;
+            }
+        }
+
+        .slide-up-medium {
+            animation: slideUpMedium 1s cubic-bezier(0.4, 0.0, 0.2, 1);
+            /* 这是一个中等速度的动画效果 */
+        }
+
+        @keyframes slideUpSlow {
+            from {
+                transform: translateY(100px);
+                opacity: 0;
+            }
+
+            to {
+                transform: translateY(0);
+                opacity: 1;
+            }
+        }
+
+        .slide-up-slow {
+            animation: slideUpSlow 1.2s cubic-bezier(0.22, 0.61, 0.36, 1);
+            /* 这是一个慢速的动画效果 */
+        }
+
+        #scrollToTop {
+            position: fixed;
+            bottom: 20px;
+            right: 20px;
+            padding: 10px 20px;
+            background-color: #ec807e;
+            /* 深蓝色背景 */
+            color: #fff;
+            /* 白色文字 */
+            cursor: pointer;
+            border-radius: 25px;
+            z-index: 1000;
+            box-shadow: none;
+        }
+
+        .card {
+            transition: transform 0.3s ease-in-out;
+        }
+
+        .card:hover {
+            transform: scale(1.1);
+        }
+
+        .image-wrap {
+            float: right;
+            margin-left: 20px;
+            /* Adjust as needed */
+            margin-bottom: 20px;
+            /* Adjust as needed */
+        }
+
+        .image-wrap img {
+            max-width: 300px;
+            /* Adjust as needed */
+            height: auto;
+        }
+
+        .float-right {
+            float: right;
+            margin-left: 20px;
+        }
+
+        p:hover {
+            color: #ffd062;
+            /* 高亮颜色，可以根据需要更改 */
+            transition: color 0.3s ease-in-out;
+            /* 过渡效果 */
+        }
     </style>
 
 </head>
 
 <body>
-    <div class="progress" id="progressBar" style="width: 100%; position: fixed; top: 0; z-index: 999;">
+    <!-- <div class="progress" id="progressBar" style="width: 100%; position: fixed; top: 0; z-index: 999;">
         <div class="progress-bar progress-bar-striped progress-bar-animated bg-danger" role="progressbar"
             style="width: 0%;" id="myProgressBar"></div>
-    </div>
+    </div> -->
+
+    <button id="scrollToTop" style="display: none;">To The Top</button>
 
     <h1 class="title mt-4">Shanghai Animation Film Studio</h1>
 
     <div class="container" style="opacity: 1;">
-        <div class="section">
-            <h2>History</h2>
-            <p>Shanghai Animation Film Studio (abbreviated as Shanghai Animation) is one of the oldest animation
-                studios in China, founded in April 1957 and located at 618 Wanhong Road, Changning District, Shanghai.
+        <div class="section seccontainer">
+            <h2>Introduction</h2>
+            <div class="image-wrap">
+                <img src="../assets/image/shanghaiAnimationFilmStudio/shangMeiJiuZhaoPian.jpg" alt="Image Placeholder"
+                    class="float-right">
+                <p>Established in 1957, Shanghai Animation Film Studio (Shanghai Animation) stands as a beacon of
+                    artistic expression and cultural heritage, etching its name among the oldest and most revered
+                    animation studios in China. Nestled in the heart of Shanghai's Changning District, at 618 Wanhong
+                    Road, the studio has served as a creative powerhouse, breathing life into captivating stories and
+                    nurturing the imaginations of generations.</p>
+            </div>
+
+
+            <h3>Classic Animated Works</h3>
+            <p>Shanghai Animation has crafted a plethora of timeless animated classics renowned for their distinctive
+                artistic flair and exceptional production quality. Notable works include "Havoc in Heaven," "The Little
+                Tadpole Looking for Mom," "The Black Cat Sheriff," and "The Calabash Brothers," among others, cherished
+                by audiences far and wide.</p>
+
+            <h3>Historical Background</h3>
+            <p>The precursor to Shanghai Animation Film Studio was the Cartoon Stock of Northeast Film Studio,
+                established in 1949. Officially founded as Shanghai Animation Film Studio in 1957, its creative ensemble
+                comprises seasoned artists alongside a cohort of young, burgeoning talent. This amalgamation has
+                fostered a legacy of creativity, research, and the cultivation of a unique artistic identity.</p>
+
+            <h3>Diverse Productions</h3>
+
+            <p>Shanghai Animation Film Studio showcases versatility through its diverse repertoire, spanning feature
+                films, educational content, opera adaptations, musical animations, and more. Its productions have
+                not
+                only garnered domestic acclaim but have also received numerous accolades on the international stage.
             </p>
-            <p>Shanghai Animation has created numerous classic animated works with its unique artistic style and
-                superb production techniques, such as "Havoc in Heaven", "The Little Tadpole Looking for Mom", "The
-                Black Cat Sheriff", "The Calabash Brothers", and many others, which are deeply loved by audiences.
-            </p>
+
+            <h3>Cultural Significance</h3>
+            <p>Regarded as a treasure trove of Chinese animation art, Shanghai Animation's creations are esteemed as
+                cultural gems of the Chinese nation, embodying the essence of China's rich artistic heritages of
+                the Chinese nation.</p>
+
+
+
         </div>
-        <div class="section">
+        <div class="section seccontainer">
             <h2>Map</h2>
             <div class="embed-responsive embed-responsive-16by9">
                 <iframe class="embed-responsive-item"
@@ -95,12 +278,13 @@
                     allowfullscreen></iframe>
             </div>
         </div>
-        <div class="section">
+        <div class="section seccontainer">
             <h2>Honors</h2>
             <div class="row">
                 <div class="col-md-4">
                     <div class="card">
-                        <img src="path_to_image.jpg" class="card-img-top" alt="Golden Rooster Award">
+                        <img src="../assets/image/shanghaiAnimationFilmStudio/goldenRooster.jpg" class="card-img-top"
+                            alt="Golden Rooster Award">
                         <div class="card-body">
                             <h5 class="card-title">Golden Rooster Award</h5>
                             <p class="card-text">Won for outstanding animation.</p>
@@ -109,7 +293,8 @@
                 </div>
                 <div class="col-md-4">
                     <div class="card">
-                        <img src="path_to_image.jpg" class="card-img-top" alt="Hundred Flowers Award">
+                        <img src="../assets/image/shanghaiAnimationFilmStudio/HunFlower.jpg" class="card-img-top"
+                            alt="Hundred Flowers Award">
                         <div class="card-body">
                             <h5 class="card-title">Hundred Flowers Award</h5>
                             <p class="card-text">Recognized for excellence in animation.</p>
@@ -118,18 +303,18 @@
                 </div>
                 <div class="col-md-4">
                     <div class="card">
-                        <img src="path_to_image.jpg" class="card-img-top" alt="Golden Monkey Award">
+                        <img src="../assets/image/shanghaiAnimationFilmStudio/GoldenMonkey.jpg" class="card-img-top"
+                            alt="Golden Monkey Award">
                         <div class="card-body">
                             <h5 class="card-title">Golden Monkey Award</h5>
                             <p class="card-text">Received at the Animation Film Festival.</p>
                         </div>
                     </div>
                 </div>
-            </div>
-            <div class="row mt-4">
                 <div class="col-md-4">
                     <div class="card">
-                        <img src="path_to_image.jpg" class="card-img-top" alt="Golden Palm Award">
+                        <img src="../assets/image/shanghaiAnimationFilmStudio/GoldenPalm.jpg" class="card-img-top"
+                            alt="Golden Palm Award">
                         <div class="card-body">
                             <h5 class="card-title">Golden Palm Award</h5>
                             <p class="card-text">Achieved at the Cannes Film Festival.</p>
@@ -138,27 +323,8 @@
                 </div>
                 <div class="col-md-4">
                     <div class="card">
-                        <img src="path_to_image.jpg" class="card-img-top" alt="Golden Bear Award">
-                        <div class="card-body">
-                            <h5 class="card-title">Golden Bear Award</h5>
-                            <p class="card-text">Received at the Berlin Film Festival.</p>
-                        </div>
-                    </div>
-                </div>
-                <div class="col-md-4">
-                    <div class="card">
-                        <img src="path_to_image.jpg" class="card-img-top" alt="Golden Lion Award">
-                        <div class="card-body">
-                            <h5 class="card-title">Golden Lion Award</h5>
-                            <p class="card-text">Achieved at the Venice Film Festival.</p>
-                        </div>
-                    </div>
-                </div>
-            </div>
-            <div class="row mt-4">
-                <div class="col-md-4">
-                    <div class="card">
-                        <img src="path_to_image.jpg" class="card-img-top" alt="Academy Award">
+                        <img src="../assets/image/shanghaiAnimationFilmStudio/AcademyAward.jpg" class="card-img-top"
+                            alt="Academy Award">
                         <div class="card-body">
                             <h5 class="card-title">Academy Award</h5>
                             <p class="card-text">Received at the prestigious Academy Awards.</p>
@@ -172,25 +338,28 @@
                 transform: scale(1.1);
             }
         </style>
-        <div class="section">
+        <div class="section seccontainer">
             <h2>Classic Works</h2>
             <div class="card-deck">
                 <div class="card">
-                    <img src="path_to_image.jpg" class="card-img-top" alt="Classic Work 1">
+                    <img src="../assets/image/shanghaiAnimationFilmStudio/HavocInHeaven.jpg" class="card-img-top"
+                        alt="Classic Work 1">
                     <div class="card-body">
                         <h5 class="card-title">Havoc in Heaven</h5>
                         <p class="card-text">Released in 1961.</p>
                     </div>
                 </div>
                 <div class="card">
-                    <img src="path_to_image.jpg" class="card-img-top" alt="Classic Work 2">
+                    <img src="../assets/image/shanghaiAnimationFilmStudio/TadpoleFindMon.jpg" class="card-img-top"
+                        alt="Classic Work 2">
                     <div class="card-body">
                         <h5 class="card-title">The Little Tadpole Looking for Mom</h5>
                         <p class="card-text">Released in 1960.</p>
                     </div>
                 </div>
                 <div class="card">
-                    <img src="path_to_image.jpg" class="card-img-top" alt="Classic Work 3">
+                    <img src="../assets/image/shanghaiAnimationFilmStudio/BlackCat.jpg" class="card-img-top"
+                        alt="Classic Work 3">
                     <div class="card-body">
                         <h5 class="card-title">The Black Cat Sheriff</h5>
                         <p class="card-text">Released from 1984 to 1987.</p>
@@ -198,11 +367,53 @@
                 </div>
             </div>
         </div>
-        <div class="section">
+        <div class="section seccontainer">
             <h2>Contact</h2>
-            <p>Address: 618 Wanhong Road, Changning District, Shanghai</p>
-            <p>Phone: 021-62524349, 021-62512776</p>
-            <p>Official Website: <a href="https://www.ani-sh.com/">https://www.ani-sh.com/</a></p>
+            <div class="row"> <!-- 使用 Bootstrap 的栅格系统 -->
+                <div class="col-md-6 d-flex flex-column justify-content-between"> <!-- 联系信息 -->
+                    <!-- 使用 Bootstrap 的媒体对象和 Font Awesome 图标 -->
+                    <div class="media">
+                        <i class="fa fa-map-marker fa-lg mr-3"></i>
+                        <div class="media-body">
+                            <h5 class="mt-0">Address:</h5>
+                            618 Wanhong Road, Changning District, Shanghai
+                        </div>
+                    </div>
+                    <div class="media">
+                        <i class="fa fa-phone fa-lg mr-3"></i>
+                        <div class="media-body">
+                            <h5 class="mt-0">Phone:</h5>
+                            021-62524349, 021-62512776
+                        </div>
+                    </div>
+                    <div class="media">
+                        <i class="fa fa-globe fa-lg mr-3"></i>
+                        <div class="media-body">
+                            <h5 class="mt-0">Official Website:</h5>
+                            <a href="https://www.ani-sh.com/">https://www.ani-sh.com/</a>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- 表单 -->
+                <div class="col-md-6">
+                    <form> <!-- 使用 Bootstrap 的表单样式 -->
+                        <div class="form-group">
+                            <label for="name">Name:</label>
+                            <input type="text" class="form-control" id="name" name="name">
+                        </div>
+                        <div class="form-group">
+                            <label for="email">Email:</label>
+                            <input type="email" class="form-control" id="email" name="email">
+                        </div>
+                        <div class="form-group">
+                            <label for="message">Message:</label>
+                            <textarea class="form-control" id="message" name="message"></textarea>
+                        </div>
+                        <button type="submit" class="btn btn-primary">Submit</button>
+                    </form>
+                </div>
+            </div>
         </div>
     </div>
 
@@ -219,6 +430,40 @@
             var height = document.documentElement.scrollHeight - document.documentElement.clientHeight;
             var scrolled = (winScroll / height) * 100;
             document.getElementById("myProgressBar").style.width = scrolled + "%";
+        };
+        window.onload = function () {
+            document.body.classList.add('fade-in');
+        };
+        window.onload = function () {
+            var sections = document.querySelectorAll('.section');
+            var totalSections = sections.length;
+            sections.forEach(function (section, index) {
+                var speed = 'fast';
+                if (index / totalSections < 0.5) {
+                    speed = 'fast';
+                } else if (index / totalSections < 0.75) {
+                    speed = 'medium';
+                } else {
+                    speed = 'slow';
+                }
+                section.classList.add('slide-up-' + speed);
+            });
+        };
+
+        var scrollToTopButton = document.getElementById('scrollToTop');
+
+        // 当页面滚动时，如果滚动距离超过 200px，显示按钮，否则隐藏按钮
+        window.onscroll = function () {
+            if (document.body.scrollTop > 200 || document.documentElement.scrollTop > 200) {
+                scrollToTopButton.style.display = "block";
+            } else {
+                scrollToTopButton.style.display = "none";
+            }
+        };
+
+        // 当点击按钮时，页面平滑滚动到顶部
+        scrollToTopButton.onclick = function () {
+            window.scrollTo({ top: 0, behavior: 'smooth' });
         };
     </script>
 </body>
