@@ -14,6 +14,18 @@
     display: block;
 }
 
+html {
+    height: 100%;
+    width: 100%;
+    background: linear-gradient(180deg,
+            #ffece3 12.93%,
+            #bb4f4d 150.44%,
+            #a11414 150.46%);
+    background-attachment: fixed;
+    
+    /* 背景固定，内容滚动时背景不会动 */
+}
+
 /* 图片展示页面遮罩层 */
 .img-display-page::before {
     content: '';
@@ -51,4 +63,34 @@
     align-items: center;
     color: var(--not-more-c);
     display: none;
+}
+
+.page-title {
+    color: #a11414;
+    text-align: center;
+    letter-spacing: -1.92px;
+    margin-top: 40px;
+    font: italic 600 64px Inter, sans-serif;
+}
+@media screen and (max-width: 536px) {
+
+    /* 在屏幕宽度小于或等于1536px 时应用的样式 */
+    .footer {
+        /* background: linear-gradient(180deg,
+                #D9938E 12.93%,
+                #BD5452 150.44%); */
+        background-color: transparent;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        padding: 0px;
+    }
+
+    .header-item {
+        max-width: 50% !important;
+    }
+    .page-title{
+        font-size: 1.4rem;
+    }
 }

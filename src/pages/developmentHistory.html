@@ -28,28 +28,100 @@
 
     
 </head>
+<style>
+    .music-player-button {
+        position: fixed;
+        top: 50%;
+        right: 20px;
+        transform: translateY(-50%);
+        background-color: #fff;
+        border: 1px solid #ccc;
+        padding: 10px;
+        border-radius: 5px;
+        box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+        z-index: 9999;
+        cursor: pointer;
+    }
 
-<body>
-    <div>
-        <div class="tuan">
+    .music-player-button.playing {
+        animation: gradient 5s infinite;
+    }
 
-        </div>
-        <div class="shell">
-            <a href="#" class="box"><i class="iconfont icon-liebiao"></i><span>list</span></a>
-            <a href="#" class="box"><i class="iconfont icon-cangku"></i><span> cbz</span></a>
-            <a href="#" class="box"><i class="iconfont icon-zhuti_tiaosepan"></i><span>cbz</span></a>
-            <a href="#" class="box"><i class="iconfont icon-qianbao"></i><span>cbz</span></a>
-            <a href="#" class="box"><i class="iconfont icon-tupian"></i><span>cbz</span></a>
-            <a href="#" class="box"><i class="iconfont icon-erweima"></i><span>cbz</span></a>
-            <a href="#" class="box"><i class="iconfont icon-dunpaibaoxianrenzheng"></i><span>cbz</span></a>
-            <a href="#" class="box"><i class="iconfont icon-dengchu"></i><span>cbz</span></a>
-        </div>
+    @keyframes gradient {
+        0% {
+            background-color: #ff9999;
+        }
+
+        25% {
+            background-color: #ffff99;
+        }
+
+        50% {
+            background-color: #99ff99;
+        }
+
+        75% {
+            background-color: #99ffff;
+        }
+
+        100% {
+            background-color: #ff9999;
+        }
+    }
+</style>
+
+<script>
+    var audio = new Audio('../assets/music/tianGongXunYin.mp3');
+    var isPlaying = false;
+
+    function togglePlay() {
+        var button = document.querySelector('.music-player-button');
+        isPlaying = !isPlaying;
+
+        if (isPlaying) {
+            audio.play();
+            document.getElementById('playButton').src = '../assets/image/icon/pause.png'; // 切换为暂停图标
+            button.classList.add('playing'); // 添加动画
+        } else {
+            audio.pause();
+            document.getElementById('playButton').src = '../assets/image/icon/play.png'; // 切换为播放图标
+            button.classList.remove('playing'); // 移除动画
+        }
+    }
+</script>
+<style>
+    @media screen and (max-width: 536px) {
+
+/* 在屏幕宽度小于或等于1536px 时应用的样式 */
+.footer {
+    /* background: linear-gradient(180deg,
+            #D9938E 12.93%,
+            #BD5452 150.44%); */
+    background-color: transparent;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    padding: 0px;
+}
+
+.header-item {
+    max-width: 50% !important;
+}
+.title{
+    font-size: 1.4rem;
+}
+}
+</style>
+<body class="container gradient-background">
+    <div class="music-player-button" onclick="togglePlay()">
+        <img src="../assets/image/icon/play.png" alt="Play" id="playButton" style="width: 20px; height: 20px;">
     </div>
-
+    <h1 class="page-title mt-4">Development History</h1>
+    <!-- <iframe src="../components/navigation.html" width="100%" height="295.5" frameborder="0" scrolling="no"></iframe> -->
     <!-- 图片展示页面 -->
     <div class="img-display-page">
 
-        <h1 class="title mt-4">Development History</h1>
         <!-- 图片展示页面中的标题 -->
         <div class="img-display-page__title">
             <!-- 标题 -->
@@ -408,5 +480,15 @@
     </div>
     <script src="../scripts/components.js"></script>
 </body>
-
+<script>
+    var audio2 = new Audio('../assets/music/yin2.mp3');
+    let links = document.querySelectorAll("button")
+    for(let i = 0;i<links.length;i++){
+        console.log(555);
+        links[i].onclick = function(){
+            console.log(444);
+            audio2.play()
+        }
+    }
+</script>
 </html>
