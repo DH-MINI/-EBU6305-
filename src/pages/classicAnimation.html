@@ -15,6 +15,7 @@
     <script src="../assets/bootstrap_src/v4bootstrap.bundle.min.js"></script>
 
 
+
 </head>
 <style>
     .music-player-button {
@@ -66,8 +67,10 @@
         <div class="modal-dialog modal-lg" role="document">
             <div class="modal-content">
                 <div class="modal-header">
+
                     <h5 class="modal-title" id="exampleModalLabel">Animation Details</h5>
                     <button type="button" class="close" aria-label="Close">
+
                         <span aria-hidden="true">&times;</span>
                     </button>
                 </div>
@@ -75,9 +78,7 @@
                     <!-- 这里是要加载的外部 HTML 内容 -->
                     <iframe id="externalContent" style="width: 100%; height: 100%; border: none;"></iframe>
                 </div>
-                <!-- <div class="modal-footer">
-                    <button type="button" class="btn btn-secondary" data-dismiss="modal">关闭</button>
-                </div> -->
+
             </div>
         </div>
     </div>
@@ -237,12 +238,14 @@
                 event.preventDefault(); // 阻止按钮的默认行为
             });
 
+
             // 手动关闭模态窗口的按钮点击事件
             $('.modal .close').click(function () {
                 $('#exampleModal').modal('hide');
             });
         });
     </script>
+
 
 
     <script>
