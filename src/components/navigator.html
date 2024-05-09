@@ -1,0 +1,172 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="..\styles\iconfont.css">
+    <title>崔博之</title>
+    <style>
+        * {
+            padding: 0;
+            margin: 0;
+            text-decoration: none;
+        }
+
+        body {
+            background-color: rgb(209, 213, 219);
+            display: block;
+            justify-content: space-evenly;
+            height: 100vh;
+            align-items: center;
+        }
+
+
+        .shell {
+            position: fixed; 
+            z-index: 3;
+            top: 0;
+            left: 0;
+            width: 100px;
+            height: 100vh; 
+            display: flex;
+            justify-content: left;
+            align-items: left;
+            flex-direction: column;
+            background-color: rgb(17, 24, 39);
+            border-radius: 1px;
+            transition: .3s .5s;
+
+            
+        }
+        .tuan {
+            content: '';
+            position: fixed;
+            top: 0;
+            left: 270px; /* 假设 .shell 的宽度是 100px */
+            right: 0;
+            bottom: 0;
+            width: 100%;
+            height: 100%;
+            backdrop-filter: blur(0px);
+            background-color: rgba(175, 175, 175, 0); /* 设置伪元素的背景颜色为绿色 */
+            z-index: 9; /* 确保伪元素位于 .shell 元素下方 */
+            transition: .3s;
+            
+        }
+        
+        .box {
+            display: block;
+            height: 200px;
+            width: 95%;
+            margin: 9px;
+            border-radius: 5px;
+            position: relative;
+            transition: .8s;
+            color: rgb(160, 160, 175);
+        }
+        .box i {
+            font-size: 60px;
+            position: absolute;
+            margin: 7px 0 0 13px;
+        }
+
+        .box:nth-child(1)::before,
+        .box:nth-child(5)::before{
+            content: '';
+            display: block;
+            width: 100%;
+            height: 2px;
+            background-color: rgb(55, 65, 81);
+            position: absolute;
+            bottom: -10px;
+        }
+
+        .box span{
+            position: relative;
+            top: 22px;
+            left: 80px;
+            font: 500 20px '';
+            opacity: 0;
+            transition: .8s;
+        }
+        .shell:hover{
+            width: 270px;
+            transition: .8s;
+        }
+
+        .tuan.hover {
+            background-color: rgba(175, 175, 175, 0.112);
+            backdrop-filter: blur(5px);
+            transition: .3s .8s;
+        }
+
+        .box:hover{
+            background-color: rgba(55, 65, 81, 0.505);
+            
+        }
+        .shell:hover span{
+            opacity: 1;
+        }
+        .box:hover{
+            color: #fff;
+        }
+
+        .shell:nth-child(2) {
+            background-color: rgb(243, 244, 246);
+        }
+        .shell:nth-child(2) .box:hover{
+            background-color: rgb(209, 213, 219);
+            color: rgb(241, 159, 159);
+        }
+        .shell:nth-child(2) .box{
+            color: #000;
+        }
+
+        .shell:nth-child(3) {
+            background-color: rgb(49,46,129);
+        }
+        .shell:nth-child(3) .box:hover{
+            background-color: rgb(67, 56, 202);
+        }
+        .shell:nth-child(3) .box{
+            color: rgb(140, 120, 240);
+        }
+
+    </style>
+</head>
+
+<body>
+    <div>
+        <div class="tuan">
+
+        </div>
+        <div class="shell">
+            <a href="#" class="box"><i class="iconfont icon-liebiao"></i><span>list</span></a>
+            <a href="#" class="box"><i class="iconfont icon-cangku"></i><span> cbz</span></a>
+            <a href="#" class="box"><i class="iconfont icon-zhuti_tiaosepan"></i><span>cbz</span></a>
+            <a href="#" class="box"><i class="iconfont icon-qianbao"></i><span>cbz</span></a>
+            <a href="#" class="box"><i class="iconfont icon-tupian"></i><span>cbz</span></a>
+            <a href="#" class="box"><i class="iconfont icon-erweima"></i><span>cbz</span></a>
+            <a href="#" class="box"><i class="iconfont icon-dunpaibaoxianrenzheng"></i><span>cbz</span></a>
+            <a href="#" class="box"><i class="iconfont icon-dengchu"></i><span>cbz</span></a>
+        </div>
+    </div>
+
+    <script>
+        var shell = document.querySelector('.shell');
+        var tuan = document.querySelector('.tuan');
+
+        shell.addEventListener('mouseenter', function() {
+        tuan.classList.add('hover');
+        });
+
+        shell.addEventListener('mouseleave', function() {
+        tuan.classList.remove('hover');
+        });
+
+    </script>
+</body>
+
+</html>
