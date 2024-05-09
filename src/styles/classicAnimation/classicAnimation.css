@@ -1,4 +1,3 @@
-/* 页面整体样式 */
 html {
     height: 100%;
     width: 100%;
@@ -19,6 +18,9 @@ body {
     width: 100%;
 }
 
+/* 页面整体样式 */
+
+
 /* 标题样式 */
 .title {
     color: #a11414;
@@ -27,13 +29,14 @@ body {
     margin-top: 40px;
     font: italic 600 64px Inter, sans-serif;
 }
+
 @media screen and (max-width: 536px) {
 
     /* 在屏幕宽度小于或等于1536px 时应用的样式 */
     .footer {
         /* background: linear-gradient(180deg,
-                #D9938E 12.93%,
-                #BD5452 150.44%); */
+        #D9938E 12.93%,
+        #BD5452 150.44%); */
         background-color: transparent;
         display: flex;
         flex-direction: column;
@@ -45,10 +48,12 @@ body {
     .header-item {
         max-width: 50% !important;
     }
-    .title{
+
+    .title {
         font-size: 1.4rem;
     }
 }
+
 /* 热门区域样式 */
 .hot {
     width: 80%;
@@ -89,19 +94,6 @@ body {
 .hot-section .col-md-3 {
     margin-bottom: 20px;
     /* 统一设置底部外边距以保持一致性 */
-}
-
-.modal-content {
-    width: auto;
-    height: auto;
-    position: absolute;
-    /* To allow dynamic positioning */
-}
-
-.modal {
-    display: block;
-    /* To prevent display before positioning */
-    visibility: hidden;
 }
 
 .hover-text {
