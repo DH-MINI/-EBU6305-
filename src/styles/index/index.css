@@ -360,7 +360,7 @@ body {
 
 /* Accordion card body fixed height */
 .accordion .card-body {
-    min-height: 300px;
+    min-height: 120px;
     /* Fixed minimum height */
     overflow: hidden;
     /* Hide overflow */

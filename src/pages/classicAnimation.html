@@ -1,6 +1,7 @@
 <!DOCTYPE html>
 <html lang="en">
 
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -13,7 +14,6 @@
     <script src="../assets/bootstrap_src/popper.min.js"></script>
     <script src="../assets/bootstrap_src/v4bootstrap.bundle.min.js"></script>
 
-    <!-- <script src="../scripts/classicAnimation/classicAnimation.js"></script> -->
 
 
 </head>
@@ -67,8 +67,10 @@
         <div class="modal-dialog modal-lg" role="document">
             <div class="modal-content">
                 <div class="modal-header">
-                    <h5 class="modal-title" id="exampleModalLabel">动画详情</h5>
-                    <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+
+                    <h5 class="modal-title" id="exampleModalLabel">Animation Details</h5>
+                    <button type="button" class="close" aria-label="Close">
+
                         <span aria-hidden="true">&times;</span>
                     </button>
                 </div>
@@ -76,9 +78,7 @@
                     <!-- 这里是要加载的外部 HTML 内容 -->
                     <iframe id="externalContent" style="width: 100%; height: 100%; border: none;"></iframe>
                 </div>
-                <div class="modal-footer">
-                    <button type="button" class="btn btn-secondary" data-dismiss="modal">关闭</button>
-                </div>
+
             </div>
         </div>
     </div>
@@ -87,6 +87,7 @@
     <div class="music-player-button" onclick="togglePlay()">
         <img src="../assets/image/icon/play.png" alt="Play" id="playButton" style="width: 20px; height: 20px;">
     </div>
+
     <h1 class="title mt-4">Classic Animation</h1>
     <div id="classicAnimationCarousel" class="carousel slide" data-ride="carousel">
         <div class="carousel-inner">
@@ -162,14 +163,14 @@
     <script>
         // Sample data - replace this with your actual data
         const contentData = [
-            { title: "The Legend Of Sealed Book", image: "../assets/image/classicAnimation/nvYaoGuai.jpg", hoverText: "An imaginative and creative animated film.", link: "./animationDetails/animationDetail.html" },
-            { title: "Ginseng Fruit", image: "../assets/image/classicAnimation/11.jpg", hoverText: "Adapted from the classic Chinese literary work 'Journey to the West'.", link: "./animationDetails/animationDetail.html" },
-            { title: "Three Monks", image: "../assets/image/classicAnimation/monk.webp", hoverText: "It integrates modern comic techniques into its own national style.", link: "./animationDetails/animationDetail.html" },
-            { title: "Prince Nezha's Triumph Against Dragon King", image: "../assets/image/classicAnimation/neZhaNaoHai.jpg", hoverText: "Childhood memories of Chinese people.", link: "./animationDetails/animationDetail.html" },
-            { title: "Yao-Chinese Folktales", image: "../assets/image/classicAnimation/zhongGuoQiTan.webp", hoverText: "The clean and pure Chinese art films have returned.", link: "./animationDetails/animationDetail.html" },
-            { title: "Small Tadpole Looks for Mother", image: "../assets/image/classicAnimation/keDou.webp", hoverText: "China's first ink wash animation film.", link: "./animationDetails/animationDetail.html" },
-            { title: "Snipe-Clam Grapple", image: "../assets/image/classicAnimation/1.jpg", hoverText: "Adapted from a traditional Chinese fable.", link: "./animationDetails/animationDetail.html" },
-            { title: "Calabash Brothers", image: "../assets/image/classicAnimation/10.webp", hoverText: "One of the most influential representative works of Chinese animation.", link: "./animationDetails/animationDetail.html" },
+            { title: "The Legend Of Sealed Book", image: "../assets/image/classicAnimation/nvYaoGuai.jpg", hoverText: "An imaginative and creative animated film.", link: "./animationDetails/animationDetail1.html" },
+            { title: "Ginseng Fruit", image: "../assets/image/classicAnimation/11.jpg", hoverText: "Adapted from the classic Chinese literary work 'Journey to the West'.", link: "./animationDetails/animationDetail2.html" },
+            { title: "Three Monks", image: "../assets/image/classicAnimation/monk.webp", hoverText: "It integrates modern comic techniques into its own national style.", link: "./animationDetails/animationDetail3.html" },
+            { title: "Prince Nezha's Triumph Against Dragon King", image: "../assets/image/classicAnimation/neZhaNaoHai.jpg", hoverText: "Childhood memories of Chinese people.", link: "./animationDetails/animationDetail4.html" },
+            { title: "Yao-Chinese Folktales", image: "../assets/image/classicAnimation/zhongGuoQiTan.webp", hoverText: "The clean and pure Chinese art films have returned.", link: "./animationDetails/animationDetail5.html" },
+            { title: "Small Tadpole Looks for Mother", image: "../assets/image/classicAnimation/keDou.webp", hoverText: "China's first ink wash animation film.", link: "./animationDetails/animationDetail6.html" },
+            { title: "Snipe-Clam Grapple", image: "../assets/image/classicAnimation/1.jpg", hoverText: "Adapted from a traditional Chinese fable.", link: "./animationDetails/animationDetail7.html" },
+            { title: "Calabash Brothers", image: "../assets/image/animationDetail/5.jpeg", hoverText: "One of the most influential representative works of Chinese animation.", link: "./animationDetails/animationDetail.html" },
             { title: "The Snow Child", image: "../assets/image/classicAnimation/3.jpg", hoverText: "Simple and pure design and story.", link: "./animationDetails/animationDetail.html" },
             { title: "No-brain and Unhappiness", image: "../assets/image/classicAnimation/4.jpg", hoverText: "A representative work of the Chinese School of Animation.", link: "./animationDetails/animationDetail.html" },
             { title: "Shuke and Beita", image: "../assets/image/classicAnimation/5.jpg", hoverText: "A partial critique of the educational system at the time.", link: "./animationDetails/animationDetail.html" },
@@ -236,8 +237,16 @@
                 $('#exampleModal').modal('show'); // 显示模态窗口
                 event.preventDefault(); // 阻止按钮的默认行为
             });
+
+
+            // 手动关闭模态窗口的按钮点击事件
+            $('.modal .close').click(function () {
+                $('#exampleModal').modal('hide');
+            });
         });
     </script>
+
+
 
     <script>
         var audio2 = new Audio('../assets/music/yin2.mp3');

@@ -1,0 +1,352 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Classic Animation - China Dream Works Studios</title>
+    <link href="../../assets/bootstrap_src/bootstrap.min.css" rel="stylesheet">
+    <script src="../../assets/bootstrap_src/jquery-3.6.0.min.js"></script>
+    <script src="../../assets/bootstrap_src/bootstrap.bundle.min.js"></script>
+    <script src="../../assets/bootstrap_src/popper.min.js"></script>
+    <script src="../../assets/bootstrap_src/v4bootstrap.bundle.min.js"></script>
+
+    <!-- <script src="../scripts/classicAnimation/classicAnimation.js"></script> -->
+    <style>
+        html {
+            height: 100%;
+            width: 100%;
+            background: linear-gradient(180deg, #ffece3 12.93%, #bb4f4d 150.44%, #a11414 150.46%);
+            background-attachment: fixed;
+            /* 背景固定，内容滚动时背景不会动 */
+        }
+
+        body {
+            margin: 0;
+            padding: 0;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            background: transparent;
+            /* 透明背景 */
+            width: 100%;
+        }
+
+        .box:hover {
+            box-shadow: 0 8px 8px 0 grey;
+            transform: translate(0, -10px);
+            transform: scale(1.1);
+            transition: all 0.4s;
+            z-index: 1;
+
+        }
+
+        .box-bd {
+            margin: 20px 0 0 300px;
+            width: 700px;
+        }
+    </style>
+</head>
+
+<body class="container ">
+    <section>
+        <div id="carouselExampleIndicators" class="carousel slide carousel-fade" data-ride="carousel">
+            <div class="carousel-inner">
+                <div class="carousel-item active">
+                    <img src="../../assets/image/animationDetail/24.jpeg" class="d-block w-100" alt="picture 4">
+                </div>
+                <div class="carousel-item">
+                    <img src="../../assets/image/animationDetail/22.jpeg" class="d-block w-100" alt="picture 2">
+                </div>
+                <div class="carousel-item">
+                    <img src="../../assets/image/animationDetail/23.jpeg" class="d-block w-100" alt="picture 3">
+                </div>
+            </div>
+            <button class="carousel-control-prev" type="button" data-target="#carouselExampleIndicators"
+                data-slide="prev">
+                <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+            </button>
+            <button class="carousel-control-next" type="button" data-target="#carouselExampleIndicators"
+                data-slide="next">
+                <span class="carousel-control-next-icon" aria-hidden="true"></span>
+            </button>
+        </div>
+        <section class="card p-5 text-white bg-danger">
+            <div class="card-header">
+                <h1>
+                    <span class="text-warning">《Ginseng Fruit》</span>
+                </h1>
+            </div>
+            <div class="container">
+                <div class="d-flex align-items-cente"> <!--display flex-->
+                    <div>
+                        <p class="my-4">
+                        <div class="card-body">
+                            <p class="card-text">Director: Dingxian Yan</p>
+                            <p class="card-text">Writer: Dingxian Yan</p>
+                            <h5 class="card-title text-warning">Introduction of the movie</h5>
+                            <p class="card-text">
+                                &nbsp; &nbsp; That is to say, the Tang monk teacher and disciple four people winding to
+                                the mountain five Zhuang Guan, is the view master ZhenYuanZi to go to YuanShiTianZun to
+                                listen to the law, has instructed the apprentice QingFeng and MingYue with ginseng fruit
+                                hospitality to the eastern monks. This ginseng fruit is a rare delicacy on earth, eat a
+                                mouthful of it can prolong life and immortality. However, the Tang Monk, seeing that the
+                                ginseng fruit is in the shape of a doll, firmly refuses to eat it, attracting jokes from
+                                Qingfeng and Mingyue. The Tang Monk, however, refuses to eat the ginseng fruit because
+                                it is in the shape of a doll. This causes an argument between the Tang Monk and the
+                                Moon, and the Monkey King gets angry and breaks the ginseng fruit tree, which causes a
+                                series of troubles.</p>
+
+                            <p class="card-text"><small class="text-muted">Welcome to the movie.</small></p>
+                        </div>
+                        </p>
+                        <button class="btn btn-warning btn-lg">watch now</button>
+                    </div>
+                    <img type="button" src="../../assets/image/animationDetail/25.jpeg" alt="showcase"
+                        class=" box w-50 h-100  d-none d-md-block " data-toggle="modal" data-target="#exampleModal">
+                    <!-- Modal -->
+                    <div class="modal fade" id="exampleModal" tabindex="-1" aria-labelledby="exampleModalLabel"
+                        aria-hidden="true">
+                        <div class="modal-dialog modal-dialog-centered modal-dialog-scrollable">
+                            <div class="modal-content">
+                                <div class="modal-header">
+                                    <h5 class="modal-title" id="exampleModalLabel">Modal title</h5>
+                                    <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                                        <span aria-hidden="true">&times;</span>
+                                    </button>
+                                </div>
+                                <div class="modal-body">
+                                    <div class="accordion" id="accordionExample">
+                                        <div class="card">
+                                            <div class="card-header" id="headingOne">
+                                                <h2 class="mb-0">
+                                                    <button class="btn btn-link btn-block text-left" type="button"
+                                                        data-toggle="collapse" data-target="#collapseOne"
+                                                        aria-expanded="true" aria-controls="collapseOne">
+                                                        <h5 class="card-title text-warning">Author</h5>
+                                                    </button>
+                                                </h2>
+                                            </div>
+
+                                            <div id="collapseOne" class="collapse show" aria-labelledby="headingOne"
+                                                data-parent="#accordionExample">
+                                                <div class="card-body">
+                                                    <p class="card-text">Director: Dingxian Yan</p>
+                                                    <p class="card-text">Screenplay: Dingxian Yan</p>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class="card">
+                                            <div class="card-header" id="headingTwo">
+                                                <h2 class="mb-0">
+                                                    <button class="btn btn-link btn-block text-left collapsed"
+                                                        type="button" data-toggle="collapse" data-target="#collapseTwo"
+                                                        aria-expanded="false" aria-controls="collapseTwo">
+                                                        <h5 class="card-title text-warning">Introduction of the movie
+                                                        </h5>
+                                                    </button>
+                                                </h2>
+                                            </div>
+                                            <div id="collapseTwo" class="collapse" aria-labelledby="headingTwo"
+                                                data-parent="#accordionExample">
+                                                <div class="card-body">
+                                                    <p class="card-text">
+                                                        &nbsp; &nbsp; That is to say, the Tang monk teacher and disciple
+                                                        four people winding to the mountain five Zhuang Guan, is the
+                                                        view master ZhenYuanZi to go to YuanShiTianZun to listen to the
+                                                        law, has instructed the apprentice QingFeng and MingYue with
+                                                        ginseng fruit hospitality to the eastern monks. This ginseng
+                                                        fruit is a rare delicacy on earth, eat a mouthful of it can
+                                                        prolong life and immortality. However, the Tang Monk, seeing
+                                                        that the ginseng fruit is in the shape of a doll, firmly refuses
+                                                        to eat it, attracting jokes from Qingfeng and Mingyue. The Tang
+                                                        Monk, however, refuses to eat the ginseng fruit because it is in
+                                                        the shape of a doll. This causes an argument between the Tang
+                                                        Monk and the Moon, and the Monkey King gets angry and breaks the
+                                                        ginseng fruit tree, which causes a series of troubles.</p>
+                                                </div>
+                                            </div>
+                                        </div>
+
+                                    </div>
+                                    <div class="modal-footer">
+                                        <button type="button" class="btn btn-warning"
+                                            data-dismiss="modal">Close</button>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+        </section>
+        <section>
+            <div class="card-group">
+                <div class="card">
+                    <img type="button" src="../../assets/image/animationDetail/21.jpeg" alt="picture 1"
+                        class=" box card-img-top " data-toggle="modal" data-target="#Modal1">
+                    <!-- Modal -->
+                    <div class="modal fade" id="Modal1" tabindex="-1" aria-labelledby="exampleModalLabel"
+                        aria-hidden="true">
+                        <div class="modal-dialog">
+                            <div class="modal-content">
+                                <div class="modal-header">
+                                    <h5 class="modal-title text-warning" id="exampleModalLabel">Town God: A Powerful and
+                                        Benevolent Immortal in "Journey to the West"</h5>
+                                    <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                                        <span aria-hidden="true">&times;</span>
+                                    </button>
+                                </div>
+                                <div class="modal-body">
+                                    <p>Town God, also known as Zhen Yuanzi, is a prominent figure in the Chinese classic
+                                        novel "Journey to the West." He is a powerful and benevolent immortal who
+                                        resides in the Wuzhuang Temple, a sacred place where the legendary Ginseng Fruit
+                                        Tree grows.</p>
+                                    <h5>Personality</h5>
+                                    <ul>
+                                        <li>Wisdom: Town God possesses vast knowledge and understanding of the universe
+                                            and its workings.</li>
+                                        <li>Benevolence: Town God is kind and compassionate, offering hospitality and
+                                            guidance to those who visit his temple.</li>
+                                        <li>Detachment: Town God is detached from worldly desires and focuses on
+                                            spiritual cultivation.</li>
+                                        <li>Power: Town God is a powerful immortal with the ability to control the
+                                            elements and perform miracles.</li>
+                                    </ul>
+                                    <h5>Role in the Story</h5>
+                                    <p>Town God plays a significant role in the adventures of the Monkey King, Sun
+                                        Wukong, and his companions. When Sun Wukong steals the Ginseng Fruits, Town God
+                                        confronts him but is ultimately defeated by the Monkey King's superior strength.
+                                        However, instead of seeking revenge, Town God offers Sun Wukong a chance to
+                                        redeem himself by helping him retrieve his stolen treasures.</p>
+                                    <h5>Symbolism</h5>
+                                    <p>Town God represents the ideal of a wise and benevolent ruler. He embodies the
+                                        virtues of wisdom, compassion, and detachment, qualities that are essential for
+                                        leadership and spiritual growth. His presence in the story highlights the
+                                        importance of seeking guidance from those who are wiser and more experienced,
+                                        and the value of learning from one's mistakes.</p>
+                                </div>
+                                <div class="modal-footer">
+                                    <button type="button" class="btn btn-warning" data-dismiss="modal">Close</button>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="card-body">
+                        <p class="card-text"><small class="text-muted">Town God: A Powerful and Benevolent Immortal in
+                                "Journey to the West"</small>
+                        </p>
+                    </div>
+                </div>
+                <div class="card">
+                    <img type="button" src="../../assets/image/animationDetail/22.jpeg" alt="picture 2"
+                        class=" box card-img-top " data-toggle="modal" data-target="#Modal2">
+                    <!-- Modal -->
+                    <div class="modal fade" id="Modal2" tabindex="-1" aria-labelledby="exampleModalLabel"
+                        aria-hidden="true">
+                        <div class="modal-dialog">
+                            <div class="modal-content">
+                                <div class="modal-header">Tang Sanzang: The Pious and Determined Monk in "Journey to the
+                                    West"</h5>
+                                    <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                                        <span aria-hidden="true">&times;</span>
+                                    </button>
+                                </div>
+                                <div class="modal-body">
+                                    <p>Tang Sanzang, also known as Xuanzang, is the central figure in the classic
+                                        Chinese novel "Journey to the West." He is a devout Buddhist monk who undertakes
+                                        a perilous journey to retrieve sacred scriptures from the West. Along the way,
+                                        he is accompanied by three disciples: Sun Wukong, Zhu Bajie, and Sha Wujing.</p>
+                                    <h5>Personality</h5>
+                                    <ul>
+                                        <li>Pious: Tang Sanzang is deeply devoted to Buddhism and adheres strictly to
+                                            its teachings.</li>
+                                        <li>Determined: Despite the many challenges he faces, Tang Sanzang remains
+                                            steadfast in his resolve to complete his mission.</li>
+                                        <li>Naive: Tang Sanzang can be naive and easily deceived, particularly by demons
+                                            and other tricksters.</li>
+                                        <li>Scholarly: Tang Sanzang is a learned scholar with a deep understanding of
+                                            Buddhist scriptures.</li>
+                                    </ul>
+                                    <h5>Role in the Story</h5>
+                                    <p>Tang Sanzang is the driving force behind the journey to the West. He is the one
+                                        who sets the goal and inspires his disciples to overcome obstacles. He also
+                                        serves as a moral compass for the group, reminding them of their purpose and the
+                                        importance of staying true to their values.</p>
+                                    <h5>Symbolism</h5>
+                                    <p>Tang Sanzang represents the ideal of the Buddhist seeker. He embodies the
+                                        qualities of piety, determination, and compassion, which are essential for
+                                        achieving spiritual liberation. His journey to the West symbolizes the path to
+                                        enlightenment, which is fraught with challenges but ultimately leads to a state
+                                        of perfect understanding and peace.</p>
+                                </div>
+                                <div class="modal-footer">
+                                    <button type="button" class="btn btn-warning" data-dismiss="modal">Close</button>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="card-body">
+                        <p class="card-text"><small class="text-muted">Tang Sanzang: The Pious and Determined Monk in
+                                "Journey to the West"</small></p>
+                    </div>
+                </div>
+                <div class="card">
+                    <img type="button" src="../../assets/image/animationDetail/23.jpeg" alt="picture 3"
+                        class=" box card-img-top " data-toggle="modal" data-target="#Modal3">
+                    <!-- Modal -->
+                    <div class="modal fade" id="Modal3" tabindex="-1" aria-labelledby="exampleModalLabel"
+                        aria-hidden="true">
+                        <div class="modal-dialog">
+                            <div class="modal-content">
+                                <div class="modal-header">
+                                    <h5 class="modal-title text-warning" id="exampleModalLabel">The Supreme Lord Laozi:
+                                        A Powerful and Enigmatic Figure in Chinese Mythology</h5>
+                                    <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                                        <span aria-hidden="true">&times;</span>
+                                    </button>
+                                </div>
+                                <div class="modal-body">
+                                    <p>The Supreme Lord Laozi, also known as Lao Tzu, is a revered figure in Chinese
+                                        mythology and Taoism. He is traditionally considered the founder of Taoism and
+                                        the author of the Tao Te Ching, a foundational text of the philosophy. Laozi is
+                                        depicted as a wise and enigmatic sage, possessing immense power and knowledge.
+                                    </p>
+                                    <h5>Personality</h5>
+                                    <ul>
+                                        <li>Wisdom: Laozi is renowned for his profound understanding of the universe and
+                                            its workings.</li>
+                                        <li>Humility: Despite his immense power, Laozi remains humble and unassuming.
+                                        </li>
+                                        <li>Mystery: Laozi's origins and true nature remain shrouded in mystery.</li>
+                                        <li>Non-interventionism: Laozi generally avoids interfering in the affairs of
+                                            mortals.</li>
+                                    </ul>
+                                    <h5>Role in Chinese Mythology</h5>
+                                    <p>Laozi plays a significant role in Chinese mythology as a source of wisdom and
+                                        guidance. He is often consulted by emperors and other rulers seeking advice on
+                                        how to govern their people and maintain harmony in the land. His teachings have
+                                        influenced countless individuals throughout history, inspiring them to live more
+                                        meaningful and fulfilling lives.</p>
+                                    <h5>Symbolism</h5>
+                                    <p>Laozi represents the ideal of the wise and enlightened sage. He embodies the
+                                        principles of the Tao, such as humility, non-interventionism, and living in
+                                        harmony with nature. His presence in Chinese mythology serves as a reminder of
+                                        the importance of seeking wisdom, living ethically, and understanding the
+                                        interconnectedness of all things.</p>
+                                </div>
+                                <div class="modal-footer">
+                                    <button type="button" class="btn btn-warning" data-dismiss="modal">Close</button>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="card-body">
+                        <p class="card-text"><small class="text-muted">The Supreme Lord Laozi: A Powerful and Enigmatic
+                                Figure in Chinese Mythology</small></p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+</body>
+
+</html>

@@ -1,0 +1,361 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Classic Animation - China Dream Works Studios</title>
+    <link href="../../assets/bootstrap_src/bootstrap.min.css" rel="stylesheet">
+    <script src="../../assets/bootstrap_src/jquery-3.6.0.min.js"></script>
+    <script src="../../assets/bootstrap_src/bootstrap.bundle.min.js"></script>
+    <script src="../../assets/bootstrap_src/popper.min.js"></script>
+    <script src="../../assets/bootstrap_src/v4bootstrap.bundle.min.js"></script>
+
+    <!-- <script src="../scripts/classicAnimation/classicAnimation.js"></script> -->
+    <style>
+        html {
+            height: 100%;
+            width: 100%;
+            background: linear-gradient(180deg, #ffece3 12.93%, #bb4f4d 150.44%, #a11414 150.46%);
+            background-attachment: fixed;
+            /* 背景固定，内容滚动时背景不会动 */
+        }
+
+        body {
+            margin: 0;
+            padding: 0;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            background: transparent;
+            /* 透明背景 */
+            width: 100%;
+        }
+
+        .box:hover {
+            box-shadow: 0 8px 8px 0 grey;
+            transform: translate(0, -10px);
+            transform: scale(1.1);
+            transition: all 0.4s;
+            z-index: 1;
+
+        }
+
+        .box-bd {
+            margin: 20px 0 0 300px;
+            width: 700px;
+        }
+    </style>
+</head>
+
+<body class="container ">
+    <section>
+        <div id="carouselExampleIndicators" class="carousel slide carousel-fade" data-ride="carousel">
+            <div class="carousel-inner">
+                <div class="carousel-item active">
+                    <img src="../../assets/image/animationDetail/44.jpeg" class="d-block w-100" alt="picture 4">
+                </div>
+                <div class="carousel-item">
+                    <img src="../../assets/image/animationDetail/42.jpeg" class="d-block w-100" alt="picture 2">
+                </div>
+                <div class="carousel-item">
+                    <img src="../../assets/image/animationDetail/43.jpeg" class="d-block w-100" alt="picture 3">
+                </div>
+            </div>
+            <button class="carousel-control-prev" type="button" data-target="#carouselExampleIndicators"
+                data-slide="prev">
+                <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+            </button>
+            <button class="carousel-control-next" type="button" data-target="#carouselExampleIndicators"
+                data-slide="next">
+                <span class="carousel-control-next-icon" aria-hidden="true"></span>
+            </button>
+        </div>
+        <section class="card p-5 text-white bg-danger">
+            <div class="card-header">
+                <h1>
+                    <span class="text-warning">《Smash the Heavenly Palace》</span>
+                </h1>
+            </div>
+            <div class="container">
+                <div class="d-flex align-items-cente"> <!--display flex-->
+                    <div>
+                        <p class="my-4">
+                        <div class="card-body">
+                            <p class="card-text">Director: Wang Shuchen, Yan Dingxian, Ada</p>
+                            <h5 class="card-title text-warning">Introduction of the movie</h5>
+                            <p class="card-text">
+                                &nbsp; &nbsp; Ne Zha Fights the Sea' is China's first widescreen animated feature film,
+                                based on classical literature, which tells the story of the feud between Li Nezha, the
+                                son of Li Jing of the Chentang Pass, and the Dragon Palace of the East China Sea.
+                            </p>
+                            <p class="card-text">
+                                &nbsp; &nbsp; The film is a magnificent, well-produced film that features richly drawn
+                                characters, a
+                                rhythmic narrative, and a fascinating use of colour, with the words 'strange, superb,
+                                magnificent, and beautiful' running through every aspect of its creation.</p>
+                            <p class="card-text"><small class="text-muted">Welcome to the movie.</small></p>
+                        </div>
+                        </p>
+                        <button class="btn btn-warning btn-lg">watch now</button>
+                    </div>
+                    <img type="button" src="../../assets/image/animationDetail/45.jpeg" alt="showcase"
+                        class=" box w-50 h-100  d-none d-md-block " data-toggle="modal" data-target="#exampleModal">
+                    <!-- Modal -->
+                    <div class="modal fade" id="exampleModal" tabindex="-1" aria-labelledby="exampleModalLabel"
+                        aria-hidden="true">
+                        <div class="modal-dialog modal-dialog-centered modal-dialog-scrollable">
+                            <div class="modal-content">
+                                <div class="modal-header">
+                                    <h5 class="modal-title" id="exampleModalLabel">Modal title</h5>
+                                    <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                                        <span aria-hidden="true">&times;</span>
+                                    </button>
+                                </div>
+                                <div class="modal-body">
+                                    <div class="accordion" id="accordionExample">
+                                        <div class="card">
+                                            <div class="card-header" id="headingOne">
+                                                <h2 class="mb-0">
+                                                    <button class="btn btn-link btn-block text-left" type="button"
+                                                        data-toggle="collapse" data-target="#collapseOne"
+                                                        aria-expanded="true" aria-controls="collapseOne">
+                                                        <h5 class="card-title text-warning">Author</h5>
+                                                    </button>
+                                                </h2>
+                                            </div>
+
+                                            <div id="collapseOne" class="collapse show" aria-labelledby="headingOne"
+                                                data-parent="#accordionExample">
+                                                <div class="card-body">
+                                                    <p class="card-text">Director: Wang Shuchen, Yan Dingxian, Ada</p>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class="card">
+                                            <div class="card-header" id="headingTwo">
+                                                <h2 class="mb-0">
+                                                    <button class="btn btn-link btn-block text-left collapsed"
+                                                        type="button" data-toggle="collapse" data-target="#collapseTwo"
+                                                        aria-expanded="false" aria-controls="collapseTwo">
+                                                        <h5 class="card-title text-warning">Introduction of the movie
+                                                        </h5>
+                                                    </button>
+                                                </h2>
+                                            </div>
+                                            <div id="collapseTwo" class="collapse" aria-labelledby="headingTwo"
+                                                data-parent="#accordionExample">
+                                                <div class="card-body">
+                                                    <p class="card-text">
+                                                        &nbsp; &nbsp; Ne Zha Fights the Sea' is China's first widescreen
+                                                        animated feature film,
+                                                        based on classical literature, which tells the story of the feud
+                                                        between Li Nezha, the
+                                                        son of Li Jing of the Chentang Pass, and the Dragon Palace of
+                                                        the East China Sea.
+                                                    </p>
+                                                    <p class="card-text">
+                                                        &nbsp; &nbsp; The film is a magnificent, well-produced film that
+                                                        features richly drawn characters, a
+                                                        rhythmic narrative, and a fascinating use of colour, with the
+                                                        words 'strange, superb,
+                                                        magnificent, and beautiful' running through every aspect of its
+                                                        creation.</p>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class="card">
+                                            <div class="card-header" id="headingThree">
+                                                <h2 class="mb-0">
+                                                    <button class="btn btn-link btn-block text-left collapsed"
+                                                        type="button" data-toggle="collapse"
+                                                        data-target="#collapseThree" aria-expanded="false"
+                                                        aria-controls="collapseThree">
+                                                        <h5 class="card-title text-warning">Awards</h5>
+                                                    </button>
+                                                </h2>
+                                            </div>
+                                            <div id="collapseThree" class="collapse" aria-labelledby="headingThree"
+                                                data-parent="#accordionExample">
+                                                <div class="card-body">
+                                                    <p class="card-text">
+                                                    <ul>
+                                                        <li><strong>1979:</strong> Culture Ministry Excellent Film Award
+                                                            (China)</li>
+                                                        <li><strong>1983:</strong> Special Award at the Manila
+                                                            International Film Festival (Philippines)</li>
+                                                        <li><strong>1988:</strong>
+                                                            <ul>
+                                                                <li>Jury Award at the Bourges International Festival of
+                                                                    Young Animated Films (France)</li>
+                                                                <li>Wide-Screen Feature Animation Award at the Bourges
+                                                                    International Festival of Young Animated Films
+                                                                    (France)</li>
+                                                            </ul>
+                                                        </li>
+                                                        <li><strong>1980:</strong> Best Animated Film Award at the 3rd
+                                                            Hundred Flowers Awards (China)</li>
+                                                    </ul>
+                                                    </p>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+
+                                </div>
+                                <div class="modal-footer">
+                                    <button type="button" class="btn btn-warning" data-dismiss="modal">Close</button>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+        </section>
+        <section>
+            <div class="card-group">
+                <div class="card">
+                    <img type="button" src="../../assets/image/animationDetail/41.jpeg" alt="picture 1"
+                        class=" box card-img-top " data-toggle="modal" data-target="#Modal1">
+                    <!-- Modal -->
+                    <div class="modal fade" id="Modal1" tabindex="-1" aria-labelledby="exampleModalLabel"
+                        aria-hidden="true">
+                        <div class="modal-dialog">
+                            <div class="modal-content">
+                                <div class="modal-header">
+                                    <h5 class="modal-title text-warning" id="exampleModalLabel">Ne Zha's Uprising in the
+                                        Dragon Palace: A Tale of Rebellion and Redemption</h5>
+                                    <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                                        <span aria-hidden="true">&times;</span>
+                                    </button>
+                                </div>
+                                <div class="modal-body">
+
+                                    <h5>The Incident</h5>
+                                    <ul>
+                                        <li>Cause: Ne Zha accidentally kills the Dragon King's son, Ao Bing.</li>
+                                        <li>Confrontation: Ne Zha bravely confronts the Dragon King and his army.</li>
+                                        <li>Resolution: Ne Zha defeats the Dragon King's forces but sacrifices himself
+                                            to save his people.</li>
+                                    </ul>
+                                    <h5>Significance</h5>
+                                    <ul>
+                                        <li>Character Development: Ne Zha's actions showcase his impulsiveness,
+                                            rebellious spirit, and loyalty.</li>
+                                        <li>Themes: The story explores themes of rebellion, justice, consequences,
+                                            responsibility, and redemption.</li>
+                                        <li>Cultural Impact: The story has become a popular legend, inspiring
+                                            adaptations in literature, opera, and film.</li>
+                                    </ul>
+                                </div>
+                                <div class="modal-footer">
+                                    <button type="button" class="btn btn-warning" data-dismiss="modal">Close</button>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="card-body">
+                        <p class="card-text"><small class="text-muted">Ne Zha's Uprising in the Dragon Palace: A Tale of
+                                Rebellion and Redemption</small>
+                        </p>
+                    </div>
+                </div>
+                <div class="card">
+                    <img type="button" src="../../assets/image/animationDetail/42.jpeg" alt="picture 2"
+                        class=" box card-img-top " data-toggle="modal" data-target="#Modal2">
+                    <!-- Modal -->
+                    <div class="modal fade" id="Modal2" tabindex="-1" aria-labelledby="exampleModalLabel"
+                        aria-hidden="true">
+                        <div class="modal-dialog">
+                            <div class="modal-content">
+                                <div class="modal-header">
+                                    <h5 class="modal-title text-warning" id="exampleModalLabel">The Enduring Educational
+                                        Significance and Influence of the Ne Zha Story</h5>
+                                    <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                                        <span aria-hidden="true">&times;</span>
+                                    </button>
+                                </div>
+                                <div class="modal-body">
+                                    <h5>Educational Significance</h5>
+                                    <ul>
+                                        <li>Moral Lessons: Teaches valuable lessons about responsibility, consequences,
+                                            and facing mistakes.</li>
+                                        <li>Cultural Values: Reflects traditional Chinese values like filial piety,
+                                            loyalty, and pursuit of justice.</li>
+                                        <li>Self-Discovery and Identity: Resonates with young people navigating
+                                            adolescence and identity formation.</li>
+                                    </ul>
+                                    <h5>Cultural Influence</h5>
+                                    <ul>
+                                        <li>Literature and Art: Inspired countless adaptations in Chinese literature,
+                                            opera, and film.</li>
+                                        <li>Popular Culture: Ne Zha's image and characteristics have become widely
+                                            recognized.</li>
+                                        <li>Social Commentary: Used as a vehicle for social commentary, addressing
+                                            prejudice, discrimination, and acceptance.</li>
+                                    </ul>
+                                </div>
+                                <div class="modal-footer">
+                                    <button type="button" class="btn btn-warning" data-dismiss="modal">Close</button>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="card-body">
+                        <p class="card-text"><small class="text-muted">The Enduring Educational Significance and
+                                Influence of the Ne Zha Story</small></p>
+                    </div>
+                </div>
+                <div class="card">
+                    <img type="button" src="../../assets/image/animationDetail/43.jpeg" alt="picture 3"
+                        class=" box card-img-top " data-toggle="modal" data-target="#Modal3">
+                    <!-- Modal -->
+                    <div class="modal fade" id="Modal3" tabindex="-1" aria-labelledby="exampleModalLabel"
+                        aria-hidden="true">
+                        <div class="modal-dialog">
+                            <div class="modal-content">
+                                <div class="modal-header">
+                                    <h5 class="modal-title text-warning" id="exampleModalLabel">Ne Zha's Self-Immolation
+                                        in Chentangguan: A Moment of Sacrifice and Redemption
+                                    </h5>
+                                    <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                                        <span aria-hidden="true">&times;</span>
+                                    </button>
+                                </div>
+                                <div class="modal-body">
+                                    <h5>The Decision</h5>
+                                    <ul>
+                                        <li>Realization of Consequences: Ne Zha understands the potential devastation
+                                            his conflict has caused.</li>
+                                        <li>Acceptance of Responsibility: Ne Zha acknowledges his actions have
+                                            consequences and chooses to bear the burden.</li>
+                                        <li>Ultimate Sacrifice: Ne Zha severs his own flesh and bones, returning them to
+                                            his parents as a final act of filial piety.</li>
+                                    </ul>
+                                    <h5>Significance</h5>
+                                    <ul>
+                                        <li>Character Development: Ne Zha's self-immolation showcases his growth,
+                                            maturity, and understanding of consequences.</li>
+                                        <li>Themes: The story explores themes of sacrifice, redemption, and the power of
+                                            love.</li>
+                                        <li>Cultural Impact: Ne Zha's self-immolation has become a poignant and
+                                            memorable moment in Chinese mythology.</li>
+                                    </ul>
+                                </div>
+                                <div class="modal-footer">
+                                    <button type="button" class="btn btn-warning" data-dismiss="modal">Close</button>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="card-body">
+                        <p class="card-text"><small class="text-muted">Ne Zha's Self-Immolation in Chentangguan: A
+                                Moment of Sacrifice and Redemption</small></p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+
+</body>
+
+</html>
