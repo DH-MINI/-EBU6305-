@@ -1,0 +1,371 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Classic Animation - China Dream Works Studios</title>
+    <link href="../../assets/bootstrap_src/bootstrap.min.css" rel="stylesheet">
+    <script src="../../assets/bootstrap_src/jquery-3.6.0.min.js"></script>
+    <script src="../../assets/bootstrap_src/bootstrap.bundle.min.js"></script>
+    <script src="../../assets/bootstrap_src/popper.min.js"></script>
+    <script src="../../assets/bootstrap_src/v4bootstrap.bundle.min.js"></script>
+
+    <!-- <script src="../scripts/classicAnimation/classicAnimation.js"></script> -->
+    <style>
+        html {
+            height: 100%;
+            width: 100%;
+            background: linear-gradient(180deg, #ffece3 12.93%, #bb4f4d 150.44%, #a11414 150.46%);
+            background-attachment: fixed;
+            /* 背景固定，内容滚动时背景不会动 */
+        }
+
+        body {
+            margin: 0;
+            padding: 0;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            background: transparent;
+            /* 透明背景 */
+            width: 100%;
+        }
+
+        .box:hover {
+            box-shadow: 0 8px 8px 0 grey;
+            transform: translate(0, -10px);
+            transform: scale(1.1);
+            transition: all 0.4s;
+            z-index: 1;
+
+        }
+
+        .box-bd {
+            margin: 20px 0 0 300px;
+            width: 700px;
+        }
+    </style>
+</head>
+
+<body class="container ">
+    <section>
+        <div id="carouselExampleIndicators" class="carousel slide carousel-fade" data-ride="carousel">
+            <div class="carousel-inner">
+                <div class="carousel-item active">
+                    <img src="../../assets/image/animationDetail/14.jpeg" class="d-block w-100" alt="picture 4">
+                </div>
+                <div class="carousel-item">
+                    <img src="../../assets/image/animationDetail/12.jpeg" class="d-block w-100" alt="picture 2">
+                </div>
+                <div class="carousel-item">
+                    <img src="../../assets/image/animationDetail/13.jpeg" class="d-block w-100" alt="picture 3">
+                </div>
+            </div>
+            <button class="carousel-control-prev" type="button" data-target="#carouselExampleIndicators"
+                data-slide="prev">
+                <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+            </button>
+            <button class="carousel-control-next" type="button" data-target="#carouselExampleIndicators"
+                data-slide="next">
+                <span class="carousel-control-next-icon" aria-hidden="true"></span>
+            </button>
+        </div>
+        <section class="card p-5 text-white bg-danger">
+            <div class="card-header">
+                <h1>
+                    <span class="text-warning">《The Legend of Sealed Book》</span>
+                </h1>
+            </div>
+            <div class="container">
+                <div class="d-flex align-items-cente"> <!--display flex-->
+                    <div>
+                        <p class="my-4">
+                        <div class="card-body">
+                            <p class="card-text">Director: Wang Shuchen / Qian Yunda</p>
+                            <p class="card-text">Screenplay: Bao Lei / Wang Shuchen</p>
+                            <h5 class="card-title text-warning">Introduction of the movie</h5>
+                            <p class="card-text">
+                                &nbsp; &nbsp; In the Heavenly Court, there is a precious book called 'The Book of
+                                Heaven', which has been locked in a stone niche for 3,000 years. Yuan Gong, the guardian
+                                of the Book of Heaven, was curious about the contents of the Book of Heaven, and he took
+                                advantage of no one's presence to secretly take it out and read it. It turned out that
+                                the Book of Heaven recorded 108 spells, and Yuan Gong secretly descended to the earth
+                                and carved the contents of the Book of Heaven on the stone wall. However, Yuan Gong, who
+                                intended to benefit mankind, broke the rules of heaven and was punished by the Jade
+                                Emperor.</p>
+                            <p class="card-text">
+                                &nbsp; &nbsp; The elixir in the alchemy furnace was stolen and eaten by three foxes, who
+                                turned into spirits and came down to earth to cheat people of their money. They also
+                                pretended to be immortal nuns and colluded with the government, oppressing the people
+                                and inflicting harm on the earth. So Lord Yuan guides the gifted Egg Sheng, a child who
+                                jumps out of an egg, to practise the spells in the Heavenly Book and fight with the
+                                foxes to rid the people of evils.</p>
+                            <p class="card-text"><small class="text-muted">Welcome to the movie.</small></p>
+                        </div>
+                        </p>
+                        <button class="btn btn-warning btn-lg">watch now</button>
+                    </div>
+                    <img type="button" src="../../assets/image/animationDetail/15.jpeg" alt="showcase"
+                        class=" box w-50 h-100  d-none d-md-block " data-toggle="modal" data-target="#exampleModal">
+                    <!-- Modal -->
+                    <div class="modal fade" id="exampleModal" tabindex="-1" aria-labelledby="exampleModalLabel"
+                        aria-hidden="true">
+                        <div class="modal-dialog modal-dialog-centered modal-dialog-scrollable">
+                            <div class="modal-content">
+                                <div class="modal-header">
+                                    <h5 class="modal-title" id="exampleModalLabel">Modal title</h5>
+                                    <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                                        <span aria-hidden="true">&times;</span>
+                                    </button>
+                                </div>
+                                <div class="modal-body">
+                                    <div class="accordion" id="accordionExample">
+                                        <div class="card">
+                                            <div class="card-header" id="headingOne">
+                                                <h2 class="mb-0">
+                                                    <button class="btn btn-link btn-block text-left" type="button"
+                                                        data-toggle="collapse" data-target="#collapseOne"
+                                                        aria-expanded="true" aria-controls="collapseOne">
+                                                        <h5 class="card-title text-warning">Author</h5>
+                                                    </button>
+                                                </h2>
+                                            </div>
+
+                                            <div id="collapseOne" class="collapse show" aria-labelledby="headingOne"
+                                                data-parent="#accordionExample">
+                                                <div class="card-body">
+                                                    <p class="card-text">Director: Wang Shuchen / Qian Yunda</p>
+                                                    <p class="card-text">Screenplay: Bao Lei / Wang Shuchen</p>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class="card">
+                                            <div class="card-header" id="headingTwo">
+                                                <h2 class="mb-0">
+                                                    <button class="btn btn-link btn-block text-left collapsed"
+                                                        type="button" data-toggle="collapse" data-target="#collapseTwo"
+                                                        aria-expanded="false" aria-controls="collapseTwo">
+                                                        <h5 class="card-title text-warning">Introduction of the movie
+                                                        </h5>
+                                                    </button>
+                                                </h2>
+                                            </div>
+                                            <div id="collapseTwo" class="collapse" aria-labelledby="headingTwo"
+                                                data-parent="#accordionExample">
+                                                <div class="card-body">
+                                                    <p class="card-text">
+                                                        &nbsp; &nbsp; In the Heavenly Court, there is a precious book
+                                                        called 'The Book of
+                                                        Heaven', which has been locked in a stone niche for 3,000 years.
+                                                        Yuan Gong, the guardian
+                                                        of the Book of Heaven, was curious about the contents of the
+                                                        Book of Heaven, and he took
+                                                        advantage of no one's presence to secretly take it out and read
+                                                        it. It turned out that
+                                                        the Book of Heaven recorded 108 spells, and Yuan Gong secretly
+                                                        descended to the earth
+                                                        and carved the contents of the Book of Heaven on the stone wall.
+                                                        However, Yuan Gong, who
+                                                        intended to benefit mankind, broke the rules of heaven and was
+                                                        punished by the Jade
+                                                        Emperor.</p>
+                                                    <p class="card-text">
+                                                        &nbsp; &nbsp; The elixir in the alchemy furnace was stolen and
+                                                        eaten by three foxes, who
+                                                        turned into spirits and came down to earth to cheat people of
+                                                        their money. They also
+                                                        pretended to be immortal nuns and colluded with the government,
+                                                        oppressing the people
+                                                        and inflicting harm on the earth. So Lord Yuan guides the gifted
+                                                        Egg Sheng, a child who
+                                                        jumps out of an egg, to practise the spells in the Heavenly Book
+                                                        and fight with the
+                                                        foxes to rid the people of evils.</p>
+                                                </div>
+                                            </div>
+                                        </div>
+
+                                    </div>
+                                    <div class="modal-footer">
+                                        <button type="button" class="btn btn-warning"
+                                            data-dismiss="modal">Close</button>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+        </section>
+        <section>
+            <div class="card-group">
+                <div class="card">
+                    <img type="button" src="../../assets/image/animationDetail/11.jpeg" alt="picture 1"
+                        class=" box card-img-top " data-toggle="modal" data-target="#Modal1">
+                    <!-- Modal -->
+                    <div class="modal fade" id="Modal1" tabindex="-1" aria-labelledby="exampleModalLabel"
+                        aria-hidden="true">
+                        <div class="modal-dialog">
+                            <div class="modal-content">
+                                <div class="modal-header">
+                                    <h5 class="modal-title text-warning" id="exampleModalLabel">Egg-Born: The Courageous
+                                        Fox from "Havoc in Heaven"</h5>
+                                    <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                                        <span aria-hidden="true">&times;</span>
+                                    </button>
+                                </div>
+                                <div class="modal-body">
+                                    <p>Egg-Born, the protagonist of the classic Chinese animated film "Havoc in Heaven,"
+                                        is a young fox who embodies the qualities of kindness, bravery, intelligence,
+                                        and optimism. He is an orphan adopted by an old monk who teaches him the secrets
+                                        of the Heavenly Book, a powerful tome that holds the key to defeating evil.</p>
+                                    <h5>Personality</h5>
+                                    <ul>
+                                        <li>Kindness: Egg-Born is compassionate and empathetic, always willing to help
+                                            those in need.</li>
+                                        <li>Bravery: Despite his small stature, Egg-Born is fearless in the face of
+                                            danger.</li>
+                                        <li>Intelligence: Egg-Born is quick-witted and resourceful.</li>
+                                        <li>Optimism: Egg-Born maintains a positive attitude even in the face of
+                                            adversity.</li>
+                                    </ul>
+                                    <h5>Role in the Story</h5>
+                                    <p>Egg-Born's journey begins when he discovers the Heavenly Book hidden in a cave.
+                                        With the help of the old monk, he learns the book's secrets and embarks on a
+                                        mission to defeat the Jade Rabbit Spirit, who has stolen the book and plans to
+                                        use its power for evil. Along the way, he faces numerous challenges, including
+                                        the trickery of the Jade Rabbit Spirit and the dangers of the mortal world.</p>
+                                    <h5>Symbolism</h5>
+                                    <p>Egg-Born represents the potential for good that exists within everyone. He is a
+                                        reminder that even the smallest and most vulnerable individuals can make a
+                                        difference in the world. His journey teaches valuable lessons about the
+                                        importance of kindness, bravery, intelligence, and optimism, inspiring viewers
+                                        to embrace these qualities in their own lives.</p>
+                                </div>
+                                <div class="modal-footer">
+                                    <button type="button" class="btn btn-warning" data-dismiss="modal">Close</button>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="card-body">
+                        <p class="card-text"><small class="text-muted">Egg-Born: The Courageous Fox from "Havoc in
+                                Heaven"</small>
+                        </p>
+                    </div>
+                </div>
+                <div class="card">
+                    <img type="button" src="../../assets/image/animationDetail/12.jpeg" alt="picture 2"
+                        class=" box card-img-top " data-toggle="modal" data-target="#Modal2">
+                    <!-- Modal -->
+                    <div class="modal fade" id="Modal2" tabindex="-1" aria-labelledby="exampleModalLabel"
+                        aria-hidden="true">
+                        <div class="modal-dialog">
+                            <div class="modal-content">
+                                <div class="modal-header">
+                                    <h5 class="modal-title text-warning" id="exampleModalLabel">The Old Monk: A Wise and
+                                        Benevolent Guide in "Havoc in Heaven"</h5>
+                                    <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                                        <span aria-hidden="true">&times;</span>
+                                    </button>
+                                </div>
+                                <div class="modal-body">
+                                    <p>The Old Monk, a pivotal character in the Chinese animated film "Havoc in Heaven,"
+                                        embodies wisdom, compassion, and a deep understanding of the natural order. He
+                                        serves as a mentor and guide to Egg-Born, the young fox who becomes the hero of
+                                        the story.</p>
+                                    <h5>Personality</h5>
+                                    <ul>
+                                        <li>Wisdom: The Old Monk possesses a vast knowledge of the world and its hidden
+                                            secrets.</li>
+                                        <li>Compassion: The Old Monk is kind and caring, taking Egg-Born under his wing
+                                            and teaching him the values of kindness, bravery, and justice.</li>
+                                        <li>High-mindedness: The Old Monk is detached from worldly desires and focused
+                                            on the greater good.</li>
+                                        <li>Mysteriousness: The Old Monk's origins and true identity remain shrouded in
+                                            mystery.</li>
+                                    </ul>
+                                    <h5>Role in the Story</h5>
+                                    <p>The Old Monk discovers Egg-Born as a young orphan and takes him in as his
+                                        disciple. He recognizes Egg-Born's potential for greatness and begins to train
+                                        him in the ways of the Heavenly Book. The Old Monk guides Egg-Born through the
+                                        challenges he faces, offering wisdom and encouragement along the way.</p>
+                                    <h5>Symbolism</h5>
+                                    <p>The Old Monk represents the importance of mentorship and guidance in one's
+                                        journey. He embodies the wisdom and compassion that can help individuals reach
+                                        their full potential. His presence in the story highlights the value of seeking
+                                        knowledge and understanding from those who have come before us.</p>
+                                </div>
+                                <div class="modal-footer">
+                                    <button type="button" class="btn btn-warning" data-dismiss="modal">Close</button>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="card-body">
+                        <p class="card-text"><small class="text-muted">The Old Monk: A Wise and Benevolent Guide in
+                                "Havoc in Heaven"</small></p>
+                    </div>
+                </div>
+                <div class="card">
+                    <img type="button" src="../../assets/image/animationDetail/13.jpeg" alt="picture 3"
+                        class=" box card-img-top " data-toggle="modal" data-target="#Modal3">
+                    <!-- Modal -->
+                    <div class="modal fade" id="Modal3" tabindex="-1" aria-labelledby="exampleModalLabel"
+                        aria-hidden="true">
+                        <div class="modal-dialog">
+                            <div class="modal-content">
+                                <div class="modal-header">
+                                    <h5 class="modal-title text-warning" id="exampleModalLabel">The Jade Rabbit Spirit:
+                                        A Cunning and Deceptive Villain in "Havoc in Heaven"</h5>
+                                    <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                                        <span aria-hidden="true">&times;</span>
+                                    </button>
+                                </div>
+                                <div class="modal-body">
+                                    <p>The Jade Rabbit Spirit, the primary antagonist in the Chinese animated film
+                                        "Havoc in Heaven," is a cunning and deceptive villain who embodies greed,
+                                        ambition, and a thirst for power. Her manipulative nature and relentless pursuit
+                                        of her goals make her a formidable opponent for the film's protagonist,
+                                        Egg-Born.</p>
+                                    <h5>Personality</h5>
+                                    <ul>
+                                        <li>Cunning: The Jade Rabbit Spirit is highly intelligent and resourceful, using
+                                            her wit and charm to manipulate others and achieve her goals.</li>
+                                        <li>Deceptive: The Jade Rabbit Spirit is a master of disguise and trickery,
+                                            often using illusions and false promises to deceive her victims.</li>
+                                        <li>Ambitious: The Jade Rabbit Spirit is driven by an insatiable desire for
+                                            power and control, seeking to rule over the heavens and the mortal world.
+                                        </li>
+                                        <li>Ruthless: The Jade Rabbit Spirit is willing to do whatever it takes to
+                                            achieve her goals, showing no mercy or compassion for those who stand in her
+                                            way.</li>
+                                    </ul>
+                                    <h5>Role in the Story</h5>
+                                    <p>The Jade Rabbit Spirit steals the Heavenly Book, a powerful tome that holds the
+                                        key to controlling the heavens and the mortal world. With the book in her
+                                        possession, she unleashes chaos and destruction, seeking to overthrow the
+                                        celestial order and establish her own reign.</p>
+                                    <h5>Symbolism</h5>
+                                    <p>The Jade Rabbit Spirit represents the dangers of unchecked ambition and the
+                                        corrupting influence of power. Her character serves as a cautionary tale,
+                                        reminding viewers of the importance of staying true to one's values and
+                                        resisting the temptation to use power for personal gain.</p>
+                                </div>
+                                <div class="modal-footer">
+                                    <button type="button" class="btn btn-warning" data-dismiss="modal">Close</button>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="card-body">
+                        <p class="card-text"><small class="text-muted">The Jade Rabbit Spirit: A Cunning and Deceptive
+                                Villain in "Havoc in Heaven"</small></p>
+                    </div>
+                </div>
+            </div>
+        </section>
+        <iframe src="../../components/footer.html" width="100%" height="157" frameborder="0" scrolling="no"></iframe>
+
+</body>
+
+</html>
